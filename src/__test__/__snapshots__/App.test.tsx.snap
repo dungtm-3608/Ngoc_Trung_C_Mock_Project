@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`toUpperCase 1`] = `
+<DocumentFragment>
+  <div
+    class="w-screen h-screen bg-neutral-950 flex items-center justify-center text-neutral-100"
+  >
+    <div
+      class="w-96 bg-neutral-800 p-4 rounded-lg"
+    >
+      // Your component go here
+    </div>
+  </div>
+</DocumentFragment>
+`;

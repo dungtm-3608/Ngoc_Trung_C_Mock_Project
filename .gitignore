@@ -1,0 +1,45 @@
+# .gitignore - React (Vite) + TailwindCSS recommended ignores
+
+# Node modules
+node_modules/
+
+# Vite / build output
+dist/
+build/
+.vite/
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# Environment files
+.env
+.env.*.local
+.env.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+*.lcov
+
+# Tailwind cache (if used)
+.cache/
+.tailwind-cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Misc
+*.local
+*.tmp
+
+# Optional: lockfile for some workflows (uncomment to ignore)
+# package-lock.json
+# yarn.lock
