@@ -7,7 +7,6 @@ import Footer from './components/layout/Footer'
 
 
 export default function App() {
-  console.log('App: render')
   return (
     <AuthProvider>
       <BrowserRouter>

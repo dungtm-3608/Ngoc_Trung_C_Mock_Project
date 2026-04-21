@@ -1,7 +1,7 @@
 
-import logo from '../../assets/img-logo.png';
+import { Link, NavLink } from 'react-router-dom'
 
-
+import logo from '../../assets/img-logo.png'
 
 const navLinkNormalStyle = (isActive: boolean) => ({
     color: isActive ? '#c29f62' : '#000000',
@@ -13,7 +13,24 @@ const navLinkMainStyle = (isActive: boolean) => ({
     fontWeight: isActive ? 'bold' : 'normal',
 })
 
+const topNavItems = [
+  { to: '/', label: 'Tài khoản của tôi', end: true },
+  { to: '/order', label: 'Trạng thái đơn hàng' },
+  { to: '/favorites', label: 'Danh sách ưu thích' },
+  { to: '/cart', label: 'Giỏ hàng' },
+  { to: '/login', label: 'Đăng nhập' },
+  { to: '/register', label: 'Đăng kí' },
+]
 
+const mainNavItems = [
+  { to: '/', label: 'TRANG CHỦ', end: true },
+  { to: '/red_wine', label: 'RƯỢU VANG ĐỎ' },
+  { to: '/white_wine', label: 'RƯỢU VANG TRẮNG' },
+  { to: '/champagne', label: 'CHAMPAGNE' },
+  { to: '/information', label: 'THÔNG TIN' },
+  { to: '/blog', label: 'BLOG' },
+  { to: '/contact', label: 'LIÊN HỆ' },
+]
 
 export default function Header({ className = '' }) {
   return (
@@ -22,36 +39,17 @@ export default function Header({ className = '' }) {
     
       <nav>
         <ul className="flex gap-4 text-sm">
-          <li>
-            <a href="/" style={navLinkNormalStyle(window.location.pathname === '/')}>
-              Tài khoản của tôi 
-            </a>
-          </li>
-          <li>
-            <a href="/order" style={navLinkNormalStyle(window.location.pathname === '/order')}>
-              Trạng thái đơn hàng
-            </a>
-          </li>
-          <li>
-            <a href="/favorites" style={navLinkNormalStyle(window.location.pathname === '/favorites')}>
-              Danh sách ưu thích
-            </a>
-          </li>
-          <li>
-            <a href="/cart" style={navLinkNormalStyle(window.location.pathname === '/cart')}>
-             Giỏ hàng
-            </a>
-          </li>
-          <li>
-            <a href="/login" style={navLinkNormalStyle(window.location.pathname === '/login')}>
-              Đăng nhập
-            </a>
-          </li>
-          <li>
-            <a href="/register" style={navLinkNormalStyle(window.location.pathname === '/register')}>
-              Đăng kí
-            </a>
-          </li>
+          {topNavItems.map((item) => (
+            <li key={item.to}>
+              <NavLink
+                end={item.end}
+                to={item.to}
+                style={({ isActive }) => navLinkNormalStyle(isActive)}
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
@@ -60,43 +58,21 @@ export default function Header({ className = '' }) {
       <nav>
         <ul className="flex gap-8 text-lg items-center">
             <li>
-              <img src={logo} alt="logo" className="w-36 h-36 object-cover" />       
+              <Link to="/">
+                <img src={logo} alt="logo" className="w-36 h-36 object-cover" />
+              </Link>
             </li>
-          <li>
-            <a href="/" style={navLinkMainStyle(window.location.pathname === '/')}>
-              TRANG CHỦ
-            </a>
-          </li>
-          <li>
-            <a href="/red_wine" style={navLinkMainStyle(window.location.pathname === '/red_wine')}>
-              RƯỢU VANG ĐỎ
-            </a>
-          </li>
-          <li>
-            <a href="/white_wine" style={navLinkMainStyle(window.location.pathname === '/white_wine')}>
-             RƯỢU VANG TRẮNG
-            </a>
-          </li>
-          <li>
-            <a href="/champagne" style={navLinkMainStyle(window.location.pathname === '/champagne')}>
-              CHAMPAGNE
-            </a>
-          </li>
-          <li>
-            <a href="/information" style={navLinkMainStyle(window.location.pathname === '/information')}>
-              THÔNG TIN
-            </a>
-          </li>
-           <li>
-            <a href="/blog" style={navLinkMainStyle(window.location.pathname === '/blog')}>
-              BLOG
-            </a>
-          </li>
-           <li>
-            <a href="/contact" style={navLinkMainStyle(window.location.pathname === '/contact')}>
-              LIÊN HỆ
-            </a>
-          </li>
+          {mainNavItems.map((item) => (
+            <li key={item.to}>
+              <NavLink
+                end={item.end}
+                to={item.to}
+                style={({ isActive }) => navLinkMainStyle(isActive)}
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
           
         </ul>
       </nav>
