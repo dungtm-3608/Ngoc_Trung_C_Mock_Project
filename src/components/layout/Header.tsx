@@ -1,7 +1,7 @@
-import { ButtonHTMLAttributes } from 'react'
+
 import logo from '../../assets/img-logo.png';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+
 
 const navLinkNormalStyle = (isActive: boolean) => ({
     color: isActive ? '#c29f62' : '#000000',
@@ -15,7 +15,7 @@ const navLinkMainStyle = (isActive: boolean) => ({
 
 
 
-export default function Header({ className = '', type = 'button', ...props }: ButtonProps) {
+export default function Header({ className = '' }) {
   return (
     <>      
     <header className={`flex items-center bg-white-10 px-6 py-4 ${className}`}>

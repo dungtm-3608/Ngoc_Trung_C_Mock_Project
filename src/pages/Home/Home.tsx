@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useAuth } from '../../store/AuthContext'
 import wineService from '../../services/wineService'
+import { formatCurrency, getOriginalPrice } from '../../utils/currencyUtil.ts'
 
 const MAX_PRODUCTS = 8
 
@@ -12,15 +12,6 @@ type Wine = {
   discount?: number
   onStoreDate?: string
   yearFrom?: string
-}
-
-function formatCurrency(value: number) {
-  return new Intl.NumberFormat('vi-VN').format(value)
-}
-
-function getOriginalPrice(price: number, discount = 0) {
-  if (!discount) return price
-  return Math.round(price / (1 - discount / 100))
 }
 
 function mapImageId(idStr: string) {
@@ -39,7 +30,6 @@ const farmGalleryImages = Object.keys(farmImages)
   .map((key) => farmImages[key].default || farmImages[key])
 
 export default function Home() {
-  const { user, logout } = useAuth()
   const [newProducts, setNewProducts] = useState<Wine[]>([])
   const [bestSellers, setBestSellers] = useState<Wine[]>([])
 
@@ -48,11 +38,11 @@ export default function Home() {
     
     (async () => {
       try {
-        const newP = await wineService.getNewProduct()
-        const best = await wineService.getBestSellerProduct()
+        const newProducts = await wineService.getNewProduct()
+        const bestSellers = await wineService.getBestSellerProduct()
         if (!mounted) return
-        setNewProducts(newP)
-        setBestSellers(best)
+        setNewProducts(newProducts)
+        setBestSellers(bestSellers)
       } catch (err) {
         console.error('Home: error fetching products', err)
       }
@@ -74,11 +64,6 @@ export default function Home() {
 
     return ''
   }
-
-  const featuredWine = useMemo(
-    () => newProducts.find((wine) => mapImageId(wine.id) === '6') ?? newProducts[0] ?? bestSellers[0],
-    [bestSellers, newProducts],
-  )
 
   const renderProduct = (w: Wine) => (
     <article key={w.id} className="group relative flex w-full max-w-[250px] flex-col items-center px-2 pb-4 text-center">
