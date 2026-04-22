@@ -1,10 +1,72 @@
-import { LoginPayload } from '../types'
+import axios from './axiosClient'
+import type { AuthResponse, AuthUserRecord, LoginPayload, RegisterPayload, User } from '../types'
 
-export const login = async (payload: LoginPayload) => {
-  // Mock API call - replace with real request
-  await new Promise((r) => setTimeout(r, 700))
-  if (payload.email === 'user@example.com' && payload.password === 'password') {
-    return { token: 'mock-token-123', name: 'Demo User' }
+const USERS_API = '/users'
+
+function createToken(userId: string) {
+  return `mock-token-${userId}-${Date.now()}`
+}
+
+function toUser(record: AuthUserRecord): User {
+  return {
+    id: String(record.id),
+    email: record.email,
+    username: record.username,
+    firstName: record.firstName,
+    lastName: record.lastName,
+    name: `${record.firstName} ${record.lastName}`.trim(),
   }
-  throw new Error('Invalid credentials')
+}
+
+async function getUsers() {
+  const response = await axios.get<AuthUserRecord[]>(USERS_API)
+  return Array.isArray(response.data) ? response.data : []
+}
+
+export async function login(payload: LoginPayload): Promise<AuthResponse> {
+  const normalizedEmail = payload.email.trim().toLowerCase()
+  const users = await getUsers()
+  const matchedUser = users.find((user) => user.email.toLowerCase() === normalizedEmail)
+
+  if (!matchedUser) {
+    throw new Error('Email chưa được đăng ký.')
+  }
+
+  if (matchedUser.password !== payload.password) {
+    throw new Error('Mật khẩu không chính xác.')
+  }
+
+  return {
+    token: createToken(String(matchedUser.id)),
+    user: toUser(matchedUser),
+  }
+}
+
+export async function register(payload: RegisterPayload): Promise<AuthResponse> {
+  const users = await getUsers()
+  const normalizedEmail = payload.email.trim().toLowerCase()
+  const normalizedUsername = payload.username.trim().toLowerCase()
+
+  if (users.some((user) => user.email.toLowerCase() === normalizedEmail)) {
+    throw new Error('Email đã tồn tại.')
+  }
+
+  if (users.some((user) => user.username.toLowerCase() === normalizedUsername)) {
+    throw new Error('Tên người dùng đã tồn tại.')
+  }
+
+  const response = await axios.post<AuthUserRecord>(USERS_API, {
+    firstName: payload.firstName.trim(),
+    lastName: payload.lastName.trim(),
+    username: payload.username.trim(),
+    email: normalizedEmail,
+    password: payload.password,
+    subscribeNewsletter: payload.subscribeNewsletter,
+    createdAt: new Date().toISOString(),
+  })
+
+  return {
+    token: createToken(String(response.data.id)),
+    user: toUser(response.data),
+  }
 }

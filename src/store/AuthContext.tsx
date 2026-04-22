@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { User, LoginPayload } from '../types'
+import type { LoginPayload, RegisterPayload, User } from '../types'
 import * as authService from '../services/authService'
 
 type AuthContextType = {
   user: User | null
   login: (p: LoginPayload) => Promise<void>
+  register: (p: RegisterPayload) => Promise<void>
   logout: () => void
 }
 
@@ -15,15 +16,29 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const stored = localStorage.getItem('user')
-    if (stored) setUser(JSON.parse(stored))
+    if (!stored) return
+
+    try {
+      setUser(JSON.parse(stored) as User)
+    } catch {
+      localStorage.removeItem('user')
+    }
   }, [])
+
+  const persistSession = (nextUser: User, token: string) => {
+    setUser(nextUser)
+    localStorage.setItem('token', token)
+    localStorage.setItem('user', JSON.stringify(nextUser))
+  }
 
   const login = async (payload: LoginPayload) => {
     const res = await authService.login(payload)
-    const u: User = { id: '1', email: payload.email, name: res.name }
-    setUser(u)
-    localStorage.setItem('token', res.token)
-    localStorage.setItem('user', JSON.stringify(u))
+    persistSession(res.user, res.token)
+  }
+
+  const register = async (payload: RegisterPayload) => {
+    const res = await authService.register(payload)
+    persistSession(res.user, res.token)
   }
 
   const logout = () => {
@@ -33,7 +48,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   )

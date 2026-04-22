@@ -1,7 +1,7 @@
-
 import { Link, NavLink } from 'react-router-dom'
 
 import logo from '../../assets/img-logo.png'
+import { useAuth } from '../../store/AuthContext'
 
 const navLinkNormalStyle = (isActive: boolean) => ({
     color: isActive ? '#c29f62' : '#000000',
@@ -13,11 +13,7 @@ const navLinkMainStyle = (isActive: boolean) => ({
     fontWeight: isActive ? 'bold' : 'normal',
 })
 
-const topNavItems = [
-  { to: '/', label: 'Tài khoản của tôi', end: true },
-  { to: '/order', label: 'Trạng thái đơn hàng' },
-  { to: '/favorites', label: 'Danh sách ưu thích' },
-  { to: '/cart', label: 'Giỏ hàng' },
+const guestTopNavItems = [
   { to: '/login', label: 'Đăng nhập' },
   { to: '/register', label: 'Đăng kí' },
 ]
@@ -33,12 +29,22 @@ const mainNavItems = [
 ]
 
 export default function Header({ className = '' }) {
+  const { user, logout } = useAuth()
+
+  const topNavItems = user
+    ? [
+        { to: '/', label: `Xin chào, ${user.firstName}`, end: true },
+        { to: '/order', label: 'Trạng thái đơn hàng' },
+        { to: '/favorites', label: 'Danh sách ưu thích' },
+        { to: '/cart', label: 'Giỏ hàng' },
+      ]
+    : guestTopNavItems
+
   return (
-    <>      
-    <header className={`flex items-center bg-white-10 px-6 py-4 ${className}`}>
-    
+    <>
+    <header className={`flex items-center justify-between px-6 py-4 ${className}`}>
       <nav>
-        <ul className="flex gap-4 text-sm">
+        <ul className="flex flex-wrap gap-4 text-sm">
           {topNavItems.map((item) => (
             <li key={item.to}>
               <NavLink
@@ -52,11 +58,21 @@ export default function Header({ className = '' }) {
           ))}
         </ul>
       </nav>
+
+      {user ? (
+        <button
+          type="button"
+          onClick={logout}
+          className="text-sm text-black transition hover:text-[#c29f62]"
+        >
+          Đăng xuất
+        </button>
+      ) : null}
     </header>
+
      <header className={`flex items-center bg-black px-6 py-4 ${className}`}>
-    
       <nav>
-        <ul className="flex gap-8 text-lg items-center">
+        <ul className="flex flex-wrap items-center gap-8 text-lg">
             <li>
               <Link to="/">
                 <img src={logo} alt="logo" className="w-36 h-36 object-cover" />
@@ -78,6 +94,5 @@ export default function Header({ className = '' }) {
       </nav>
     </header>
    </>
-    
   )
 }

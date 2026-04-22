@@ -1,3 +1,6 @@
+import { useNavigate } from 'react-router-dom'
+
+import { useAuth } from '../../../store/AuthContext'
 import type { Wine } from '../../../types/wine'
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
 
@@ -7,6 +10,16 @@ type ProductCardProps = {
 }
 
 export default function ProductGridItem({ wine, resolveImage }: ProductCardProps) {
+  const navigate = useNavigate()
+  const { user } = useAuth()
+
+  const handleAddToCart = () => {
+    if (!user) {
+      navigate('/login')
+      return
+    }
+  }
+
   return (
     <article className="group flex flex-col items-center text-center">
       <div className="flex h-72 w-full items-center justify-center overflow-hidden bg-white px-6 py-4 transition duration-300 group-hover:scale-[1.01]">
@@ -20,8 +33,12 @@ export default function ProductGridItem({ wine, resolveImage }: ProductCardProps
           <span className="pb-1 text-sm text-neutral-400 line-through">{formatCurrency(getOriginalPrice(wine.price, wine.discount))}đ</span>
         ) : null}
       </div>
-      <button type="button" className="mt-5 border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500">
-        Add to cart
+      <button
+        type="button"
+        onClick={handleAddToCart}
+        className="mt-5 border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500"
+      >
+        THÊM VÀO GIỎ
       </button>
     </article>
   )
