@@ -67,8 +67,8 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-bold text-gray-800 mb-4 uppercase">Liên Hệ</h3>
-            {contactLines.map((line) => (
-              <p key={line}>{line}</p>
+            {contactLines.map((label) => (
+              <p key={label}>{label}</p>
             ))}
           </div>
         </div>
