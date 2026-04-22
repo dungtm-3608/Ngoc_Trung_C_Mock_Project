@@ -8,14 +8,10 @@ import ProductListItem from '../../components/layout/product_list/ProductListIte
 import wineService from '../../services/wineService.ts'
 import type { Wine } from '../../types/wine.ts'
 
-import { CategorySummary } from '../../types/categorySummary.ts'
+import type { CategorySummary } from '../../types/categorySummary.ts'
 import { PRODUCT_GRID_PAGE_SIZE, PRODUCT_LIST_PAGE_SIZE } from '../../constants/index.ts'
 
 type ItemViewMode = 'grid' | 'list'
-
-type ProductListPageProps = {
-  forcedCategorySlug?: string
-}
 
 const DEFAULT_CATEGORY_SLUG = 'red-wine'
 const OTHER_CATEGORY_SLUG = 'others'
@@ -51,15 +47,17 @@ function resolveAssetImage(asset: { default?: string } | string) {
   return typeof asset === 'string' ? asset : (asset.default ?? '')
 }
 
+const wineImageUrlById = Object.fromEntries(
+  Object.entries(wineImages).flatMap(([path, asset]) => {
+    const match = path.match(/\/wine\/(\d+)\.(png|jpg|jpeg)$/)
+    if (!match) return []
+    return [[match[1], resolveAssetImage(asset)]]
+  }),
+) as Record<string, string>
+
 function resolveImage(wineId: string) {
   const imgId = mapImageId(wineId)
-  const candidates = Object.keys(wineImages)
-  const found = candidates.find((path) => path.includes(`/wine/${imgId}.`))
-
-  if (!found) return ''
-
-  const image = wineImages[found]
-  return resolveAssetImage(image)
+  return wineImageUrlById[imgId] ?? ''
 }
 
 function buildCategorySummaries(wines: Wine[]): CategorySummary[] {
@@ -78,15 +76,13 @@ function buildCategorySummaries(wines: Wine[]): CategorySummary[] {
     .sort((left, right) => left.name.localeCompare(right.name))
 }
 
-export default function ProductListPage({ forcedCategorySlug }: ProductListPageProps) {
+export default function ProductListPage() {
   const navigate = useNavigate()
   const { categorySlug } = useParams<{ categorySlug?: string }>()
   const [allWines, setAllWines] = useState<Wine[]>([])
-  const [products, setProducts] = useState<Wine[]>([])
   const [itemViewMode, setItemViewMode] = useState<ItemViewMode>('grid')
   const [currentPage, setCurrentPage] = useState(1)
   const [isLoadingCategories, setIsLoadingCategories] = useState(true)
-  const [isLoadingProducts, setIsLoadingProducts] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
 
   useEffect(() => {
@@ -118,10 +114,9 @@ export default function ProductListPage({ forcedCategorySlug }: ProductListPageP
   const categories = useMemo(() => buildCategorySummaries(allWines), [allWines])
 
   const selectedRouteSlug = useMemo(() => {
-    if (forcedCategorySlug) return forcedCategorySlug
     if (!categorySlug) return DEFAULT_CATEGORY_SLUG
     return categorySlug in PRIMARY_CATEGORY_SLUG_TO_NAME ? categorySlug : OTHER_CATEGORY_SLUG
-  }, [categorySlug, forcedCategorySlug])
+  }, [categorySlug])
 
   const selectedCategory = useMemo(() => {
     if (selectedRouteSlug === OTHER_CATEGORY_SLUG) {
@@ -137,31 +132,19 @@ export default function ProductListPage({ forcedCategorySlug }: ProductListPageP
     }
   }, [categorySlug, selectedRouteSlug, navigate])
 
-  useEffect(() => {
-    if (isLoadingCategories) return
+  const products = useMemo(() => {
+    if (isLoadingCategories) return []
 
-    setIsLoadingProducts(true)
-    setErrorMessage('')
-
-    const nextProducts = selectedRouteSlug === OTHER_CATEGORY_SLUG
+    return selectedRouteSlug === OTHER_CATEGORY_SLUG
       ? allWines.filter((wine) => !PRIMARY_CATEGORY_NAMES.has(wine.category))
       : allWines.filter((wine) => wine.category === PRIMARY_CATEGORY_SLUG_TO_NAME[selectedRouteSlug])
-
-    setProducts(nextProducts)
-    setIsLoadingProducts(false)
   }, [allWines, selectedRouteSlug, isLoadingCategories])
 
   useEffect(() => {
-    if (isLoadingCategories) {
-      setIsLoadingProducts(true)
-    }
-  }, [isLoadingCategories])
-
-  useEffect(() => {
     setCurrentPage(1)
-  }, [selectedCategory, itemViewMode])
+  }, [selectedRouteSlug, itemViewMode])
 
-  const selectedCount = categories.find((category) => category.name === selectedCategory)?.count ?? products.length
+  const selectedCount = products.length
   const pageSize = itemViewMode === 'grid' ? PRODUCT_GRID_PAGE_SIZE : PRODUCT_LIST_PAGE_SIZE
   const totalPages = Math.max(1, Math.ceil(products.length / pageSize))
   const coverImage = useMemo(() => {
@@ -220,6 +203,7 @@ export default function ProductListPage({ forcedCategorySlug }: ProductListPageP
                   type="button"
                   onClick={() => setItemViewMode('grid')}
                   className={`flex h-9 w-9 items-center justify-center border text-sm transition ${itemViewMode === 'grid' ? 'border-amber-500 bg-amber-500 text-white' : 'border-neutral-200 text-neutral-500 hover:border-neutral-400 hover:text-neutral-800'}`}
+                  aria-pressed={itemViewMode === 'grid'}
                   aria-label="Grid view">
                   ▦
                 </button>
@@ -227,6 +211,7 @@ export default function ProductListPage({ forcedCategorySlug }: ProductListPageP
                   type="button"
                   onClick={() => setItemViewMode('list')}
                   className={`flex h-9 w-9 items-center justify-center border text-sm transition ${itemViewMode === 'list' ? 'border-amber-500 bg-amber-500 text-white' : 'border-neutral-200 text-neutral-500 hover:border-neutral-400 hover:text-neutral-800'}`}
+                  aria-pressed={itemViewMode === 'list'}
                   aria-label="List view">
                   ☰
                 </button>
@@ -234,17 +219,30 @@ export default function ProductListPage({ forcedCategorySlug }: ProductListPageP
             </div>
             <div className="flex flex-col items-start gap-3 sm:items-end">
               <div className="flex flex-wrap items-center gap-2 sm:justify-end">
-                {!isLoadingProducts && !errorMessage && products.length ? (
+                {!isLoadingCategories && !errorMessage && products.length ? (
                   <div className="ml-2 flex flex-wrap items-center gap-2">
-                    <PaginationButton onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}>
+                    <PaginationButton
+                      ariaLabel="Trang trước"
+                      disabled={currentPage === 1}
+                      onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                    >
                       &lt;
                     </PaginationButton>
                     {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
-                      <PaginationButton key={page} isActive={page === currentPage} onClick={() => setCurrentPage(page)}>
+                      <PaginationButton
+                        key={page}
+                        ariaLabel={`Trang ${page}`}
+                        isActive={page === currentPage}
+                        onClick={() => setCurrentPage(page)}
+                      >
                         {page}
                       </PaginationButton>
                     ))}
-                    <PaginationButton onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}>
+                    <PaginationButton
+                      ariaLabel="Trang sau"
+                      disabled={currentPage === totalPages}
+                      onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                    >
                       &gt;
                     </PaginationButton>
                   </div>
@@ -258,7 +256,7 @@ export default function ProductListPage({ forcedCategorySlug }: ProductListPageP
             <p className="mt-8 rounded border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{errorMessage}</p>
           ) : null}
 
-          {isLoadingProducts ? (
+          {isLoadingCategories ? (
             <p className="mt-8 text-sm text-neutral-500">Đang tải sản phẩm...</p>
           ) : itemViewMode === 'grid' ? (
             <div className="mt-8 grid gap-x-8 gap-y-12 sm:grid-cols-2 xl:grid-cols-3">
@@ -274,7 +272,7 @@ export default function ProductListPage({ forcedCategorySlug }: ProductListPageP
             </div>
           )}
 
-          {!isLoadingProducts && !errorMessage && !products.length ? (
+          {!isLoadingCategories && !errorMessage && !products.length ? (
             <p className="mt-8 text-sm text-neutral-500">Không có sản phẩm trong danh mục này.</p>
           ) : null}
         </section>

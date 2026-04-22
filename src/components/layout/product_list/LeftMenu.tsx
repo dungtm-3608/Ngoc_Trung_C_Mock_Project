@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 
 import type { CategorySummary } from '../../../types/categorySummary'
 
-const PRIMARY_CATEGORY_SLUGS = new Set(['red-wine', 'white-wine', 'champagne'])
+const PRIMARY_CATEGORY_ORDER = ['red-wine', 'white-wine', 'champagne'] as const
+const PRIMARY_CATEGORY_SLUGS: ReadonlySet<string> = new Set(PRIMARY_CATEGORY_ORDER)
 const OTHER_CATEGORY_LABEL = 'LOẠI RƯỢU KHÁC'
 const OTHER_CATEGORY_SLUG = 'others'
 
@@ -17,26 +18,26 @@ export default function LeftMenu({
   selectedCategory,
   isLoadingCategories,
 }: LeftMenuProps) {
-  const groupedCategories = categories.reduce<CategorySummary[]>((items, category) => {
+  const categoriesBySlug = new Map(categories.map((category) => [category.slug, category]))
+  const groupedCategories: CategorySummary[] = PRIMARY_CATEGORY_ORDER
+    .map((slug) => categoriesBySlug.get(slug))
+    .filter((category): category is CategorySummary => Boolean(category))
+
+  const otherCount = categories.reduce((count, category) => {
     if (PRIMARY_CATEGORY_SLUGS.has(category.slug)) {
-      items.push(category)
-      return items
+      return count
     }
 
-    const existingOtherCategory = items.find((item) => item.slug === OTHER_CATEGORY_SLUG)
-    if (existingOtherCategory) {
-      existingOtherCategory.count += category.count
-      return items
-    }
+    return count + category.count
+  }, 0)
 
-    items.push({
+  if (otherCount > 0) {
+    groupedCategories.push({
       name: OTHER_CATEGORY_LABEL,
       slug: OTHER_CATEGORY_SLUG,
-      count: category.count,
+      count: otherCount,
     })
-
-    return items
-  }, [])
+  }
 
   return (
     <aside className="border-r border-neutral-200 pr-6">

@@ -33,14 +33,6 @@ export default function AppRouter() {
         }
       />
       <Route
-        path="/wines/others"
-        element={
-          <ProtectedRoute>
-            <ProductListPage forcedCategorySlug="others" />
-          </ProtectedRoute>
-        }
-      />
-      <Route
         path="/wines/:categorySlug"
         element={
           <ProtectedRoute>

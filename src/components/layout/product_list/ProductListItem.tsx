@@ -22,7 +22,7 @@ export default function ProductListItem({ wine, resolveImage }: ProductListItemP
         </div>
         <p className="mt-5 max-w-2xl text-sm leading-7 text-neutral-500">{wine.description}</p>
         <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-neutral-500">
-          <button className="border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500">
+          <button type="button" className="border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500">
             Add to cart
           </button>
         </div>

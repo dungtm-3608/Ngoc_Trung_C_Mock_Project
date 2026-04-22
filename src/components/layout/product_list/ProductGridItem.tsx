@@ -20,7 +20,7 @@ export default function ProductGridItem({ wine, resolveImage }: ProductCardProps
           <span className="pb-1 text-sm text-neutral-400 line-through">{formatCurrency(getOriginalPrice(wine.price, wine.discount))}đ</span>
         ) : null}
       </div>
-      <button className="mt-5 border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500">
+      <button type="button" className="mt-5 border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500">
         Add to cart
       </button>
     </article>
