@@ -13,7 +13,6 @@ function ProtectedRoute({ children }: { children: ReactElement }) {
 
 export default function AppRouter() {
   return (
-  
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route
@@ -25,6 +24,5 @@ export default function AppRouter() {
         }
       />
     </Routes>
-
   )
 }

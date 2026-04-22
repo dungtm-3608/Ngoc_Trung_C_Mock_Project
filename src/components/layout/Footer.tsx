@@ -1,5 +1,27 @@
 import logo from '../../assets/img-branch.png';
 
+const informationLabels = [
+  'Về chúng tôi',
+  'Giao hàng',
+  'Cam kết',
+  'Lưu trữ',
+  'Chính sách riêng tư',
+];
+
+const shoppingLabels = [
+  'Vận chuyển và trả hàng',
+  'Mua hàng an toàn',
+  'Vận quốc tế',
+  'Liên kết',
+  'Dịch vụ giảm giá',
+];
+
+const contactLines = [
+  'Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội',
+  '📞 (04) 6674 2332 - (04) 3786 8904',
+  '📞 (08) 6680 9686 ✉️ support@bizweb.vn',
+];
+
 export default function Footer() {
   return (
     <footer className="bg-gray-100 py-8">
@@ -9,21 +31,21 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-gray-800 mb-4 uppercase">Thông Tin</h3>
             <ul>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Về chúng tôi</li>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Giao hàng</li>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Cam kết</li>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Lưu trữ</li>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Chính sách riêng tư</li>
+              {informationLabels.map((label) => (
+                <li key={label} className="hover:text-blue-500 active:text-blue-700 uppercase">
+                  {label}
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h3 className="font-bold text-gray-800 mb-4 uppercase">Mua Hàng</h3>
             <ul>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Vận chuyển và trả hàng</li>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Mua hàng an toàn</li>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Vận quốc tế</li>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Liên kết</li>
-              <li className="hover:text-blue-500 active:text-blue-700 uppercase">Dịch vụ giảm giá</li>
+              {shoppingLabels.map((label) => (
+                <li key={label} className="hover:text-blue-500 active:text-blue-700 uppercase">
+                  {label}
+                </li>
+              ))}
             </ul>
           </div>
           <div>
@@ -45,9 +67,9 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-bold text-gray-800 mb-4 uppercase">Liên Hệ</h3>
-            <p>Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội</p>
-            <p>📞 (04) 6674 2332 - (04) 3786 8904</p>
-            <p>📞 (08) 6680 9686 ✉️ support@bizweb.vn</p>
+            {contactLines.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
           </div>
         </div>
         <div className="mt-8 text-center text-gray-500 text-xs">

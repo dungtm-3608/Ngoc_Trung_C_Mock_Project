@@ -1,18 +1,24 @@
-import axios from './axiosClient';
+import { Wine } from '../types/wine'
+import axios from './axiosClient'
 
-const WINE_API = '/wines';
+const WINE_API = '/wines'
 
-function normalizeWines(data: unknown) {
+function normalizeWines(data: unknown): Wine[] {
   if (Array.isArray(data)) {
-    return data
+    return data as Wine[]
   }
 
-  if (data && typeof data === 'object' && Array.isArray((data as { wines?: unknown[] }).wines)) {
-    return (data as { wines: unknown[] }).wines
+  if (data && typeof data === 'object' && Array.isArray((data as { wines?: Wine[] }).wines)) {
+    return (data as { wines: Wine[] }).wines
   }
 
   console.warn('wineService: unexpected response payload', data)
   return []
+}
+
+function getOnStoreTimestamp(onStoreDate?: string) {
+  const timestamp = Date.parse(onStoreDate ?? '')
+  return Number.isNaN(timestamp) ? 0 : timestamp
 }
 
 const wineService = {
@@ -20,17 +26,14 @@ const wineService = {
     const response = await axios.get(WINE_API)
     const wines = normalizeWines(response.data)
 
-    return [...wines].sort(
-      (a: any, b: any) => new Date(b.onStoreDate).getTime() - new Date(a.onStoreDate).getTime(),
-    )
+    return [...wines].sort((a: Wine, b: Wine) => getOnStoreTimestamp(b.onStoreDate) - getOnStoreTimestamp(a.onStoreDate))
   },
 
   async getBestSellerProduct() {
     const response = await axios.get(WINE_API)
     const wines = normalizeWines(response.data)
-    // Mocking best-seller logic: selecting wines with the highest discounts
-    return [...wines].sort((a: any, b: any) => b.discount - a.discount).slice(0, 3)
+    return [...wines].sort((a: Wine, b: Wine) => (b.discount ?? 0) - (a.discount ?? 0)).slice(0, 3)
   }
-};
+}
 
-export default wineService;
+export default wineService
