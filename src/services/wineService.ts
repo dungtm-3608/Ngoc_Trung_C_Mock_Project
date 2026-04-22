@@ -3,6 +3,10 @@ import axios from './axiosClient'
 
 const WINE_API = '/wines'
 
+type WinesQueryOptions = {
+  category?: string
+}
+
 function normalizeWines(data: unknown): Wine[] {
   if (Array.isArray(data)) {
     return data as Wine[]
@@ -22,16 +26,22 @@ function getOnStoreTimestamp(onStoreDate?: string) {
 }
 
 const wineService = {
+  async getWines(options: WinesQueryOptions = {}) {
+    const response = await axios.get(WINE_API, {
+      params: options.category ? { category: options.category } : undefined,
+    })
+
+    return normalizeWines(response.data)
+  },
+
   async getNewProduct() {
-    const response = await axios.get(WINE_API)
-    const wines = normalizeWines(response.data)
+    const wines = await this.getWines()
 
     return [...wines].sort((a: Wine, b: Wine) => getOnStoreTimestamp(b.onStoreDate) - getOnStoreTimestamp(a.onStoreDate))
   },
 
   async getBestSellerProduct() {
-    const response = await axios.get(WINE_API)
-    const wines = normalizeWines(response.data)
+    const wines = await this.getWines()
     return [...wines].sort((a: Wine, b: Wine) => (b.discount ?? 0) - (a.discount ?? 0)).slice(0, 3)
   }
 }

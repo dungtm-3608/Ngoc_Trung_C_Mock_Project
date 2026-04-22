@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 
 import Home from '../pages/Home/Home'
 import Login from '../pages/Login/Login'
+import ProductListPage from '../pages/ProductList/ProductList'
 import { useAuth } from '../store/AuthContext'
 
 function ProtectedRoute({ children }: { children: ReactElement }) {
@@ -23,6 +24,33 @@ export default function AppRouter() {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/wines"
+        element={
+          <ProtectedRoute>
+            <ProductListPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wines/others"
+        element={
+          <ProtectedRoute>
+            <ProductListPage forcedCategorySlug="others" />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wines/:categorySlug"
+        element={
+          <ProtectedRoute>
+            <ProductListPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/red_wine" element={<Navigate replace to="/wines/red-wine" />} />
+      <Route path="/white_wine" element={<Navigate replace to="/wines/white-wine" />} />
+      <Route path="/champagne" element={<Navigate replace to="/wines/champagne" />} />
     </Routes>
   )
 }

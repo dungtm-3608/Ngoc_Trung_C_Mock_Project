@@ -24,10 +24,10 @@ const topNavItems = [
 
 const mainNavItems = [
   { to: '/', label: 'TRANG CHỦ', end: true },
-  { to: '/red_wine', label: 'RƯỢU VANG ĐỎ' },
-  { to: '/white_wine', label: 'RƯỢU VANG TRẮNG' },
-  { to: '/champagne', label: 'CHAMPAGNE' },
-  { to: '/information', label: 'THÔNG TIN' },
+  { to: '/wines/red-wine', label: 'RƯỢU VANG ĐỎ' },
+  { to: '/wines/white-wine', label: 'RƯỢU VANG TRẮNG' },
+  { to: '/wines/champagne', label: 'CHAMPAGNE' },
+  { to: '/wines/others', label: 'LOẠI RƯỢU KHÁC' },
   { to: '/blog', label: 'BLOG' },
   { to: '/contact', label: 'LIÊN HỆ' },
 ]
