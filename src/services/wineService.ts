@@ -34,6 +34,11 @@ const wineService = {
     return normalizeWines(response.data)
   },
 
+  async getWineById(wineId: string) {
+    const wines = await this.getWines()
+    return wines.find((wine) => wine.id === wineId) ?? null
+  },
+
   async getNewProduct() {
     const wines = await this.getWines()
 

@@ -1,8 +1,9 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { isUserLoggedIn } from '../../../store/AuthContext'
 import type { Wine } from '../../../types/wine'
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
+import { getWineDetailPath } from '../../../utils/wineCatalog'
 
 type ProductListItemProps = {
   wine: Wine
@@ -22,11 +23,13 @@ export default function ProductListItem({ wine, resolveImage }: ProductListItemP
 
   return (
     <article className="grid gap-6 border-b border-neutral-200 pb-8 md:grid-cols-[220px_minmax(0,1fr)] md:items-center">
-      <div className="flex h-64 items-center justify-center bg-white px-6 py-4">
+      <Link to={getWineDetailPath(wine)} className="flex h-64 items-center justify-center bg-white px-6 py-4">
         <img src={resolveImage(wine.id)} alt={wine.name} className="h-full w-auto object-contain" />
-      </div>
+      </Link>
       <div>
-        <h2 className="mt-3 text-3xl font-semibold uppercase tracking-[0.08em] text-neutral-800">{wine.name}</h2>
+        <Link to={getWineDetailPath(wine)} className="mt-3 inline-block text-3xl font-semibold uppercase tracking-[0.08em] text-neutral-800 transition hover:text-amber-600">
+          {wine.name}
+        </Link>
         <div className="mt-4 flex items-end gap-3">
           <span className="text-4xl leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
           {wine.discount ? (
@@ -35,6 +38,12 @@ export default function ProductListItem({ wine, resolveImage }: ProductListItemP
         </div>
         <p className="mt-5 max-w-2xl text-sm leading-7 text-neutral-500">{wine.description}</p>
         <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-neutral-500">
+          <Link
+            to={getWineDetailPath(wine)}
+            className="border border-neutral-300 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-800 transition hover:border-neutral-800"
+          >
+            Xem chi tiết
+          </Link>
           <button
             type="button"
             onClick={handleAddToCart}

@@ -1,6 +1,8 @@
+import { Link, useNavigate } from 'react-router-dom'
+
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil.ts'
 import { FeaturedWineProps } from '../../../types/home/featureWineProps.ts'
-
+import { getWineDetailPath } from '../../../utils/wineCatalog.ts'
 
 export default function FeaturedWine({ wine, bannerImage, resolveImage }: FeaturedWineProps) {
   return (
@@ -21,7 +23,9 @@ export default function FeaturedWine({ wine, bannerImage, resolveImage }: Featur
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Chi tiết sản phẩm</p>
-          <h3 className="mt-3 text-[30px] font-semibold uppercase tracking-[0.12em] text-slate-800">{wine.name}</h3>
+          <Link to={getWineDetailPath(wine)} className="mt-3 text-[30px] font-semibold uppercase tracking-[0.12em] text-slate-800 transition hover:text-amber-600">
+            {wine.name}
+          </Link>
           <p className="mt-2 text-sm uppercase tracking-[0.18em] text-slate-400">Niên vụ {wine.yearFrom ?? '2026'}</p>
           <div className="mt-6 flex items-end gap-3">
             <span className="text-[38px] leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>

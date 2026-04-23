@@ -3,6 +3,8 @@ import wineService from '../../services/wineService'
 import FeaturedWine from '../../components/layout/home/FeaturedWine.tsx'
 import { formatCurrency, getOriginalPrice } from '../../utils/currencyUtil.ts'
 import { Wine } from '../../types/wine.ts'
+import { getWineDetailPath, resolveWineImage } from '../../utils/wineCatalog.ts'
+import { Link } from 'react-router-dom'
 
 const MAX_PRODUCTS = 8
 
@@ -61,14 +63,16 @@ export default function Home() {
     <article key={w.id} className="group relative flex w-full max-w-[250px] flex-col items-center px-2 pb-4 text-center">
   
       <div className="flex h-64 w-40 items-center justify-center overflow-hidden bg-white transition duration-300 group-hover:scale-[1.02]">
-        <img
-          src={resolveImage(w.id)}
-          alt={w.name}
-          className="h-full w-full object-contain"
-          onError={(e) => console.warn('Home: image error for', w.id, e)}
-        />
+        <Link to={getWineDetailPath(w)}>
+          <img
+            src={resolveWineImage(w.id)}
+            alt={w.name}
+            className="h-full w-full object-contain"
+            onError={(e) => console.warn('Home: image error for', w.id, e)}
+          />
+        </Link>
       </div>
-      <div className="mt-4 min-h-12 text-sm font-semibold uppercase tracking-[0.08em] text-slate-800">{w.name}</div>
+      <Link to={getWineDetailPath(w)} className="mt-4 min-h-12 text-sm font-semibold uppercase tracking-[0.08em] text-slate-800 transition hover:text-amber-600">{w.name}</Link>
       <div className="mt-1 flex items-end justify-center gap-2">
         <span className="text-[30px] leading-none text-amber-500">{formatCurrency(w.price)}đ</span>
         {w.discount ? (
@@ -144,7 +148,7 @@ export default function Home() {
           <FeaturedWine
             wine={featuredWine}
             bannerImage={farmGalleryImages[6] ?? farmGalleryImages[0] ?? ''}
-            resolveImage={resolveImage}
+            resolveImage={resolveWineImage}
           />
         ) : null}
         {newSection}
