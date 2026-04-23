@@ -6,8 +6,16 @@
       "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A classic red wine with a rich aroma and smooth taste.",
-      "colors": ["Red", "Ruby", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Ruby",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-01",
       "price": 370000,
       "discount": 10
@@ -18,8 +26,16 @@
       "category": "White Wine",
       "yearFrom": "2020",
       "description": "A premium white wine with a crisp and refreshing flavor.",
-      "colors": ["White", "Pale Yellow", "Golden"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "White",
+        "Pale Yellow",
+        "Golden"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-03-15",
       "price": 450000,
       "discount": 15
@@ -30,8 +46,16 @@
       "category": "Champagne",
       "yearFrom": "2019",
       "description": "A luxurious champagne with a delicate balance of flavors.",
-      "colors": ["Gold", "Amber", "Rose"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber",
+        "Rose"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-02-20",
       "price": 680000,
       "discount": 20
@@ -42,8 +66,16 @@
       "category": "Rose Wine",
       "yearFrom": "2021",
       "description": "A delightful rosé with hints of strawberry and citrus.",
-      "colors": ["Pink", "Blush", "Rose"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pink",
+        "Blush",
+        "Rose"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-02",
       "price": 320000,
       "discount": 5
@@ -54,8 +86,15 @@
       "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A smooth Merlot with notes of plum and chocolate.",
-      "colors": ["Red", "Burgundy"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Burgundy"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-03",
       "price": 390000,
       "discount": 8
@@ -66,8 +105,15 @@
       "category": "White Wine",
       "yearFrom": "2019",
       "description": "A buttery Chardonnay with a hint of oak.",
-      "colors": ["Yellow", "Golden"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Yellow",
+        "Golden"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-04",
       "price": 360000,
       "discount": 12
@@ -78,8 +124,15 @@
       "category": "Red Wine",
       "yearFrom": "2018",
       "description": "An elegant Pinot Noir with cherry and earthy flavors.",
-      "colors": ["Red", "Ruby"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Ruby"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-05",
       "price": 470000,
       "discount": 10
@@ -90,8 +143,15 @@
       "category": "White Wine",
       "yearFrom": "2020",
       "description": "A fresh Sauvignon Blanc with tropical fruit notes.",
-      "colors": ["White", "Pale Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "White",
+        "Pale Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-06",
       "price": 350000,
       "discount": 7
@@ -102,8 +162,15 @@
       "category": "Red Wine",
       "yearFrom": "2016",
       "description": "A bold Zinfandel with blackberry and spice flavors.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-07",
       "price": 410000,
       "discount": 9
@@ -114,8 +181,15 @@
       "category": "Red Wine",
       "yearFrom": "2015",
       "description": "A rich Cabernet Sauvignon with dark fruit and vanilla notes.",
-      "colors": ["Red", "Burgundy"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Burgundy"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-08",
       "price": 520000,
       "discount": 15
@@ -126,8 +200,15 @@
       "category": "White Wine",
       "yearFrom": "2021",
       "description": "A floral and spicy Gewürztraminer with notes of lychee and rose.",
-      "colors": ["Yellow", "Golden"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Yellow",
+        "Golden"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-09",
       "price": 430000,
       "discount": 10
@@ -138,8 +219,15 @@
       "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A bold Syrah with notes of blackberry and pepper.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-10",
       "price": 465000,
       "discount": 12
@@ -150,8 +238,15 @@
       "category": "White Wine",
       "yearFrom": "2018",
       "description": "A smooth Pinot Gris with notes of pear and apple.",
-      "colors": ["Yellow", "Golden"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Yellow",
+        "Golden"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-11",
       "price": 380000,
       "discount": 8
@@ -162,8 +257,15 @@
       "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A smooth Tempranillo with notes of cherry and earth.",
-      "colors": ["Red", "Ruby"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Ruby"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-12",
       "price": 405000,
       "discount": 10
@@ -174,8 +276,15 @@
       "category": "Red Wine",
       "yearFrom": "2016",
       "description": "A bold Malbec with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-13",
       "price": 435000,
       "discount": 11
@@ -186,8 +295,15 @@
       "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A smooth Sangiovese with notes of cherry and earth.",
-      "colors": ["Red", "Ruby"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Ruby"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-14",
       "price": 395000,
       "discount": 9
@@ -198,8 +314,15 @@
       "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A smooth Nebbiolo with notes of cherry and earth.",
-      "colors": ["Red", "Ruby"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Ruby"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-15",
       "price": 510000,
       "discount": 13
@@ -210,8 +333,15 @@
       "category": "Red Wine",
       "yearFrom": "2020",
       "description": "A bold Croatian red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-16",
       "price": 420000,
       "discount": 10
@@ -222,8 +352,15 @@
       "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A bold Portuguese red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-17",
       "price": 460000,
       "discount": 12
@@ -234,8 +371,15 @@
       "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A bold Italian red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-18",
       "price": 495000,
       "discount": 14
@@ -246,8 +390,15 @@
       "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A bold French red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-19",
       "price": 540000,
       "discount": 16
@@ -258,8 +409,15 @@
       "category": "Red Wine",
       "yearFrom": "2016",
       "description": "A bold Spanish red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-20",
       "price": 575000,
       "discount": 18
@@ -270,8 +428,15 @@
       "category": "Red Wine",
       "yearFrom": "2015",
       "description": "A bold American red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-21",
       "price": 610000,
       "discount": 20
@@ -282,8 +447,15 @@
       "category": "Red Wine",
       "yearFrom": "2021",
       "description": "A bold Australian red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-22",
       "price": 655000,
       "discount": 22
@@ -294,8 +466,15 @@
       "category": "Red Wine",
       "yearFrom": "2020",
       "description": "A bold New Zealand red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-23",
       "price": 690000,
       "discount": 24
@@ -306,8 +485,15 @@
       "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A bold South African red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-24",
       "price": 720000,
       "discount": 26
@@ -318,8 +504,15 @@
       "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A bold Chilean red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-25",
       "price": 760000,
       "discount": 28
@@ -330,8 +523,15 @@
       "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A bold Argentine red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-26",
       "price": 790000,
       "discount": 30
@@ -342,8 +542,15 @@
       "category": "Red Wine",
       "yearFrom": "2016",
       "description": "A bold Brazilian red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-27",
       "price": 830000,
       "discount": 32
@@ -354,8 +561,15 @@
       "category": "Red Wine",
       "yearFrom": "2015",
       "description": "A bold Canadian red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-28",
       "price": 860000,
       "discount": 34
@@ -366,8 +580,15 @@
       "category": "Red Wine",
       "yearFrom": "2014",
       "description": "A bold Mexican red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-29",
       "price": 895000,
       "discount": 36
@@ -378,8 +599,15 @@
       "category": "Red Wine",
       "yearFrom": "2013",
       "description": "A bold Indian red wine with notes of blackberry and spice.",
-      "colors": ["Red", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-04-30",
       "price": 930000,
       "discount": 38
@@ -390,8 +618,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2020",
       "description": "A lively prosecco with crisp pear, citrus, and fine bubbles.",
-      "colors": ["Pale Gold", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-01",
       "price": 540000,
       "discount": 12
@@ -402,8 +637,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2019",
       "description": "A dry cava with green apple, almond, and persistent mousse.",
-      "colors": ["Gold", "Pale Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Pale Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-02",
       "price": 590000,
       "discount": 14
@@ -414,8 +656,15 @@
       "category": "Port Wine",
       "yearFrom": "2021",
       "description": "A rich ruby port with black cherry, plum, and cocoa depth.",
-      "colors": ["Ruby", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-03",
       "price": 480000,
       "discount": 9
@@ -426,8 +675,15 @@
       "category": "Port Wine",
       "yearFrom": "2018",
       "description": "A mellow tawny port with caramel, walnut, and dried fig notes.",
-      "colors": ["Amber", "Tawny"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Tawny"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-04",
       "price": 505000,
       "discount": 11
@@ -438,8 +694,15 @@
       "category": "Sherry",
       "yearFrom": "2022",
       "description": "A pale fino sherry with saline freshness and toasted almond notes.",
-      "colors": ["Pale Gold", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-05",
       "price": 410000,
       "discount": 8
@@ -450,8 +713,15 @@
       "category": "Sherry",
       "yearFrom": "2021",
       "description": "A deep oloroso sherry with walnut, spice, and polished oak tones.",
-      "colors": ["Amber", "Mahogany"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Mahogany"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-06",
       "price": 445000,
       "discount": 10
@@ -462,8 +732,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2023",
       "description": "A luxurious dessert wine with honey, apricot, and candied citrus.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-07",
       "price": 395000,
       "discount": 7
@@ -474,8 +751,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2022",
       "description": "A sweet Tokaji with marmalade, quince, and long velvet finish.",
-      "colors": ["Golden", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Golden",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-08",
       "price": 405000,
       "discount": 6
@@ -486,8 +770,15 @@
       "category": "Ice Wine",
       "yearFrom": "2021",
       "description": "A concentrated ice wine with tropical fruit, honey, and vibrant acidity.",
-      "colors": ["Golden", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Golden",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-09",
       "price": 430000,
       "discount": 9
@@ -498,8 +789,15 @@
       "category": "Ice Wine",
       "yearFrom": "2020",
       "description": "A bright ice wine with peach nectar, citrus peel, and floral lift.",
-      "colors": ["Yellow", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Yellow",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-10",
       "price": 420000,
       "discount": 8
@@ -510,8 +808,16 @@
       "category": "Orange Wine",
       "yearFrom": "2023",
       "description": "An orange wine with dried apricot, tea leaf, and subtle tannin grip.",
-      "colors": ["Amber", "Orange", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Orange",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-11",
       "price": 385000,
       "discount": 5
@@ -522,8 +828,16 @@
       "category": "Orange Wine",
       "yearFrom": "2022",
       "description": "A textured orange wine with orange peel, herbs, and savory minerality.",
-      "colors": ["Orange", "Amber", "Copper"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Orange",
+        "Amber",
+        "Copper"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-12",
       "price": 398000,
       "discount": 6
@@ -534,8 +848,15 @@
       "category": "Champagne",
       "yearFrom": "2020",
       "description": "A refined champagne with fine bubbles, brioche, and citrus zest.",
-      "colors": ["Gold", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-13",
       "price": 760000,
       "discount": 15
@@ -546,8 +867,15 @@
       "category": "Champagne",
       "yearFrom": "2019",
       "description": "A vibrant brut champagne with apple, almond, and toasted bread notes.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-14",
       "price": 820000,
       "discount": 18
@@ -558,8 +886,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2023",
       "description": "A smooth madeira with roasted nuts, citrus peel, and gentle sweetness.",
-      "colors": ["Amber", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-15",
       "price": 365000,
       "discount": 4
@@ -570,8 +905,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2022",
       "description": "A rich madeira with caramel, dried fruit, and warming spice.",
-      "colors": ["Mahogany", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Mahogany",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-16",
       "price": 372000,
       "discount": 5
@@ -582,8 +924,15 @@
       "category": "Red Wine",
       "yearFrom": "2020",
       "description": "A layered Bordeaux red with blackberry, cedar, and velvet tannins.",
-      "colors": ["Ruby", "Garnet"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Garnet"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-17",
       "price": 545000,
       "discount": 12
@@ -594,8 +943,15 @@
       "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A mature Rioja with cherry, vanilla, and tobacco notes.",
-      "colors": ["Red", "Burgundy"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Burgundy"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-18",
       "price": 515000,
       "discount": 10
@@ -606,8 +962,15 @@
       "category": "Red Wine",
       "yearFrom": "2021",
       "description": "A bright Chianti with sour cherry, herbs, and balanced acidity.",
-      "colors": ["Ruby", "Red"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Red"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-19",
       "price": 455000,
       "discount": 9
@@ -618,8 +981,15 @@
       "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A dense Shiraz with plum, pepper, and dark chocolate.",
-      "colors": ["Crimson", "Red"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Crimson",
+        "Red"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-20",
       "price": 565000,
       "discount": 13
@@ -630,8 +1000,15 @@
       "category": "Red Wine",
       "yearFrom": "2020",
       "description": "A polished Meritage blend with cassis, oak, and spice.",
-      "colors": ["Garnet", "Burgundy"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Garnet",
+        "Burgundy"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-21",
       "price": 625000,
       "discount": 15
@@ -642,8 +1019,15 @@
       "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A ripe red blend with blackberry, violet, and cocoa finish.",
-      "colors": ["Ruby", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-22",
       "price": 495000,
       "discount": 11
@@ -654,8 +1038,15 @@
       "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A powerful Douro red with plum, mineral, and spice tones.",
-      "colors": ["Red", "Garnet"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Garnet"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-23",
       "price": 535000,
       "discount": 12
@@ -666,8 +1057,15 @@
       "category": "Red Wine",
       "yearFrom": "2022",
       "description": "A modern Tuscan red with black fruit and smooth oak.",
-      "colors": ["Burgundy", "Red"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Burgundy",
+        "Red"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-24",
       "price": 475000,
       "discount": 8
@@ -678,8 +1076,15 @@
       "category": "White Wine",
       "yearFrom": "2022",
       "description": "A mineral-driven white with lemon zest and oyster-shell freshness.",
-      "colors": ["Pale Yellow", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Yellow",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-25",
       "price": 485000,
       "discount": 9
@@ -690,8 +1095,15 @@
       "category": "White Wine",
       "yearFrom": "2021",
       "description": "A fresh Pinot Blanc with pear, white flowers, and soft texture.",
-      "colors": ["White", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "White",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-26",
       "price": 395000,
       "discount": 7
@@ -702,8 +1114,15 @@
       "category": "White Wine",
       "yearFrom": "2023",
       "description": "A lively Gruner with lime, green apple, and peppery finish.",
-      "colors": ["Straw", "Pale Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Straw",
+        "Pale Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-27",
       "price": 388000,
       "discount": 6
@@ -714,8 +1133,15 @@
       "category": "White Wine",
       "yearFrom": "2022",
       "description": "A crisp Albariño with citrus, saline notes, and peach blossom.",
-      "colors": ["White", "Golden"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "White",
+        "Golden"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-28",
       "price": 425000,
       "discount": 8
@@ -726,8 +1152,15 @@
       "category": "White Wine",
       "yearFrom": "2021",
       "description": "A floral Viognier with apricot, honeysuckle, and silky body.",
-      "colors": ["Golden", "Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Golden",
+        "Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-29",
       "price": 432000,
       "discount": 9
@@ -738,8 +1171,15 @@
       "category": "White Wine",
       "yearFrom": "2020",
       "description": "A textured Semillon with beeswax, citrus peel, and soft oak.",
-      "colors": ["Pale Gold", "Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-30",
       "price": 418000,
       "discount": 7
@@ -750,8 +1190,15 @@
       "category": "White Wine",
       "yearFrom": "2023",
       "description": "A bright Soave with white peach, almond, and floral lift.",
-      "colors": ["Straw", "White"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Straw",
+        "White"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-05-31",
       "price": 365000,
       "discount": 5
@@ -762,8 +1209,15 @@
       "category": "White Wine",
       "yearFrom": "2022",
       "description": "A clean Verdicchio with citrus, fennel, and mineral freshness.",
-      "colors": ["Pale Yellow", "Golden"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Yellow",
+        "Golden"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-01",
       "price": 378000,
       "discount": 6
@@ -774,8 +1228,15 @@
       "category": "Champagne",
       "yearFrom": "2020",
       "description": "A refined rose champagne with berry fruit and brioche complexity.",
-      "colors": ["Rose", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Rose",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-02",
       "price": 845000,
       "discount": 16
@@ -786,8 +1247,15 @@
       "category": "Champagne",
       "yearFrom": "2018",
       "description": "A deep champagne with toasted hazelnut, citrus, and chalk finish.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-03",
       "price": 910000,
       "discount": 19
@@ -798,8 +1266,15 @@
       "category": "Champagne",
       "yearFrom": "2019",
       "description": "A dry brut nature with fine mousse and citrus blossom nose.",
-      "colors": ["Straw", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Straw",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-04",
       "price": 880000,
       "discount": 17
@@ -810,8 +1285,15 @@
       "category": "Champagne",
       "yearFrom": "2021",
       "description": "A celebratory cuvee with apple, toast, and elegant acidity.",
-      "colors": ["Gold", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-05",
       "price": 795000,
       "discount": 14
@@ -822,8 +1304,15 @@
       "category": "Champagne",
       "yearFrom": "2020",
       "description": "A grower-style blanc with citrus pith and creamy bubbles.",
-      "colors": ["Pale Gold", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-06",
       "price": 765000,
       "discount": 13
@@ -834,8 +1323,15 @@
       "category": "Champagne",
       "yearFrom": "2019",
       "description": "An extra brut champagne with chalk, lemon, and almond finish.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-07",
       "price": 835000,
       "discount": 15
@@ -846,8 +1342,15 @@
       "category": "Champagne",
       "yearFrom": "2021",
       "description": "A floral champagne with white peach and crisp mineral tension.",
-      "colors": ["Straw", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Straw",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-08",
       "price": 785000,
       "discount": 12
@@ -858,8 +1361,15 @@
       "category": "Champagne",
       "yearFrom": "2018",
       "description": "A barrel-aged champagne with pastry notes and long finish.",
-      "colors": ["Gold", "Honey"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Honey"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-09",
       "price": 925000,
       "discount": 18
@@ -870,8 +1380,15 @@
       "category": "Rose Wine",
       "yearFrom": "2023",
       "description": "A dry rose with strawberry, melon, and crisp finish.",
-      "colors": ["Pink", "Blush"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pink",
+        "Blush"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-10",
       "price": 365000,
       "discount": 5
@@ -882,8 +1399,15 @@
       "category": "Rose Wine",
       "yearFrom": "2022",
       "description": "A lively rose with raspberry, herbs, and floral perfume.",
-      "colors": ["Rose", "Coral"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Rose",
+        "Coral"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-11",
       "price": 378000,
       "discount": 6
@@ -894,8 +1418,15 @@
       "category": "Rose Wine",
       "yearFrom": "2023",
       "description": "A bright rose with peach skin and citrus-driven freshness.",
-      "colors": ["Pink", "Rose"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pink",
+        "Rose"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-12",
       "price": 392000,
       "discount": 7
@@ -906,8 +1437,15 @@
       "category": "Rose Wine",
       "yearFrom": "2021",
       "description": "A savory rose with watermelon, red currant, and crisp acidity.",
-      "colors": ["Blush", "Coral"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Blush",
+        "Coral"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-13",
       "price": 355000,
       "discount": 4
@@ -918,8 +1456,15 @@
       "category": "Rose Wine",
       "yearFrom": "2022",
       "description": "A deeper rose with cherry, rose petal, and subtle spice.",
-      "colors": ["Rose", "Pink"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Rose",
+        "Pink"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-14",
       "price": 408000,
       "discount": 8
@@ -930,8 +1475,15 @@
       "category": "Rose Wine",
       "yearFrom": "2023",
       "description": "An easy-drinking rose with berry fruit and refreshing finish.",
-      "colors": ["Pink", "Blush"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pink",
+        "Blush"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-15",
       "price": 342000,
       "discount": 5
@@ -942,8 +1494,15 @@
       "category": "Rose Wine",
       "yearFrom": "2021",
       "description": "A pale rose with red berries, citrus peel, and minerality.",
-      "colors": ["Blush", "Rose"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Blush",
+        "Rose"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-16",
       "price": 374000,
       "discount": 6
@@ -954,8 +1513,15 @@
       "category": "Rose Wine",
       "yearFrom": "2022",
       "description": "A soft rose with peach, strawberry, and floral undertones.",
-      "colors": ["Coral", "Pink"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Coral",
+        "Pink"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-17",
       "price": 386000,
       "discount": 7
@@ -966,8 +1532,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2023",
       "description": "A playful sparkling wine with green apple and yeasty lift.",
-      "colors": ["Pale Gold", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-18",
       "price": 455000,
       "discount": 9
@@ -978,8 +1551,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2021",
       "description": "A classic-method sparkler with brioche, citrus, and fine mousse.",
-      "colors": ["Gold", "Pale Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Pale Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-19",
       "price": 522000,
       "discount": 11
@@ -990,8 +1570,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2022",
       "description": "A vibrant sparkling red with berries and gentle sweetness.",
-      "colors": ["Ruby", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-20",
       "price": 398000,
       "discount": 7
@@ -1002,8 +1589,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2020",
       "description": "A structured sparkling wine with apple skin and toasted notes.",
-      "colors": ["Gold", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-21",
       "price": 545000,
       "discount": 12
@@ -1014,8 +1608,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2023",
       "description": "A fragrant sparkling wine with lychee, jasmine, and sweet fizz.",
-      "colors": ["White", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "White",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-22",
       "price": 412000,
       "discount": 8
@@ -1026,8 +1627,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2021",
       "description": "A refined Cremant with citrus zest and creamy texture.",
-      "colors": ["Pale Yellow", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Yellow",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-23",
       "price": 508000,
       "discount": 10
@@ -1038,8 +1646,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2022",
       "description": "A clean brut sparkler with lemon, pear, and mineral finish.",
-      "colors": ["Straw", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Straw",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-24",
       "price": 468000,
       "discount": 9
@@ -1050,8 +1665,15 @@
       "category": "Sparkling Wine",
       "yearFrom": "2023",
       "description": "A pink sparkler with red berries and crisp bubbles.",
-      "colors": ["Rose", "Pink"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Rose",
+        "Pink"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-25",
       "price": 425000,
       "discount": 8
@@ -1062,8 +1684,15 @@
       "category": "Port Wine",
       "yearFrom": "2019",
       "description": "A full-bodied port with cassis, cocoa, and polished tannins.",
-      "colors": ["Ruby", "Garnet"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Garnet"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-26",
       "price": 515000,
       "discount": 10
@@ -1074,8 +1703,15 @@
       "category": "Port Wine",
       "yearFrom": "2021",
       "description": "A golden white port with dried apricot and citrus peel.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-27",
       "price": 452000,
       "discount": 8
@@ -1086,8 +1722,15 @@
       "category": "Port Wine",
       "yearFrom": "2017",
       "description": "A deep port with blackberry, spice, and long chocolate finish.",
-      "colors": ["Crimson", "Ruby"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Crimson",
+        "Ruby"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-28",
       "price": 625000,
       "discount": 14
@@ -1098,8 +1741,15 @@
       "category": "Port Wine",
       "yearFrom": "2018",
       "description": "A nuanced colheita port with nuts, dried fig, and spice.",
-      "colors": ["Amber", "Tawny"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Tawny"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-29",
       "price": 548000,
       "discount": 11
@@ -1110,8 +1760,15 @@
       "category": "Port Wine",
       "yearFrom": "2016",
       "description": "A mature tawny with caramel, orange peel, and walnut richness.",
-      "colors": ["Tawny", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Tawny",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-06-30",
       "price": 575000,
       "discount": 12
@@ -1122,8 +1779,15 @@
       "category": "Port Wine",
       "yearFrom": "2020",
       "description": "A youthful ruby port with ripe plum and blackberry core.",
-      "colors": ["Ruby", "Red"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Red"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-01",
       "price": 438000,
       "discount": 7
@@ -1134,8 +1798,15 @@
       "category": "Port Wine",
       "yearFrom": "2019",
       "description": "A rich single-quinta port with floral lift and dark fruit.",
-      "colors": ["Garnet", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Garnet",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-02",
       "price": 532000,
       "discount": 9
@@ -1146,8 +1817,15 @@
       "category": "Port Wine",
       "yearFrom": "2015",
       "description": "A mellow old tawny with toffee, raisin, and spice.",
-      "colors": ["Amber", "Mahogany"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Mahogany"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-03",
       "price": 598000,
       "discount": 13
@@ -1158,8 +1836,15 @@
       "category": "Sherry",
       "yearFrom": "2022",
       "description": "A coastal manzanilla with saline snap and almond finish.",
-      "colors": ["Pale Gold", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-04",
       "price": 392000,
       "discount": 6
@@ -1170,8 +1855,15 @@
       "category": "Sherry",
       "yearFrom": "2021",
       "description": "A nutty amontillado with caramel and lifted savory notes.",
-      "colors": ["Amber", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-05",
       "price": 418000,
       "discount": 8
@@ -1182,8 +1874,15 @@
       "category": "Sherry",
       "yearFrom": "2020",
       "description": "A luscious sherry with raisin, molasses, and espresso depth.",
-      "colors": ["Mahogany", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Mahogany",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-06",
       "price": 455000,
       "discount": 9
@@ -1194,8 +1893,15 @@
       "category": "Sherry",
       "yearFrom": "2021",
       "description": "A smooth cream sherry with toffee, dried fig, and walnut.",
-      "colors": ["Amber", "Copper"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Copper"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-07",
       "price": 425000,
       "discount": 7
@@ -1206,8 +1912,15 @@
       "category": "Sherry",
       "yearFrom": "2019",
       "description": "A rare sherry with citrus edge, walnut, and elegant lift.",
-      "colors": ["Amber", "Mahogany"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Mahogany"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-08",
       "price": 498000,
       "discount": 10
@@ -1218,8 +1931,15 @@
       "category": "Sherry",
       "yearFrom": "2022",
       "description": "A fragrant sherry with orange peel, honey, and floral sweetness.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-09",
       "price": 405000,
       "discount": 6
@@ -1230,8 +1950,15 @@
       "category": "Sherry",
       "yearFrom": "2023",
       "description": "An unfiltered fino with intense savory notes and citrus snap.",
-      "colors": ["Pale Yellow", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Yellow",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-10",
       "price": 398000,
       "discount": 5
@@ -1242,8 +1969,15 @@
       "category": "Sherry",
       "yearFrom": "2018",
       "description": "A mature oloroso with spice box, walnut, and long warmth.",
-      "colors": ["Mahogany", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Mahogany",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-11",
       "price": 472000,
       "discount": 9
@@ -1254,8 +1988,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2022",
       "description": "A sweet dessert wine with apricot jam and floral honey.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-12",
       "price": 438000,
       "discount": 8
@@ -1266,8 +2007,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2023",
       "description": "A perfumed dessert wine with orange blossom and peach syrup.",
-      "colors": ["Golden", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Golden",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-13",
       "price": 396000,
       "discount": 7
@@ -1278,8 +2026,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2021",
       "description": "A late-harvest wine with quince, honey, and vivid acidity.",
-      "colors": ["Gold", "Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-14",
       "price": 415000,
       "discount": 6
@@ -1290,8 +2045,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2020",
       "description": "A concentrated sweet wine with marmalade and saffron depth.",
-      "colors": ["Amber", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-15",
       "price": 462000,
       "discount": 9
@@ -1302,8 +2064,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2022",
       "description": "A bright dessert wine with pineapple, pear, and honeycomb.",
-      "colors": ["Pale Gold", "Golden"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Golden"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-16",
       "price": 388000,
       "discount": 5
@@ -1314,8 +2083,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2021",
       "description": "A rich passito with dried apricot, fig, and spice finish.",
-      "colors": ["Amber", "Honey"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Honey"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-17",
       "price": 452000,
       "discount": 8
@@ -1326,8 +2102,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2023",
       "description": "A soft dessert wine with peach, orange peel, and blossom notes.",
-      "colors": ["Yellow", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Yellow",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-18",
       "price": 372000,
       "discount": 4
@@ -1338,8 +2121,15 @@
       "category": "Dessert Wine",
       "yearFrom": "2020",
       "description": "A luxurious dessert wine with candied citrus and silk texture.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-19",
       "price": 478000,
       "discount": 10
@@ -1350,8 +2140,15 @@
       "category": "Ice Wine",
       "yearFrom": "2022",
       "description": "A pink-hued ice wine with strawberry jam and bright lift.",
-      "colors": ["Rose", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Rose",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-20",
       "price": 458000,
       "discount": 8
@@ -1362,8 +2159,15 @@
       "category": "Ice Wine",
       "yearFrom": "2021",
       "description": "A rich ice wine with pineapple, mango, and honey finish.",
-      "colors": ["Golden", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Golden",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-21",
       "price": 442000,
       "discount": 7
@@ -1374,8 +2178,15 @@
       "category": "Ice Wine",
       "yearFrom": "2023",
       "description": "An aromatic ice wine with lychee, rose, and citrus peel.",
-      "colors": ["Yellow", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Yellow",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-22",
       "price": 435000,
       "discount": 6
@@ -1386,8 +2197,15 @@
       "category": "Ice Wine",
       "yearFrom": "2020",
       "description": "A concentrated ice wine with nectarine, marmalade, and floral lift.",
-      "colors": ["Pale Gold", "Straw"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Straw"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-23",
       "price": 448000,
       "discount": 8
@@ -1398,8 +2216,15 @@
       "category": "Ice Wine",
       "yearFrom": "2022",
       "description": "A crystalline ice wine with lime, peach nectar, and mineral edge.",
-      "colors": ["Straw", "Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Straw",
+        "Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-24",
       "price": 426000,
       "discount": 7
@@ -1410,8 +2235,15 @@
       "category": "Ice Wine",
       "yearFrom": "2021",
       "description": "A lush ice wine with apricot, honeycomb, and silky sweetness.",
-      "colors": ["Golden", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Golden",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-25",
       "price": 462000,
       "discount": 9
@@ -1422,8 +2254,15 @@
       "category": "Ice Wine",
       "yearFrom": "2023",
       "description": "A vibrant ice wine with pineapple, pear, and honey glaze.",
-      "colors": ["Gold", "Pale Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Pale Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-26",
       "price": 438000,
       "discount": 6
@@ -1434,8 +2273,15 @@
       "category": "Ice Wine",
       "yearFrom": "2020",
       "description": "A polished ice wine with floral aromas and citrus marmalade.",
-      "colors": ["Pale Gold", "Honey"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Gold",
+        "Honey"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-27",
       "price": 455000,
       "discount": 8
@@ -1446,8 +2292,15 @@
       "category": "Orange Wine",
       "yearFrom": "2023",
       "description": "A grippy orange wine with dried citrus and herbal finish.",
-      "colors": ["Amber", "Orange"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Orange"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-28",
       "price": 398000,
       "discount": 6
@@ -1458,8 +2311,15 @@
       "category": "Orange Wine",
       "yearFrom": "2022",
       "description": "An amphora-aged orange wine with tea leaf and dried apricot.",
-      "colors": ["Copper", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Copper",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-29",
       "price": 425000,
       "discount": 7
@@ -1470,8 +2330,15 @@
       "category": "Orange Wine",
       "yearFrom": "2021",
       "description": "A savory orange wine with orange peel and earthy minerality.",
-      "colors": ["Orange", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Orange",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-30",
       "price": 448000,
       "discount": 8
@@ -1482,8 +2349,15 @@
       "category": "Orange Wine",
       "yearFrom": "2023",
       "description": "A fresh orange wine with stone fruit, spice, and gentle tannin.",
-      "colors": ["Amber", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-07-31",
       "price": 392000,
       "discount": 5
@@ -1494,8 +2368,15 @@
       "category": "Orange Wine",
       "yearFrom": "2022",
       "description": "A juicy orange wine with mandarin, tea, and dried herbs.",
-      "colors": ["Orange", "Copper"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Orange",
+        "Copper"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-01",
       "price": 405000,
       "discount": 6
@@ -1506,8 +2387,15 @@
       "category": "Orange Wine",
       "yearFrom": "2021",
       "description": "A structured orange wine with apricot skin and savory grip.",
-      "colors": ["Amber", "Copper"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Copper"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-02",
       "price": 432000,
       "discount": 7
@@ -1518,8 +2406,15 @@
       "category": "Orange Wine",
       "yearFrom": "2023",
       "description": "A bright orange wine with bergamot, quince, and chalky finish.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-03",
       "price": 418000,
       "discount": 6
@@ -1530,8 +2425,15 @@
       "category": "Orange Wine",
       "yearFrom": "2022",
       "description": "A layered orange wine with marmalade, herbs, and dry finish.",
-      "colors": ["Orange", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Orange",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-04",
       "price": 446000,
       "discount": 8
@@ -1542,8 +2444,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2021",
       "description": "A dry madeira with citrus peel, nuts, and crisp finish.",
-      "colors": ["Gold", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-05",
       "price": 388000,
       "discount": 5
@@ -1554,8 +2463,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2020",
       "description": "A balanced madeira with dried fruit and toasted spice.",
-      "colors": ["Amber", "Honey"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Honey"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-06",
       "price": 402000,
       "discount": 6
@@ -1566,8 +2482,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2019",
       "description": "A rich madeira with toffee, fig, and orange peel warmth.",
-      "colors": ["Amber", "Mahogany"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Mahogany"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-07",
       "price": 418000,
       "discount": 7
@@ -1578,8 +2501,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2018",
       "description": "A mature madeira with walnut, caramel, and lifted acidity.",
-      "colors": ["Mahogany", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Mahogany",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-08",
       "price": 445000,
       "discount": 8
@@ -1590,8 +2520,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2022",
       "description": "A bright madeira with citrus, toasted almond, and dried peach.",
-      "colors": ["Gold", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-09",
       "price": 378000,
       "discount": 5
@@ -1602,8 +2539,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2017",
       "description": "An old-style madeira with spice box and dried fruit depth.",
-      "colors": ["Mahogany", "Copper"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Mahogany",
+        "Copper"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-10",
       "price": 462000,
       "discount": 9
@@ -1614,8 +2558,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2021",
       "description": "A medium-sweet madeira with apricot, nuts, and saline edge.",
-      "colors": ["Amber", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-11",
       "price": 395000,
       "discount": 6
@@ -1626,8 +2577,15 @@
       "category": "Madeira Wine",
       "yearFrom": "2020",
       "description": "A warming madeira with caramelized citrus and elegant finish.",
-      "colors": ["Amber", "Honey"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Honey"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-12",
       "price": 408000,
       "discount": 7
@@ -1638,8 +2596,15 @@
       "category": "Organic Wine",
       "yearFrom": "2023",
       "description": "An organic white wine with citrus blossom and fresh orchard fruit.",
-      "colors": ["Pale Yellow", "White"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Pale Yellow",
+        "White"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-13",
       "price": 382000,
       "discount": 5
@@ -1650,8 +2615,15 @@
       "category": "Organic Wine",
       "yearFrom": "2022",
       "description": "An organic red with blackberry fruit and earthy spice.",
-      "colors": ["Ruby", "Red"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Red"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-14",
       "price": 418000,
       "discount": 6
@@ -1662,8 +2634,15 @@
       "category": "Natural Wine",
       "yearFrom": "2023",
       "description": "A minimal-intervention wine with wild herbs and textured finish.",
-      "colors": ["Amber", "Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Amber",
+        "Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-15",
       "price": 425000,
       "discount": 7
@@ -1674,8 +2653,15 @@
       "category": "Natural Wine",
       "yearFrom": "2022",
       "description": "A lively natural red with tart cherry and herbal lift.",
-      "colors": ["Crimson", "Ruby"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Crimson",
+        "Ruby"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-16",
       "price": 432000,
       "discount": 8
@@ -1686,8 +2672,15 @@
       "category": "Kosher Wine",
       "yearFrom": "2021",
       "description": "A clean kosher white with pear, lemon, and floral notes.",
-      "colors": ["White", "Pale Gold"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "White",
+        "Pale Gold"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-17",
       "price": 398000,
       "discount": 6
@@ -1698,8 +2691,15 @@
       "category": "Kosher Wine",
       "yearFrom": "2020",
       "description": "A kosher red with plum, spice, and balanced tannins.",
-      "colors": ["Red", "Burgundy"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Red",
+        "Burgundy"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-18",
       "price": 445000,
       "discount": 8
@@ -1710,8 +2710,15 @@
       "category": "Fruit Wine",
       "yearFrom": "2023",
       "description": "A fruit wine with blackberry aroma and soft sweet finish.",
-      "colors": ["Ruby", "Rose"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Rose"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-19",
       "price": 335000,
       "discount": 4
@@ -1722,8 +2729,15 @@
       "category": "Fruit Wine",
       "yearFrom": "2022",
       "description": "A fragrant fruit wine with peach nectar and floral sweetness.",
-      "colors": ["Gold", "Pale Yellow"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Gold",
+        "Pale Yellow"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-20",
       "price": 328000,
       "discount": 3
@@ -1734,8 +2748,15 @@
       "category": "Fortified Wine",
       "yearFrom": "2021",
       "description": "A fortified wine with muscat perfume, honey, and warm finish.",
-      "colors": ["Golden", "Amber"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Golden",
+        "Amber"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-21",
       "price": 412000,
       "discount": 6
@@ -1746,11 +2767,101 @@
       "category": "Fortified Wine",
       "yearFrom": "2020",
       "description": "A fortified red wine with berry richness and smooth warmth.",
-      "colors": ["Ruby", "Crimson"],
-      "size": ["S", "M", "L"],
+      "colors": [
+        "Ruby",
+        "Crimson"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
       "onStoreDate": "2026-08-22",
       "price": 438000,
       "discount": 7
     }
-  ]
+  ],
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Anna",
+      "lastName": "Nguyen",
+      "username": "anna.nguyen",
+      "email": "anna.nguyen@example.com",
+      "password": "wine1234",
+      "subscribeNewsletter": true,
+      "createdAt": "2026-04-22T08:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "firstName": "Minh",
+      "lastName": "Tran",
+      "username": "minh.tran",
+      "email": "minh.tran@example.com",
+      "password": "cellar2026",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-22T08:15:00.000Z"
+    },
+    {
+      "id": "3",
+      "firstName": "Linh",
+      "lastName": "Pham",
+      "username": "linh.pham",
+      "email": "linh.pham@example.com",
+      "password": "grapes2026",
+      "subscribeNewsletter": true,
+      "createdAt": "2026-04-22T08:30:00.000Z"
+    },
+    {
+      "firstName": "Ha",
+      "lastName": "Chuc",
+      "username": "ha.chuc",
+      "email": "ha.chuc@example.com",
+      "password": "12345678q",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-22T09:48:28.786Z",
+      "id": "iXw9j8kO0JQ"
+    },
+    {
+      "firstName": "Nguyen",
+      "lastName": "C",
+      "username": "FFF",
+      "email": "nguyen.ngoc.trung-c@sun-asterisk.com",
+      "password": "Aa@123456",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-23T02:53:37.930Z",
+      "id": "1N5cqzLVpFg"
+    },
+    {
+      "firstName": "Nguyen",
+      "lastName": "C",
+      "username": "fsdf",
+      "email": "nguyen.n1@sfrisk.com",
+      "password": "A12345678",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-23T03:01:56.252Z",
+      "id": "hRT6lPLsGrg"
+    },
+    {
+      "firstName": "Nguyen11fdsf",
+      "lastName": "C",
+      "username": "FFFds",
+      "email": "nguyen.ng@sun-acom.fd",
+      "password": "12345678A",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-23T03:02:53.249Z",
+      "id": "9v544AMXHHA"
+    },
+    {
+      "firstName": "Nguyen",
+      "lastName": "Cfsdfd",
+      "username": "Adfsdffds",
+      "email": "43fdsfdrung-c@sun-asterisk.com",
+      "password": "1234567X",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-23T03:11:02.775Z",
+      "id": "HlOfwueUPDM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
