@@ -9,12 +9,6 @@ import ProductDetailPage from '../pages/ProductDetail/ProductDetail'
 import Register from '../pages/Register/Register'
 import { useAuth } from '../store/AuthContext'
 
-function ProtectedRoute({ children }: { children: ReactElement }) {
-  const { user } = useAuth()
-
-  return user ? children : <Navigate replace to="/login" />
-}
-
 function PublicOnlyRoute({ children }: { children: ReactElement }) {
   const { user } = useAuth()
 

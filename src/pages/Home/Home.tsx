@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import wineService from '../../services/wineService'
 import FeaturedWine from '../../components/layout/home/FeaturedWine.tsx'
 import { formatCurrency, getOriginalPrice } from '../../utils/currencyUtil.ts'
-import { Wine } from '../../types/wine.ts'
+import type { Wine } from '../../types/wine.ts'
 import { getWineDetailPath, resolveWineImage } from '../../utils/wineCatalog.ts'
 import { Link } from 'react-router-dom'
 

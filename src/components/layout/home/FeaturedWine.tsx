@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil.ts'
 import { FeaturedWineProps } from '../../../types/home/featureWineProps.ts'
