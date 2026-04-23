@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-import { useAuth } from '../../../store/AuthContext'
+import { isUserLoggedIn } from '../../../store/AuthContext'
 import type { Wine } from '../../../types/wine'
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
 
@@ -11,10 +11,10 @@ type ProductListItemProps = {
 
 export default function ProductListItem({ wine, resolveImage }: ProductListItemProps) {
   const navigate = useNavigate()
-  const { user } = useAuth()
+  const isLoggedIn = isUserLoggedIn()
 
   const handleAddToCart = () => {
-    if (!user) {
+    if (!isLoggedIn) {
       navigate('/login')
       return
     }

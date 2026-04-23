@@ -2813,14 +2813,54 @@
       "createdAt": "2026-04-22T08:30:00.000Z"
     },
     {
-      "firstName": "f",
-      "lastName": "C",
-      "username": "fdf",
-      "email": "ngur@su.fd",
+      "firstName": "Ha",
+      "lastName": "Chuc",
+      "username": "ha.chuc",
+      "email": "ha.chuc@example.com",
       "password": "12345678q",
       "subscribeNewsletter": false,
       "createdAt": "2026-04-22T09:48:28.786Z",
       "id": "iXw9j8kO0JQ"
+    },
+    {
+      "firstName": "Nguyen",
+      "lastName": "C",
+      "username": "FFF",
+      "email": "nguyen.ngoc.trung-c@sun-asterisk.com",
+      "password": "Aa@123456",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-23T02:53:37.930Z",
+      "id": "1N5cqzLVpFg"
+    },
+    {
+      "firstName": "Nguyen",
+      "lastName": "C",
+      "username": "fsdf",
+      "email": "nguyen.n1@sfrisk.com",
+      "password": "A12345678",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-23T03:01:56.252Z",
+      "id": "hRT6lPLsGrg"
+    },
+    {
+      "firstName": "Nguyen11fdsf",
+      "lastName": "C",
+      "username": "FFFds",
+      "email": "nguyen.ng@sun-acom.fd",
+      "password": "12345678A",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-23T03:02:53.249Z",
+      "id": "9v544AMXHHA"
+    },
+    {
+      "firstName": "Nguyen",
+      "lastName": "Cfsdfd",
+      "username": "Adfsdffds",
+      "email": "43fdsfdrung-c@sun-asterisk.com",
+      "password": "1234567X",
+      "subscribeNewsletter": false,
+      "createdAt": "2026-04-23T03:11:02.775Z",
+      "id": "HlOfwueUPDM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

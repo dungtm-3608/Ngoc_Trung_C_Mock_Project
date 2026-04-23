@@ -28,12 +28,8 @@ export async function login(payload: LoginPayload): Promise<AuthResponse> {
   const users = await getUsers()
   const matchedUser = users.find((user) => user.email.toLowerCase() === normalizedEmail)
 
-  if (!matchedUser) {
-    throw new Error('Email chưa được đăng ký.')
-  }
-
-  if (matchedUser.password !== payload.password) {
-    throw new Error('Mật khẩu không chính xác.')
+  if (!matchedUser || !(matchedUser.password !== payload.password)) {
+    throw new Error('Thông tin đăng nhập không chính xác.')
   }
 
   return {
