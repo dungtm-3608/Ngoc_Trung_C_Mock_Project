@@ -4,7 +4,7 @@ import { isUserLoggedIn } from '../../../store/AuthContext'
 
 import type { Wine } from '../../../types/wine'
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
-import { getWineDetailPath } from '../../../utils/wineCatalog'
+import { getWineDetailPath } from '../../../utils/wineUtils'
 
 type ProductCardProps = {
   wine: Wine

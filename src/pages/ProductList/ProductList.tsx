@@ -15,7 +15,7 @@ import {
   PRIMARY_CATEGORY_SLUG_TO_NAME,
   resolveWineImage,
   toCategorySlug,
-} from '../../utils/wineCatalog.ts'
+} from '../../utils/wineUtils.ts'
 
 import type { CategorySummary } from '../../types/categorySummary.ts'
 import { PRODUCT_GRID_PAGE_SIZE, PRODUCT_LIST_PAGE_SIZE } from '../../constants/index.ts'

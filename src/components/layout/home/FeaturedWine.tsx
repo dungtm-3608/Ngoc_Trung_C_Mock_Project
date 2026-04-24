@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil.ts'
 import { FeaturedWineProps } from '../../../types/home/featureWineProps.ts'
-import { getWineDetailPath } from '../../../utils/wineCatalog.ts'
+import { getWineDetailPath } from '../../../utils/wineUtils.ts'
 
 export default function FeaturedWine({ wine, bannerImage, resolveImage }: FeaturedWineProps) {
   return (
