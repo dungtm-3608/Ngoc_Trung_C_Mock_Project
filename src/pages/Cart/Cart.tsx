@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import CartEmptyState from '../../components/layout/cart/CartEmptyState'
 import CartItemsTable from '../../components/layout/cart/CartItemsTable'
 import CartSummary from '../../components/layout/cart/CartSummary'
+import CheckoutLoadErrorState from '../../components/layout/checkout/CheckoutLoadErrorState'
 import { useCart } from '../../store/CartContext'
 import wineService from '../../services/wineService'
 import type { EnrichedCartItem } from '../../types/cart/enrichedCartItem'
@@ -15,6 +16,8 @@ export default function CartPage() {
   const { items, toggleSelected, updateQuantity, removeFromCart } = useCart()
   const [wines, setWines] = useState<Wine[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [loadError, setLoadError] = useState('')
+  const [reloadSeed, setReloadSeed] = useState(0)
 
   const checkoutState = location.state as { checkoutSuccess?: boolean; orderId?: string | number } | null
 
@@ -24,6 +27,7 @@ export default function CartPage() {
     ;(async () => {
       try {
         setIsLoading(true)
+        setLoadError('')
         const nextWines = await wineService.getWines()
         if (!active) return
         setWines(nextWines)
@@ -31,6 +35,7 @@ export default function CartPage() {
         if (!active) return
         console.error('CartPage: error fetching wines', error)
         setWines([])
+        setLoadError('Không thể tải thông tin sản phẩm. Vui lòng thử lại.')
       } finally {
         if (active) {
           setIsLoading(false)
@@ -41,7 +46,7 @@ export default function CartPage() {
     return () => {
       active = false
     }
-  }, [])
+  }, [reloadSeed])
 
   const detailedItems = useMemo<EnrichedCartItem[]>(() => {
     return items.flatMap((item) => {
@@ -68,6 +73,10 @@ export default function CartPage() {
 
   if (isLoading) {
     return <main className="mx-auto max-w-7xl px-6 py-12 text-sm text-neutral-500">Đang tải giỏ hàng...</main>
+  }
+
+  if (loadError) {
+    return <CheckoutLoadErrorState message={loadError} onRetry={() => setReloadSeed((s) => s + 1)} />
   }
 
   return (

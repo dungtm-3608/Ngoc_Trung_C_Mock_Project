@@ -5,7 +5,7 @@ import FormField from '../../components/common/FormField.tsx'
 import AuthPageLayout from '../../components/layout/auth/AuthPageLayout'
 import { useAuth } from '../../store/AuthContext'
 import type { AuthResponse } from '../../types'
-import {RegisterFormState} from '../../types/register/registerFormState.ts'
+import type { RegisterFormState } from '../../types/register/registerFormState.ts'
 import {
   validateEmail,
   validatePassword,
