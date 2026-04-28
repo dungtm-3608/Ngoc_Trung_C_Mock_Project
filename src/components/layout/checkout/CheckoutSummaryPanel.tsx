@@ -33,6 +33,9 @@ export default function CheckoutSummaryPanel({
         <label className="block">
           <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500">Người nhận</span>
           <input
+            name="customerName"
+            autoComplete="name"
+            placeholder="Họ và tên người nhận"
             value={customerName}
             onChange={(event) => onCustomerNameChange(event.target.value)}
             className="w-full border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none focus:border-neutral-800"
@@ -42,6 +45,9 @@ export default function CheckoutSummaryPanel({
           <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500">Số điện thoại</span>
           <input
             type="tel"
+            name="phoneNumber"
+            autoComplete="tel"
+            placeholder="0912345678"
             value={phoneNumber}
             onChange={(event) => onPhoneNumberChange(event.target.value)}
             className="w-full border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none focus:border-neutral-800"
@@ -50,6 +56,9 @@ export default function CheckoutSummaryPanel({
         <label className="block">
           <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500">Địa chỉ giao hàng</span>
           <textarea
+            name="shippingAddress"
+            autoComplete="street-address"
+            placeholder="Số nhà, đường, quận, thành phố"
             value={shippingAddress}
             onChange={(event) => onShippingAddressChange(event.target.value)}
             className="min-h-28 w-full border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none focus:border-neutral-800"
@@ -75,7 +84,7 @@ export default function CheckoutSummaryPanel({
       <button
         type="button"
         onClick={onPlaceOrder}
-        disabled={isSubmitting}
+        disabled={isSubmitting || !customerName.trim() || !phoneNumber.trim() || !shippingAddress.trim()}
         className="mt-6 w-full border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:border-amber-500 hover:bg-amber-500 disabled:cursor-not-allowed disabled:border-neutral-200 disabled:bg-neutral-200 disabled:text-neutral-500"
       >
         Đặt hàng
