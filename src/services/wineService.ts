@@ -1,5 +1,7 @@
+import axios from 'axios'
+
 import { Wine } from '../types/wine'
-import axios from './axiosClient'
+import axiosClient from './axiosClient'
 
 const WINE_API = '/wines'
 
@@ -20,6 +22,23 @@ function normalizeWines(data: unknown): Wine[] {
   return []
 }
 
+function normalizeWine(data: unknown): Wine | null {
+  if (data && typeof data === 'object' && !Array.isArray(data)) {
+    return data as Wine
+  }
+
+  if (Array.isArray(data)) {
+    return data[0] ?? null
+  }
+
+  if (data === null || data === undefined) {
+    return null
+  }
+
+  console.warn('wineService: unexpected single wine payload', data)
+  return null
+}
+
 function getOnStoreTimestamp(onStoreDate?: string) {
   const timestamp = Date.parse(onStoreDate ?? '')
   return Number.isNaN(timestamp) ? 0 : timestamp
@@ -27,11 +46,24 @@ function getOnStoreTimestamp(onStoreDate?: string) {
 
 const wineService = {
   async getWines(options: WinesQueryOptions = {}) {
-    const response = await axios.get(WINE_API, {
+    const response = await axiosClient.get(WINE_API, {
       params: options.category ? { category: options.category } : undefined,
     })
 
     return normalizeWines(response.data)
+  },
+
+  async getWineById(wineId: string) {
+    try {
+      const response = await axiosClient.get(`${WINE_API}/${wineId}`)
+      return normalizeWine(response.data)
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 404) {
+        return null
+      }
+
+      throw error
+    }
   },
 
   async getNewProduct() {

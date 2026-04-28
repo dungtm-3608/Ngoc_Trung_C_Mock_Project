@@ -7,57 +7,25 @@ import ProductGridItem from '../../components/layout/product_list/ProductGridIte
 import ProductListItem from '../../components/layout/product_list/ProductListItem.tsx'
 import wineService from '../../services/wineService.ts'
 import type { Wine } from '../../types/wine.ts'
+import {
+  DEFAULT_CATEGORY_SLUG,
+  OTHER_CATEGORY_LABEL,
+  OTHER_CATEGORY_SLUG,
+  PRIMARY_CATEGORY_NAMES,
+  PRIMARY_CATEGORY_SLUG_TO_NAME,
+  resolveWineImage,
+  toCategorySlug,
+} from '../../utils/wineUtils.ts'
 
 import type { CategorySummary } from '../../types/categorySummary.ts'
 import { PRODUCT_GRID_PAGE_SIZE, PRODUCT_LIST_PAGE_SIZE } from '../../constants/index.ts'
 
 type ItemViewMode = 'grid' | 'list'
 
-const DEFAULT_CATEGORY_SLUG = 'red-wine'
-const OTHER_CATEGORY_SLUG = 'others'
-const OTHER_CATEGORY_LABEL = 'LOẠI RƯỢU KHÁC'
-const PRIMARY_CATEGORY_SLUG_TO_NAME: Record<string, string> = {
-  'red-wine': 'Red Wine',
-  'white-wine': 'White Wine',
-  'champagne': 'Champagne',
-}
-const PRIMARY_CATEGORY_NAMES = new Set(Object.values(PRIMARY_CATEGORY_SLUG_TO_NAME))
-
 const farmImages = import.meta.glob('/src/assets/farm/*.{png,jpg,jpeg}', { eager: true }) as Record<string, { default?: string } | string>
-
-function toCategorySlug(value: string) {
-  return value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-}
-
-function mapImageId(idStr: string) {
-  const id = parseInt(idStr, 10) || 0
-  if (id <= 0) return '1'
-  const wrapped = ((id - 1) % 14) + 1
-  return String(wrapped)
-}
-
-const wineImages = import.meta.glob('/src/assets/wine/*.{png,jpg,jpeg}', { eager: true }) as Record<string, { default?: string } | string>
 
 function resolveAssetImage(asset: { default?: string } | string) {
   return typeof asset === 'string' ? asset : (asset.default ?? '')
-}
-
-const wineImageUrlById = Object.fromEntries(
-  Object.entries(wineImages).flatMap(([path, asset]) => {
-    const match = path.match(/\/wine\/(\d+)\.(png|jpg|jpeg)$/)
-    if (!match) return []
-    return [[match[1], resolveAssetImage(asset)]]
-  }),
-) as Record<string, string>
-
-function resolveImage(wineId: string) {
-  const imgId = mapImageId(wineId)
-  return wineImageUrlById[imgId] ?? ''
 }
 
 function buildCategorySummaries(wines: Wine[]): CategorySummary[] {
@@ -261,13 +229,13 @@ export default function ProductListPage() {
           ) : itemViewMode === 'grid' ? (
             <div className="mt-8 grid gap-x-8 gap-y-12 sm:grid-cols-2 xl:grid-cols-3">
               {paginatedProducts.map((wine) => (
-                <ProductGridItem key={wine.id} wine={wine} resolveImage={resolveImage} />
+                <ProductGridItem key={wine.id} wine={wine} resolveImage={resolveWineImage} />
               ))}
             </div>
           ) : (
             <div className="mt-8 space-y-8">
               {paginatedProducts.map((wine) => (
-                <ProductListItem key={wine.id} wine={wine} resolveImage={resolveImage} />
+                <ProductListItem key={wine.id} wine={wine} resolveImage={resolveWineImage} />
               ))}
             </div>
           )}

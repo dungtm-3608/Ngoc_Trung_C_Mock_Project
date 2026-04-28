@@ -1,9 +1,10 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { isUserLoggedIn } from '../../../store/AuthContext'
 
 import type { Wine } from '../../../types/wine'
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
+import { getWineDetailPath } from '../../../utils/wineUtils'
 
 type ProductCardProps = {
   wine: Wine
@@ -23,11 +24,15 @@ export default function ProductGridItem({ wine, resolveImage }: ProductCardProps
 
   return (
     <article className="group flex flex-col items-center text-center">
-      <div className="flex h-72 w-full items-center justify-center overflow-hidden bg-white px-6 py-4 transition duration-300 group-hover:scale-[1.01]">
-        <img src={resolveImage(wine.id)} alt={wine.name} className="h-full w-auto object-contain" />
-      </div>
+      <Link to={getWineDetailPath(wine)} className="block w-full">
+        <div className="flex h-72 w-full items-center justify-center overflow-hidden bg-white px-6 py-4 transition duration-300 group-hover:scale-[1.01]">
+          <img src={resolveImage(wine.id)} alt={wine.name} className="h-full w-auto object-contain" />
+        </div>
+      </Link>
       <p className="mt-5 text-xs uppercase tracking-[0.28em] text-neutral-500">{wine.category}</p>
-      <h2 className="mt-2 text-base font-semibold uppercase tracking-[0.12em] text-neutral-800">{wine.name}</h2>
+      <Link to={getWineDetailPath(wine)} className="mt-2 text-base font-semibold uppercase tracking-[0.12em] text-neutral-800 transition hover:text-amber-600">
+        {wine.name}
+      </Link>
       <div className="mt-3 flex items-end gap-2">
         <span className="text-3xl leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
         {wine.discount ? (
