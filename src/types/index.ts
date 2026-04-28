@@ -5,6 +5,7 @@ export type User = {
   firstName: string
   lastName: string
   name: string
+  phoneNumber: string
 }
 
 export type LoginPayload = {
@@ -17,6 +18,7 @@ export type RegisterPayload = {
   lastName: string
   username: string
   email: string
+  phoneNumber: string
   password: string
   confirmPassword: string
   subscribeNewsletter: boolean
@@ -28,6 +30,7 @@ export type AuthUserRecord = {
   lastName: string
   username: string
   email: string
+  phoneNumber: string
   password: string
   subscribeNewsletter?: boolean
   createdAt?: string

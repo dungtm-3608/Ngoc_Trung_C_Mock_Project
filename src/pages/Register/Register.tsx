@@ -9,6 +9,7 @@ import {RegisterFormState} from '../../types/register/registerFormState.ts'
 import {
   validateEmail,
   validatePassword,
+  validatePhoneNumber,
   validateRequired,
   validateUsername,
 } from '../../utils/validators'
@@ -21,6 +22,7 @@ const initialForm: RegisterFormState = {
   lastName: '',
   username: '',
   email: '',
+  phoneNumber: '',
   password: '',
   confirmPassword: '',
   subscribeNewsletter: false,
@@ -31,6 +33,7 @@ const initialTouchedFields: RegisterTouchedFields = {
   lastName: false,
   username: false,
   email: false,
+  phoneNumber: false,
   password: false,
   confirmPassword: false,
 }
@@ -44,6 +47,7 @@ function getFieldErrors(form: RegisterFormState): RegisterFieldErrors {
     lastName: validateRequired(form.lastName, 'Tên sau'),
     username: validateUsername(form.username),
     email: validateEmail(form.email),
+    phoneNumber: validatePhoneNumber(form.phoneNumber),
     password: validatePassword(form.password),
     confirmPassword: !form.confirmPassword
       ? 'Xác nhận mật khẩu không được để trống.'
@@ -213,6 +217,21 @@ export default function Register() {
                 value: form.email,
                 onBlur: () => setTouchedFields((current) => ({ ...current, email: true })),
                 onChange: (event) => handleChange('email', getInputValue(event)),
+              }}
+            />
+
+            <FormField
+              label="Số điện thoại *"
+              error={fieldErrors.phoneNumber}
+              errorId="register-phone-number-error"
+              isErrorVisible={shouldShowFieldError('phoneNumber')}
+              inputProps={{
+                id: 'register-phone-number',
+                className: inputClassName,
+                type: 'tel',
+                value: form.phoneNumber,
+                onBlur: () => setTouchedFields((current) => ({ ...current, phoneNumber: true })),
+                onChange: (event) => handleChange('phoneNumber', getInputValue(event)),
               }}
             />
 

@@ -1,6 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
-
-import { isUserLoggedIn } from '../../../store/AuthContext'
+import { Link } from 'react-router-dom'
 import type { Wine } from '../../../types/wine'
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
 import { getWineDetailPath } from '../../../utils/wineUtils'
@@ -11,16 +9,6 @@ type ProductListItemProps = {
 }
 
 export default function ProductListItem({ wine, resolveImage }: ProductListItemProps) {
-  const navigate = useNavigate()
-  const isLoggedIn = isUserLoggedIn()
-
-  const handleAddToCart = () => {
-    if (!isLoggedIn) {
-      navigate('/login')
-      return
-    }
-  }
-
   return (
     <article className="grid gap-6 border-b border-neutral-200 pb-8 md:grid-cols-[220px_minmax(0,1fr)] md:items-center">
       <Link to={getWineDetailPath(wine)} className="flex h-64 items-center justify-center bg-white px-6 py-4">
@@ -37,21 +25,6 @@ export default function ProductListItem({ wine, resolveImage }: ProductListItemP
           ) : null}
         </div>
         <p className="mt-5 max-w-2xl text-sm leading-7 text-neutral-500">{wine.description}</p>
-        <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-neutral-500">
-          <Link
-            to={getWineDetailPath(wine)}
-            className="border border-neutral-300 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-800 transition hover:border-neutral-800"
-          >
-            Xem chi tiết
-          </Link>
-          <button
-            type="button"
-            onClick={handleAddToCart}
-            className="border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500"
-          >
-            THÊM VÀO GIỎ
-          </button>
-        </div>
       </div>
     </article>
   )

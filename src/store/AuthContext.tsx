@@ -26,6 +26,7 @@ function isStoredUser(value: unknown): value is User {
     candidate.firstName,
     candidate.lastName,
     candidate.name,
+    candidate.phoneNumber,
   ].every((field) => typeof field === 'string' && field.trim().length > 0)
 }
 

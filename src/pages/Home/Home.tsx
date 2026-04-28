@@ -79,9 +79,6 @@ export default function Home() {
           <span className="text-sm text-slate-400 line-through">{formatCurrency(getOriginalPrice(w.price, w.discount))}đ</span>
         ) : null}
       </div>
-      <button className="mt-4 border border-slate-900 bg-slate-900 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-amber-500 hover:border-amber-500">
-        Thêm vào giỏ
-      </button>
     </article>
   )
 

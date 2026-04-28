@@ -31,13 +31,7 @@ export default function RelatedWinesSection({ relatedWines, relatedSectionTitle,
               {relatedWine.name}
             </Link>
             <p className="mt-3 text-2xl text-amber-500">{formatCurrency(relatedWine.price)}đ</p>
-            <button
-              type="button"
-              onClick={() => onAddToCart(relatedWine)}
-              className="mt-4 border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500"
-            >
-              Thêm vào giỏ
-            </button>
+        
           </article>
         ))}
       </div>

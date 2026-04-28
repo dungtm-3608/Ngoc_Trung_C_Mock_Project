@@ -2788,6 +2788,7 @@
       "lastName": "Nguyen",
       "username": "anna.nguyen",
       "email": "anna.nguyen@example.com",
+      "phoneNumber": "0901234567",
       "password": "wine1234",
       "subscribeNewsletter": true,
       "createdAt": "2026-04-22T08:00:00.000Z"
@@ -2798,6 +2799,7 @@
       "lastName": "Tran",
       "username": "minh.tran",
       "email": "minh.tran@example.com",
+      "phoneNumber": "0912345678",
       "password": "cellar2026",
       "subscribeNewsletter": false,
       "createdAt": "2026-04-22T08:15:00.000Z"
@@ -2808,6 +2810,7 @@
       "lastName": "Pham",
       "username": "linh.pham",
       "email": "linh.pham@example.com",
+      "phoneNumber": "0987654321",
       "password": "grapes2026",
       "subscribeNewsletter": true,
       "createdAt": "2026-04-22T08:30:00.000Z"
@@ -2817,6 +2820,7 @@
       "lastName": "Chuc",
       "username": "ha.chuc",
       "email": "ha.chuc@example.com",
+      "phoneNumber": "0973456789",
       "password": "12345678q",
       "subscribeNewsletter": false,
       "createdAt": "2026-04-22T09:48:28.786Z",
@@ -2827,6 +2831,7 @@
       "lastName": "C",
       "username": "FFF",
       "email": "nguyen.ngoc.trung-c@sun-asterisk.com",
+      "phoneNumber": "0934567890",
       "password": "Aa@123456",
       "subscribeNewsletter": false,
       "createdAt": "2026-04-23T02:53:37.930Z",
@@ -2837,6 +2842,7 @@
       "lastName": "C",
       "username": "fsdf",
       "email": "nguyen.n1@sfrisk.com",
+      "phoneNumber": "0945678901",
       "password": "A12345678",
       "subscribeNewsletter": false,
       "createdAt": "2026-04-23T03:01:56.252Z",
@@ -2847,6 +2853,7 @@
       "lastName": "C",
       "username": "FFFds",
       "email": "nguyen.ng@sun-acom.fd",
+      "phoneNumber": "0956789012",
       "password": "12345678A",
       "subscribeNewsletter": false,
       "createdAt": "2026-04-23T03:02:53.249Z",
@@ -2857,10 +2864,143 @@
       "lastName": "Cfsdfd",
       "username": "Adfsdffds",
       "email": "43fdsfdrung-c@sun-asterisk.com",
+      "phoneNumber": "0967890123",
       "password": "1234567X",
       "subscribeNewsletter": false,
       "createdAt": "2026-04-23T03:11:02.775Z",
       "id": "HlOfwueUPDM"
+    }
+  ],
+  "orders": [
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 3230000,
+      "items": [
+        {
+          "wineId": "2",
+          "wineName": "White Wine Premium",
+          "unitPrice": 450000,
+          "quantity": 2
+        },
+        {
+          "wineId": "8",
+          "wineName": "Sauvignon Blanc Fresh",
+          "unitPrice": 350000,
+          "quantity": 2
+        },
+        {
+          "wineId": "5",
+          "wineName": "Merlot Reserve",
+          "unitPrice": 390000,
+          "quantity": 2,
+          "selectedColor": "Red",
+          "selectedSize": "S"
+        },
+        {
+          "wineId": "60",
+          "wineName": "Albariño Atlantic Coast",
+          "unitPrice": 425000,
+          "quantity": 2
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-24T04:19:55.261Z",
+      "id": "cq-sDg1U9vA"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1510000,
+      "items": [
+        {
+          "wineId": "6",
+          "wineName": "Chardonnay Bliss",
+          "unitPrice": 360000,
+          "quantity": 2
+        },
+        {
+          "wineId": "58",
+          "wineName": "Pinot Blanc Alpine",
+          "unitPrice": 395000,
+          "quantity": 2
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-24T04:20:38.476Z",
+      "id": "fA2O1epJ6s4"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 31390000,
+      "items": [
+        {
+          "wineId": "6",
+          "wineName": "Chardonnay Bliss",
+          "unitPrice": 360000,
+          "quantity": 2,
+          "selectedColor": "Golden",
+          "selectedSize": "L"
+        },
+        {
+          "wineId": "65",
+          "wineName": "Champagne Rose Prestige",
+          "unitPrice": 845000,
+          "quantity": 2,
+          "selectedColor": "Gold",
+          "selectedSize": "L"
+        },
+        {
+          "wineId": "10",
+          "wineName": "Cabernet Sauvignon Rich",
+          "unitPrice": 520000,
+          "quantity": 2,
+          "selectedColor": "Burgundy",
+          "selectedSize": "S"
+        },
+        {
+          "wineId": "32",
+          "wineName": "Indian Red",
+          "unitPrice": 930000,
+          "quantity": 6,
+          "selectedColor": "Red",
+          "selectedSize": "S"
+        },
+        {
+          "wineId": "32",
+          "wineName": "Indian Red",
+          "unitPrice": 930000,
+          "quantity": 14,
+          "selectedColor": "Crimson",
+          "selectedSize": "M"
+        },
+        {
+          "wineId": "32",
+          "wineName": "Indian Red",
+          "unitPrice": 930000,
+          "quantity": 6,
+          "selectedColor": "Crimson",
+          "selectedSize": "L"
+        },
+        {
+          "wineId": "7",
+          "wineName": "Pinot Noir Elegance",
+          "unitPrice": 470000,
+          "quantity": 8,
+          "selectedColor": "Ruby",
+          "selectedSize": "L"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-24T06:43:22.571Z",
+      "id": "iYtbb0U4cZ4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

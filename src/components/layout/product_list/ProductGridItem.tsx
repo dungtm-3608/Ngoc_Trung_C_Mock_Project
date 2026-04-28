@@ -1,6 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
-
-import { isUserLoggedIn } from '../../../store/AuthContext'
+import { Link } from 'react-router-dom'
 
 import type { Wine } from '../../../types/wine'
 import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
@@ -12,16 +10,6 @@ type ProductCardProps = {
 }
 
 export default function ProductGridItem({ wine, resolveImage }: ProductCardProps) {
-  const navigate = useNavigate()
-  const isLoggedIn = isUserLoggedIn()
-
-  const handleAddToCart = () => {
-    if (!isLoggedIn) {
-      navigate('/login')
-      return
-    }
-  }
-
   return (
     <article className="group flex flex-col items-center text-center">
       <Link to={getWineDetailPath(wine)} className="block w-full">
@@ -39,13 +27,6 @@ export default function ProductGridItem({ wine, resolveImage }: ProductCardProps
           <span className="pb-1 text-sm text-neutral-400 line-through">{formatCurrency(getOriginalPrice(wine.price, wine.discount))}đ</span>
         ) : null}
       </div>
-      <button
-        type="button"
-        onClick={handleAddToCart}
-        className="mt-5 border border-neutral-900 bg-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-amber-500 hover:bg-amber-500"
-      >
-        THÊM VÀO GIỎ
-      </button>
     </article>
   )
 }

@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 import logo from '../../assets/img-logo.png'
 import { useAuth, isUserLoggedIn } from '../../store/AuthContext'
+import { useCart } from '../../store/CartContext'
 
 const navLinkNormalStyle = (isActive: boolean) => ({
   color: isActive ? '#c29f62' : '#000000',
@@ -31,13 +32,14 @@ const mainNavItems = [
 export default function Header({ className = '' }) {
   const { user, logout } = useAuth()
   const isLoggedIn = isUserLoggedIn()
+  const { itemCount } = useCart()
 
   const topNavItems = isLoggedIn
     ? [
       { to: '/', label: `Xin chào, ${user?.firstName ?? ''}`, end: true },
       { to: '/order', label: 'Trạng thái đơn hàng' },
       { to: '/favorites', label: 'Danh sách ưu thích' },
-      { to: '/cart', label: 'Giỏ hàng' },
+      { to: '/cart', label: `Giỏ hàng (${itemCount})` },
     ]
     : guestTopNavItems
 
