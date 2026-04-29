@@ -38,6 +38,20 @@ export function validateEmail(value: string) {
   return ''
 }
 
+export function validatePhoneNumber(value: string) {
+  const normalizedValue = value.trim()
+
+  if (!normalizedValue) {
+    return 'Số điện thoại không được để trống.'
+  }
+
+  if (!/^(\+?\d[\d\s.-]{8,14})$/.test(normalizedValue)) {
+    return 'Số điện thoại không đúng định dạng.'
+  }
+
+  return ''
+}
+
 export function validatePassword(value: string) {
   if (!value) {
     return 'Mật khẩu không được để trống.'

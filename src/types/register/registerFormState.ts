@@ -3,6 +3,7 @@ export type RegisterFormState = {
   lastName: string
   username: string
   email: string
+  phoneNumber: string
   password: string
   confirmPassword: string
   subscribeNewsletter: boolean

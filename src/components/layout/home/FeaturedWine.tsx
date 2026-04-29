@@ -6,26 +6,19 @@ import { getWineDetailPath } from '../../../utils/wineUtils.ts'
 
 export default function FeaturedWine({ wine, bannerImage, resolveImage }: FeaturedWineProps) {
   return (
-    <section className="relative mx-auto mb-16 max-w-5xl">
+    <Link to={getWineDetailPath(wine)} className="group block relative mx-auto mb-16 max-w-5xl">
       <div className="h-[360px] overflow-hidden md:h-[420px]">
-        <img src={bannerImage} alt="Detail of item" className="h-full w-full object-cover" />
+        <img src={bannerImage} alt="Detail of item" className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.01]" />
       </div>
-      <div className="relative mx-auto -mt-20 grid max-w-4xl gap-8 bg-white px-8 py-10 shadow-[0_18px_60px_rgba(15,23,42,0.12)] md:grid-cols-[1fr_1.1fr] md:px-12">
+      <div className="relative mx-auto -mt-20 grid max-w-4xl gap-8 bg-white px-8 py-10 shadow-[0_18px_60px_rgba(15,23,42,0.12)] transition duration-300 group-hover:shadow-[0_24px_72px_rgba(15,23,42,0.16)] md:grid-cols-[1fr_1.1fr] md:px-12">
         <div className="relative flex items-center justify-center">
-          {wine.discount ? (
-            <div className="absolute left-0 top-0 h-0 w-0 border-b-[78px] border-l-[78px] border-b-amber-400 border-l-transparent">
-              <span className="absolute -left-16 top-4 -rotate-45 text-sm font-semibold uppercase tracking-[0.16em] text-white">
-                Giảm
-              </span>
-            </div>
-          ) : null}
           <img src={resolveImage(wine.id)} alt={wine.name} className="h-[320px] w-auto object-contain" />
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Chi tiết sản phẩm</p>
-          <Link to={getWineDetailPath(wine)} className="mt-3 text-[30px] font-semibold uppercase tracking-[0.12em] text-slate-800 transition hover:text-amber-600">
+          <h2 className="mt-3 text-[30px] font-semibold uppercase tracking-[0.12em] text-slate-800 transition group-hover:text-amber-600">
             {wine.name}
-          </Link>
+          </h2>
           <p className="mt-2 text-sm uppercase tracking-[0.18em] text-slate-400">Niên vụ {wine.yearFrom ?? '2026'}</p>
           <div className="mt-6 flex items-end gap-3">
             <span className="text-[38px] leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
@@ -35,9 +28,6 @@ export default function FeaturedWine({ wine, bannerImage, resolveImage }: Featur
               </span>
             ) : null}
           </div>
-          <button className="mt-6 w-fit border border-slate-900 bg-slate-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-amber-500 hover:border-amber-500">
-            Thêm vào giỏ
-          </button>
           <p className="mt-5 max-w-md text-sm leading-7 text-slate-500">
             {wine.description ?? 'Rượu vang được ủ trong điều kiện lý tưởng, tạo nên hương vị cân bằng và dư vị bền lâu.'}
           </p>
@@ -61,6 +51,6 @@ export default function FeaturedWine({ wine, bannerImage, resolveImage }: Featur
           </div>
         </div>
       </div>
-    </section>
+    </Link>
   )
 }

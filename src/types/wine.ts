@@ -10,3 +10,11 @@ export type Wine = {
   onStoreDate?: string
   yearFrom?: string
 }
+
+export type CartItem = {
+  wineId: string
+  quantity: number
+  selected: boolean
+  selectedColor?: string
+  selectedSize?: string
+}

@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.cart-quantity-input::-webkit-outer-spin-button,
+.cart-quantity-input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.cart-quantity-input {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}

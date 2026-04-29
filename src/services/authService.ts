@@ -15,6 +15,7 @@ function toUser(record: AuthUserRecord): User {
     firstName: record.firstName,
     lastName: record.lastName,
     name: `${record.firstName} ${record.lastName}`.trim(),
+    phoneNumber: record.phoneNumber,
   }
 }
 
@@ -28,7 +29,7 @@ export async function login(payload: LoginPayload): Promise<AuthResponse> {
   const users = await getUsers()
   const matchedUser = users.find((user) => user.email.toLowerCase() === normalizedEmail)
 
-  if (!matchedUser || !(matchedUser.password !== payload.password)) {
+  if (!matchedUser || (matchedUser.password !== payload.password)) {
     throw new Error('Thông tin đăng nhập không chính xác.')
   }
 
@@ -56,6 +57,7 @@ export async function register(payload: RegisterPayload): Promise<AuthResponse> 
     lastName: payload.lastName.trim(),
     username: payload.username.trim(),
     email: normalizedEmail,
+    phoneNumber: payload.phoneNumber.trim(),
     password: payload.password,
     subscribeNewsletter: payload.subscribeNewsletter,
     createdAt: new Date().toISOString(),
