@@ -10,6 +10,8 @@ import Register from '../pages/Register/Register'
 import { useAuth } from '../store/AuthContext'
 import CartPage from '../pages/Cart/Cart'
 import CheckoutPage from '../pages/Checkout/Checkout'
+import OrderPage from '../pages/Order/Order'
+import NotFoundPage from '../pages/NotFound/NotFound'
 
 function PublicOnlyRoute({ children }: { children: ReactElement }) {
   const { user } = useAuth()
@@ -82,9 +84,26 @@ export default function AppRouter() {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/order"
+        element={
+          <ProtectedRoute>
+            <OrderPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/order/:orderId"
+        element={
+          <ProtectedRoute>
+            <OrderPage />
+          </ProtectedRoute>
+        }
+      />
       <Route path="/red_wine" element={<Navigate replace to="/wines/red-wine" />} />
       <Route path="/white_wine" element={<Navigate replace to="/wines/white-wine" />} />
       <Route path="/champagne" element={<Navigate replace to="/wines/champagne" />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )
 }

@@ -82,7 +82,19 @@ export default function CheckoutPage() {
       })
   }, [items, wines])
 
-  const total = selectedItems.reduce((sum, item) => sum + item.wine.price * item.quantity, 0)
+  const selectedCartItems = useMemo(() => items.filter((item) => item.selected), [items])
+
+  const total = useMemo(() => {
+    if (selectedItems.length) {
+      return selectedItems.reduce((sum, item) => sum + item.wine.price * item.quantity, 0)
+    }
+
+    // fallback: compute total from cart items using available wine price or 0
+    return selectedCartItems.reduce((sum, cartItem) => {
+      const wine = wines.find((w) => w.id === cartItem.wineId)
+      return sum + (wine ? wine.price * cartItem.quantity : 0)
+    }, 0)
+  }, [selectedItems, selectedCartItems, wines])
 
   const handlePlaceOrder = async () => {
     if (!user) {
@@ -109,24 +121,48 @@ export default function CheckoutPage() {
       setIsSubmitting(true)
       setSubmitError('')
 
-      const order = await createOrder({
+      const cartSelected = selectedCartItems
+
+      const orderItems = (selectedItems.length ? selectedItems : cartSelected).map((entry) => {
+        // entry may be a CheckoutSelectedItem (with wine) or a CartItem
+        // normalize fields
+        if ((entry as any).wine) {
+          const item = entry as CheckoutSelectedItem
+          return {
+            wineId: item.wine.id,
+            wineName: item.wine.name,
+            unitPrice: item.wine.price,
+            quantity: item.quantity,
+            selectedColor: item.selectedColor,
+            selectedSize: item.selectedSize,
+          }
+        }
+
+        const cartItem = entry as typeof items[number]
+        const wine = wines.find((w) => w.id === cartItem.wineId)
+        return {
+          wineId: cartItem.wineId,
+          wineName: wine ? wine.name : 'Sản phẩm không tìm thấy',
+          unitPrice: wine ? wine.price : 0,
+          quantity: cartItem.quantity,
+          selectedColor: cartItem.selectedColor,
+          selectedSize: cartItem.selectedSize,
+        }
+      })
+
+      const payload = {
         userId: user.id,
         customerName: trimmedName,
         phoneNumber: trimmedPhoneNumber,
         shippingAddress: trimmedAddress,
         total,
-        items: selectedItems.map((item) => ({
-          wineId: item.wine.id,
-          wineName: item.wine.name,
-          unitPrice: item.wine.price,
-          quantity: item.quantity,
-          selectedColor: item.selectedColor,
-          selectedSize: item.selectedSize,
-        })),
-      })
+        items: orderItems,
+      }
+
+      const order = await createOrder(payload)
 
       clearSelected()
-      navigate('/cart', { replace: true, state: { checkoutSuccess: true, orderId: order.id } })
+      navigate(`/order/${order.id}`, { replace: true })
     } catch (error) {
       console.error('CheckoutPage: error creating order', error)
       setSubmitError('Không thể lưu đơn hàng. Vui lòng thử lại.')

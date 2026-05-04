@@ -7,10 +7,9 @@ import { getWineDetailPath, resolveWineImage } from '../../../utils/wineUtils'
 type RelatedWinesSectionProps = {
   relatedWines: Wine[]
   relatedSectionTitle: string
-  onAddToCart: (wine: Wine) => void
 }
 
-export default function RelatedWinesSection({ relatedWines, relatedSectionTitle, onAddToCart }: RelatedWinesSectionProps) {
+export default function RelatedWinesSection({ relatedWines, relatedSectionTitle }: RelatedWinesSectionProps) {
   if (!relatedWines.length) {
     return null
   }

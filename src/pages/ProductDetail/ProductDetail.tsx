@@ -108,21 +108,6 @@ export default function ProductDetailPage() {
     setIsSuccessDialogOpen(true)
   }
 
-  const handleRelatedWineAddToCart = (relatedWine: Wine) => {
-    if (!isLoggedIn) {
-      navigate('/login')
-      return
-    }
-
-    addToCart({
-      wineId: relatedWine.id,
-      selectedColor: relatedWine.colors?.[0],
-      selectedSize: relatedWine.size?.[0],
-    })
-    setSuccessMessage(`Đã thêm ${relatedWine.name} vào giỏ hàng thành công.`)
-    setIsSuccessDialogOpen(true)
-  }
-
   if (isLoading) {
     return <main className="mx-auto max-w-7xl px-6 py-12 text-sm text-neutral-500">Đang tải chi tiết sản phẩm...</main>
   }
@@ -191,7 +176,6 @@ export default function ProductDetailPage() {
       <RelatedWinesSection
         relatedWines={relatedWines}
         relatedSectionTitle={relatedSectionTitle}
-        onAddToCart={handleRelatedWineAddToCart}
       />
     </main>
   )
