@@ -14,14 +14,7 @@ import type { Wine } from '../../types/wine'
 import { validatePhoneNumber } from '../../utils/validators'
 
 function isCheckoutSelectedItem(entry: any): entry is CheckoutSelectedItem {
-  return (
-    entry &&
-    typeof entry === 'object' &&
-    'wine' in entry &&
-    entry.wine != null &&
-    typeof entry.wine === 'object' &&
-    'id' in entry.wine
-  )
+  return !!entry && typeof entry === 'object' && 'wine' in entry
 }
 
 export default function CheckoutPage() {
