@@ -19,6 +19,8 @@ export default function OrderPage() {
   const [shouldScrollToDetail, setShouldScrollToDetail] = useState(false)
   const detailSectionRef = useRef<HTMLDivElement | null>(null)
 
+  // Fetch the full orders list only when `user` changes to avoid refetching
+  // the whole list when navigating between `/order/:orderId` routes.
   useEffect(() => {
     if (!user) return
 
@@ -31,33 +33,7 @@ export default function OrderPage() {
         const nextOrders = await getOrdersByUserId(user.id)
         if (!active) return
 
-        if (!orderId) {
-          setOrders(nextOrders)
-          return
-        }
-
-        const matchedOrder = nextOrders.find((order) => String(order.id) === orderId)
-
-        if (matchedOrder) {
-          setOrders(nextOrders)
-          return
-        }
-
-        try {
-          const nextSelectedOrder = await getOrderById(orderId)
-
-          if (!active) return
-
-          if (nextSelectedOrder.userId !== user.id) {
-            setOrders(nextOrders)
-            return
-          }
-
-          setOrders([nextSelectedOrder, ...nextOrders])
-        } catch {
-          if (!active) return
-          setOrders(nextOrders)
-        }
+        setOrders(nextOrders)
       } catch (error) {
         if (!active) return
         console.error('OrderPage: error fetching orders', error)
@@ -72,7 +48,36 @@ export default function OrderPage() {
     return () => {
       active = false
     }
-  }, [orderId, user])
+  }, [user])
+
+  // When `orderId` changes, avoid refetching the full list. If the selected
+  // id is not already present in `orders`, fetch the single order and
+  // prepend it to the list (no full-list loading state to avoid flicker).
+  useEffect(() => {
+    if (!user || !orderId) return
+
+    const exists = orders.some((o) => String(o.id) === orderId)
+    if (exists) return
+
+    let active = true
+
+    ;(async () => {
+      try {
+        const nextSelectedOrder = await getOrderById(orderId)
+        if (!active) return
+
+        if (nextSelectedOrder.userId !== user.id) return
+
+        setOrders((prev) => [nextSelectedOrder, ...prev])
+      } catch (err) {
+        // Ignore — keep current list and do not trigger global loading state.
+      }
+    })()
+
+    return () => {
+      active = false
+    }
+  }, [orderId, user, orders])
 
   const filteredOrders = useMemo(() => {
     if (statusFilter === 'all') return orders

@@ -3197,6 +3197,26 @@
       "status": "pending",
       "createdAt": "2026-04-28T10:00:54.568Z",
       "id": "bpj4HDjqXNc"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1990000,
+      "items": [
+        {
+          "wineId": "141",
+          "wineName": "Kosher Reserve Blanc",
+          "unitPrice": 398000,
+          "quantity": 5,
+          "selectedColor": "White",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-04T03:00:29.909Z",
+      "id": "fwjET7kWXcA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

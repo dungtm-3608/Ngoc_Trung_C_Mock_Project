@@ -13,6 +13,17 @@ import type { CheckoutSelectedItem } from '../../types/checkout/checkoutSelected
 import type { Wine } from '../../types/wine'
 import { validatePhoneNumber } from '../../utils/validators'
 
+function isCheckoutSelectedItem(entry: any): entry is CheckoutSelectedItem {
+  return (
+    entry &&
+    typeof entry === 'object' &&
+    'wine' in entry &&
+    entry.wine != null &&
+    typeof entry.wine === 'object' &&
+    'id' in entry.wine
+  )
+}
+
 export default function CheckoutPage() {
   const navigate = useNavigate()
   const { user } = useAuth()
@@ -124,10 +135,10 @@ export default function CheckoutPage() {
       const cartSelected = selectedCartItems
 
       const orderItems = (selectedItems.length ? selectedItems : cartSelected).map((entry) => {
-        // entry may be a CheckoutSelectedItem (with wine) or a CartItem
-        // normalize fields
-        if ((entry as any).wine) {
-          const item = entry as CheckoutSelectedItem
+        // entry may be a CheckoutSelectedItem (with `wine`) or a CartItem.
+        // Use a type guard instead of unsafe `any` checks.
+        if (isCheckoutSelectedItem(entry)) {
+          const item = entry
           return {
             wineId: item.wine.id,
             wineName: item.wine.name,

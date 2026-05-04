@@ -16,12 +16,20 @@ export async function createOrder(payload: CreateOrderPayload) {
 }
 
 export async function getOrdersByUserId(userId: string) {
-  const response = await axios.get<OrderRecord[]>(ORDERS_API)
+  const response = await axios.get<OrderRecord[]>(ORDERS_API, {
+    params: {
+      _where: JSON.stringify({
+        userId: {
+          eq: String(userId),
+        },
+      }),
+      _sort: '-createdAt',
+    },
+  })
+
   const orders = Array.isArray(response.data) ? response.data : []
 
-  return orders
-    .filter((order) => String(order.userId) === String(userId))
-    .sort((left, right) => new Date(right.createdAt).getTime() - new Date(left.createdAt).getTime())
+   return orders.filter((order) => String(order.userId) === String(userId))
 }
 
 export async function getOrderById(orderId: string) {
