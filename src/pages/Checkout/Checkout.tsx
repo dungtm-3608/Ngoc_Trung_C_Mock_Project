@@ -12,6 +12,7 @@ import wineService from '../../services/wineService'
 import type { CheckoutSelectedItem } from '../../types/checkout/checkoutSelectedItem'
 import type { Wine } from '../../types/wine'
 import { validatePhoneNumber } from '../../utils/validators'
+import { getDefaultShippingAddress as getDefaultShippingAddressApi } from '../../services/shippingAddressService'
 
 function isCheckoutSelectedItem(entry: any): entry is CheckoutSelectedItem {
   return !!entry && typeof entry === 'object' && 'wine' in entry
@@ -34,13 +35,32 @@ export default function CheckoutPage() {
   useEffect(() => {
     if (!user) return
 
-    setCustomerName((currentValue) => currentValue || user.name)
-    setPhoneNumber((currentValue) => currentValue || user.phoneNumber)
+    let active = true;
+
+    (async () => {
+      try {
+        const defaultProfile = await getDefaultShippingAddressApi(user.id)
+        if (!active) return
+        if (defaultProfile) {
+          setCustomerName((currentValue) => currentValue || defaultProfile.customerName || user.name)
+          setPhoneNumber((currentValue) => currentValue || defaultProfile.phoneNumber || user.phoneNumber)
+          setShippingAddress((currentValue) => currentValue || defaultProfile.shippingAddress)
+          return
+        }
+
+        setCustomerName((currentValue) => currentValue || user.name)
+        setPhoneNumber((currentValue) => currentValue || user.phoneNumber)
+      } catch (err) {
+        setCustomerName((currentValue) => currentValue || user.name)
+        setPhoneNumber((currentValue) => currentValue || user.phoneNumber)
+      }
+    })()
+
+    return () => {
+      active = false
+    }
   }, [user])
 
-  useEffect(() => {
-    setShippingAddress((currentValue) => currentValue || '12 Nguyen Hue, District 1, Ho Chi Minh City')
-  }, [])
 
   useEffect(() => {
     let active = true
