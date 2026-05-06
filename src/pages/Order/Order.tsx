@@ -7,7 +7,7 @@ import { getOrderById, getOrdersByUserId } from '../../services/orderService'
 import { useAuth } from '../../store/AuthContext'
 import type { OrderRecord } from '../../types/order/orderRecord'
 import { ORDER_STATUS_OPTIONS, countOrdersByStatus, getOrderStatusLabel, type OrderStatusFilter } from '../../utils/orderUtils'
-import { ShippingAddress } from '../../types/shippingAddress'
+import type { ShippingAddress } from '../../types/shippingAddress'
 import { getDefaultShippingAddress as getDefaultShippingAddressApi } from '../../services/shippingAddressService'
 
 
@@ -30,30 +30,30 @@ export default function OrderPage() {
 
     let active = true
 
-    ;(async () => {
-      try {
-        setIsLoading(true)
-        setLoadError('')
-        const nextOrders = await getOrdersByUserId(user.id)
-        if (!active) return
-
-        setOrders(nextOrders)
+      ; (async () => {
         try {
-          const defaultProfile = await getDefaultShippingAddressApi(user.id)
-          if (active) setDefaultProfile(defaultProfile ?? null)
-        } catch {
-          if (active) setDefaultProfile(null)
+          setIsLoading(true)
+          setLoadError('')
+          const nextOrders = await getOrdersByUserId(user.id)
+          if (!active) return
+
+          setOrders(nextOrders)
+          try {
+            const defaultProfile = await getDefaultShippingAddressApi(user.id)
+            if (active) setDefaultProfile(defaultProfile ?? null)
+          } catch {
+            if (active) setDefaultProfile(null)
+          }
+        } catch (error) {
+          if (!active) return
+          console.error('OrderPage: error fetching orders', error)
+          setLoadError('Không thể tải danh sách đơn hàng. Vui lòng thử lại.')
+        } finally {
+          if (active) {
+            setIsLoading(false)
+          }
         }
-      } catch (error) {
-        if (!active) return
-        console.error('OrderPage: error fetching orders', error)
-        setLoadError('Không thể tải danh sách đơn hàng. Vui lòng thử lại.')
-      } finally {
-        if (active) {
-          setIsLoading(false)
-        }
-      }
-    })()
+      })()
 
     return () => {
       active = false
@@ -71,18 +71,18 @@ export default function OrderPage() {
 
     let active = true
 
-    ;(async () => {
-      try {
-        const nextSelectedOrder = await getOrderById(orderId)
-        if (!active) return
+      ; (async () => {
+        try {
+          const nextSelectedOrder = await getOrderById(orderId)
+          if (!active) return
 
-        if (nextSelectedOrder.userId !== user.id) return
+          if (nextSelectedOrder.userId !== user.id) return
 
-        setOrders((prev) => [nextSelectedOrder, ...prev])
-      } catch (err) {
-        // Ignore — keep current list and do not trigger global loading state.
-      }
-    })()
+          setOrders((prev) => [nextSelectedOrder, ...prev])
+        } catch (err) {
+          // Ignore — keep current list and do not trigger global loading state.
+        }
+      })()
 
     return () => {
       active = false
@@ -194,17 +194,6 @@ export default function OrderPage() {
 
           {selectedOrder ? (
             <div ref={detailSectionRef} className="mt-8">
-              {defaultProfile ? (
-                <div className="mb-6 rounded border border-neutral-200 bg-neutral-50 px-5 py-4 text-sm">
-                  <p className="text-xs uppercase tracking-[0.24em] text-neutral-400">Địa chỉ mặc định</p>
-                  <div className="mt-2 text-neutral-700">
-                    <div className="font-semibold">{defaultProfile.customerName}</div>
-                    <div className="text-sm">{defaultProfile.phoneNumber}</div>
-                    <div className="mt-2 leading-6">{defaultProfile.shippingAddress}</div>
-                  </div>
-                </div>
-              ) : null}
-
               <OrderDetailPanel order={selectedOrder} />
             </div>
           ) : null}

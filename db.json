@@ -2793,48 +2793,22 @@
       "subscribeNewsletter": true,
       "shippingAddresses": [
         {
+          "id": "1778034226288",
+          "userId": "1",
+          "label": "Địa chỉ mới",
+          "customerName": "Authay",
+          "phoneNumber": "09432423432",
+          "shippingAddress": "Hà Nội, Đống Đa, Trung Hoà, 12",
+          "isDefault": false
+        },
+        {
           "id": "1777866906955",
           "userId": "1",
           "label": "Company",
           "customerName": "Henry",
           "phoneNumber": "0989656566",
-          "shippingAddress": "Hà Nội, Đống Đa, Nhân Chính",
+          "shippingAddress": "Hà Nội, Đống Đa, Nhân Chính 12",
           "isDefault": true
-        },
-        {
-          "id": "1777867060217",
-          "userId": "1",
-          "label": "Địa chỉ mới",
-          "customerName": "fsdfsdfds",
-          "phoneNumber": "54545455555",
-          "shippingAddress": "fsfsdfsdfsdf",
-          "isDefault": false
-        },
-        {
-          "id": "1777866915282",
-          "userId": "1",
-          "label": "Địa chỉ mới",
-          "customerName": "rserseresf",
-          "phoneNumber": "09656565656ttttt",
-          "shippingAddress": "43434343",
-          "isDefault": false
-        },
-        {
-          "id": "1777866232824",
-          "userId": "1",
-          "label": "Địa chỉ mới",
-          "customerName": "Rulu",
-          "phoneNumber": "09654645656",
-          "shippingAddress": "Fdedddddfsfdsfsdf",
-          "isDefault": false
-        },
-        {
-          "id": "addr-1-1",
-          "label": "Nhà riêng",
-          "customerName": "Anna Nguyen",
-          "phoneNumber": "0901234567",
-          "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
-          "isDefault": false
         }
       ],
       "createdAt": "2026-04-22T08:00:00.000Z"
