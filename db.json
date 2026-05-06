@@ -3001,6 +3001,222 @@
       "status": "pending",
       "createdAt": "2026-04-24T06:43:22.571Z",
       "id": "iYtbb0U4cZ4"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 2340000,
+      "items": [
+        {
+          "wineId": "1",
+          "wineName": "Red Wine Classic",
+          "unitPrice": 370000,
+          "quantity": 3,
+          "selectedColor": "Red",
+          "selectedSize": "S"
+        },
+        {
+          "wineId": "9",
+          "wineName": "Zinfandel Bold",
+          "unitPrice": 410000,
+          "quantity": 3,
+          "selectedColor": "Crimson",
+          "selectedSize": "L"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T09:20:02.685Z",
+      "id": "TjFYyd1vEAw"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1950000,
+      "items": [
+        {
+          "wineId": "5",
+          "wineName": "Merlot Reserve",
+          "unitPrice": 390000,
+          "quantity": 5,
+          "selectedColor": "Red",
+          "selectedSize": "L"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T09:20:30.295Z",
+      "id": "18ljd1h8j1M"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 410000,
+      "items": [
+        {
+          "wineId": "9",
+          "wineName": "Zinfandel Bold",
+          "unitPrice": 410000,
+          "quantity": 1,
+          "selectedColor": "Red",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T09:41:27.179Z",
+      "id": "Jr11CTNImZ4"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 370000,
+      "items": [
+        {
+          "wineId": "1",
+          "wineName": "Red Wine Classic",
+          "unitPrice": 370000,
+          "quantity": 1,
+          "selectedColor": "Red",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T09:45:12.129Z",
+      "id": "F1LfE61lPyg"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1170000,
+      "items": [
+        {
+          "wineId": "5",
+          "wineName": "Merlot Reserve",
+          "unitPrice": 390000,
+          "quantity": 3,
+          "selectedColor": "Red",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T09:49:46.109Z",
+      "id": "-DOiGsuKIKw"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 6180000,
+      "items": [
+        {
+          "wineId": "6",
+          "wineName": "Chardonnay Bliss",
+          "unitPrice": 360000,
+          "quantity": 10,
+          "selectedColor": "Yellow",
+          "selectedSize": "S"
+        },
+        {
+          "wineId": "11",
+          "wineName": "Gewürztraminer",
+          "unitPrice": 430000,
+          "quantity": 6,
+          "selectedColor": "Yellow",
+          "selectedSize": "L"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T09:50:19.260Z",
+      "id": "B7qASN-lKDc"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1080000,
+      "items": [
+        {
+          "wineId": "6",
+          "wineName": "Chardonnay Bliss",
+          "unitPrice": 360000,
+          "quantity": 3,
+          "selectedColor": "Yellow",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T09:55:35.944Z",
+      "id": "fZs-K9lV5EU"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 2060000,
+      "items": [
+        {
+          "wineId": "145",
+          "wineName": "Fortified Muscat Gold",
+          "unitPrice": 412000,
+          "quantity": 5,
+          "selectedColor": "Golden",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T09:56:26.283Z",
+      "id": "LLw8VFGo3ek"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1360000,
+      "items": [
+        {
+          "wineId": "3",
+          "wineName": "Champagne Royale",
+          "unitPrice": 680000,
+          "quantity": 2,
+          "selectedColor": "Gold",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-04-28T10:00:54.568Z",
+      "id": "bpj4HDjqXNc"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1990000,
+      "items": [
+        {
+          "wineId": "141",
+          "wineName": "Kosher Reserve Blanc",
+          "unitPrice": 398000,
+          "quantity": 5,
+          "selectedColor": "White",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-04T03:00:29.909Z",
+      "id": "fwjET7kWXcA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

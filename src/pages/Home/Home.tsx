@@ -8,15 +8,7 @@ import { Link } from 'react-router-dom'
 
 const MAX_PRODUCTS = 8
 
-function mapImageId(idStr: string) {
-  const id = parseInt(idStr, 10) || 0
-  if (id <= 0) return '1'
-  const wrapped = ((id - 1) % 14) + 1
-  return String(wrapped)
-}
-
 // load images from assets using Vite's import.meta.glob
-const wineImages = import.meta.glob('/src/assets/wine/*.{png,jpg,jpeg}', { eager: true }) as Record<string, any>
 const farmImages = import.meta.glob('/src/assets/farm/*.{png,jpg,jpeg}', { eager: true }) as Record<string, any>
 const farmGalleryImages = Object.keys(farmImages)
   .sort((left, right) => left.localeCompare(right, undefined, { numeric: true }))
@@ -46,18 +38,6 @@ export default function Home() {
       mounted = false
     }
   }, [])
-
-  const resolveImage = (wineId: string) => {
-    const imgId = mapImageId(wineId)
-    const candidates = Object.keys(wineImages)
-    const found = candidates.find((p) => p.includes(`/wine/${imgId}.`))
-    if (found) return wineImages[found].default || wineImages[found]
-
-    const farmKeys = Object.keys(farmImages)
-    if (farmKeys.length) return farmImages[farmKeys[0]].default || farmImages[farmKeys[0]]
-
-    return ''
-  }
 
   const renderProduct = (w: Wine) => (
     <article key={w.id} className="group relative flex w-full max-w-[250px] flex-col items-center px-2 pb-4 text-center">
