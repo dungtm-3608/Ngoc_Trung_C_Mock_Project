@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 import { getCartItemKey } from '../../../store/CartContext'
 import type { EnrichedCartItem } from '../../../types/cart/enrichedCartItem'
-import { formatCurrency } from '../../../utils/currencyUtil'
+import { formatCurrency, getDiscountedPrice } from '../../../utils/currencyUtil'
 import { getWineDetailPath, resolveWineImage } from '../../../utils/wineUtils'
 
 type CartItemsTableProps = {
@@ -26,6 +26,7 @@ export default function CartItemsTable({ items, onToggleSelected, onUpdateQuanti
       <div className="divide-y divide-neutral-200">
         {items.map((item) => {
           const cartItemKey = getCartItemKey(item)
+          const discounted = getDiscountedPrice(item.wine.price, item.wine.discount)
 
           return (
             <article key={cartItemKey} className="grid gap-4 px-5 py-5 md:grid-cols-[minmax(0,1.9fr)_128px_160px_132px_72px] md:items-center">
@@ -68,9 +69,18 @@ export default function CartItemsTable({ items, onToggleSelected, onUpdateQuanti
                 </div>
               </div>
 
-              <div className="text-sm text-neutral-700 md:pl-1">
+                <div className="text-sm text-neutral-700 md:pl-1">
                 <p className="md:hidden text-xs uppercase tracking-[0.18em] text-neutral-400">Giá</p>
-                <span className="text-base text-amber-500">{formatCurrency(item.wine.price)}đ</span>
+                <div>
+                  {item.wine.discount ? (
+                    <>
+                      <span className="text-base text-amber-500">{formatCurrency(discounted)}đ</span>
+                      <div className="text-xs text-neutral-400 line-through">{formatCurrency(item.wine.price)}đ</div>
+                    </>
+                  ) : (
+                    <span className="text-base text-amber-500">{formatCurrency(item.wine.price)}đ</span>
+                  )}
+                </div>
               </div>
 
               <div>
@@ -102,9 +112,9 @@ export default function CartItemsTable({ items, onToggleSelected, onUpdateQuanti
                 </div>
               </div>
 
-              <div className="text-sm text-neutral-700">
+                <div className="text-sm text-neutral-700">
                 <p className="md:hidden text-xs uppercase tracking-[0.18em] text-neutral-400">Tổng</p>
-                <span className="text-lg font-semibold text-neutral-900">{formatCurrency(item.wine.price * item.quantity)}đ</span>
+                <span className="text-lg font-semibold text-neutral-900">{formatCurrency(discounted * item.quantity)}đ</span>
               </div>
 
               <button

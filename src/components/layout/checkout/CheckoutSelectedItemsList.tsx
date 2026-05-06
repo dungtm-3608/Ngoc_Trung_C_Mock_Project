@@ -1,5 +1,5 @@
 import type { CheckoutSelectedItem } from '../../../types/checkout/checkoutSelectedItem'
-import { formatCurrency } from '../../../utils/currencyUtil'
+import { formatCurrency, getDiscountedPrice } from '../../../utils/currencyUtil'
 import { resolveWineImage } from '../../../utils/wineUtils'
 
 type CheckoutSelectedItemsListProps = {
@@ -27,7 +27,18 @@ export default function CheckoutSelectedItemsList({ items }: CheckoutSelectedIte
               </div>
             </div>
             <div className="text-lg font-semibold text-neutral-900 md:text-right">
-              {formatCurrency(item.wine.price * item.quantity)}đ
+              {(() => {
+                const discounted = getDiscountedPrice(item.wine.price, item.wine.discount)
+                return item.wine.discount ? (
+                  <div className="flex flex-col items-end">
+                    <span className="text-lg text-amber-500">{formatCurrency(discounted)}đ</span>
+                    <span className="text-sm text-neutral-400 line-through">{formatCurrency(item.wine.price)}đ</span>
+                    <span className="mt-1">{formatCurrency(discounted * item.quantity)}đ</span>
+                  </div>
+                ) : (
+                  <div>{formatCurrency(item.wine.price * item.quantity)}đ</div>
+                )
+              })()}
             </div>
           </article>
         ))}

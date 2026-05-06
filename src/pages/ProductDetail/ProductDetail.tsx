@@ -8,7 +8,7 @@ import { isUserLoggedIn } from '../../store/AuthContext'
 import { useCart } from '../../store/CartContext'
 import wineService from '../../services/wineService'
 import type { Wine } from '../../types/wine'
-import { getWineCategorySlug } from '../../utils/wineUtils'
+import { getCategorySlug } from '../../utils/wineUtils'
 
 export default function ProductDetailPage() {
   const navigate = useNavigate()
@@ -60,7 +60,7 @@ export default function ProductDetailPage() {
         setSelectedSize(currentWine.size?.[0] ?? '')
         setRelatedWines(
           wines
-            .filter((candidate) => candidate.category === currentWine.category && candidate.id !== currentWine.id)
+            .filter((candidate) => candidate.categoryId === currentWine.categoryId && candidate.id !== currentWine.id)
             .slice(0, 4),
         )
       } catch (error) {
@@ -82,9 +82,26 @@ export default function ProductDetailPage() {
   }, [wineId])
 
   const relatedSectionTitle = useMemo(() => {
-    if (!wine?.category) return 'Sản phẩm liên quan'
-    return `Khám phá thêm ${wine.category}`
+    const categoryName = wine?.categoryName ?? wine?.category
+    if (!categoryName) return 'Sản phẩm liên quan'
+    return `Khám phá thêm ${categoryName}`
   }, [wine])
+
+  const handleAddRelatedToCart = (relatedWine: Wine) => {
+    if (!isLoggedIn) {
+      navigate('/login')
+      return
+    }
+
+    addToCart({
+      wineId: relatedWine.id,
+      quantity: 1,
+      selectedColor: relatedWine.colors?.[0] ?? undefined,
+      selectedSize: relatedWine.size?.[0] ?? undefined,
+    })
+    setSuccessMessage(`Đã thêm ${relatedWine.name} vào giỏ hàng thành công.`)
+    setIsSuccessDialogOpen(true)
+  }
 
   const handleCloseSuccessDialog = () => {
     setIsSuccessDialogOpen(false)
@@ -156,7 +173,7 @@ export default function ProductDetailPage() {
       <div className="mb-8 flex flex-wrap items-center gap-2 text-sm text-neutral-500">
         <Link to="/" className="transition hover:text-amber-600">Trang chủ</Link>
         <span>/</span>
-        <Link to={`/wines/${getWineCategorySlug(wine.category)}`} className="transition hover:text-amber-600">{wine.category}</Link>
+        <Link to={`/wines/${getCategorySlug({ id: wine.categoryId, name: wine.categoryName ?? wine.category })}`} className="transition hover:text-amber-600">{wine.categoryName ?? wine.category}</Link>
         <span>/</span>
         <span className="text-neutral-800">{wine.name}</span>
       </div>
@@ -176,6 +193,7 @@ export default function ProductDetailPage() {
       <RelatedWinesSection
         relatedWines={relatedWines}
         relatedSectionTitle={relatedSectionTitle}
+        onAddToCart={handleAddRelatedToCart}
       />
     </main>
   )

@@ -5,20 +5,21 @@ import LeftMenu from '../../components/layout/product_list/LeftMenu.tsx'
 import PaginationButton from '../../components/layout/product_list/PaginationButton.tsx'
 import ProductGridItem from '../../components/layout/product_list/ProductGridItem.tsx'
 import ProductListItem from '../../components/layout/product_list/ProductListItem.tsx'
+import categoryService from '../../services/categoryService.ts'
 import wineService from '../../services/wineService.ts'
 import type { Wine } from '../../types/wine.ts'
 import {
   DEFAULT_CATEGORY_SLUG,
   OTHER_CATEGORY_LABEL,
   OTHER_CATEGORY_SLUG,
-  PRIMARY_CATEGORY_NAMES,
-  PRIMARY_CATEGORY_SLUG_TO_NAME,
+  getCategorySlug,
+  isPrimaryCategory,
   resolveWineImage,
-  toCategorySlug,
 } from '../../utils/wineUtils.ts'
 
 import type { CategorySummary } from '../../types/categorySummary.ts'
 import { PRODUCT_GRID_PAGE_SIZE, PRODUCT_LIST_PAGE_SIZE } from '../../constants/index.ts'
+import type { CategoryRecord } from '../../services/categoryService.ts'
 
 type ItemViewMode = 'grid' | 'list'
 
@@ -28,19 +29,21 @@ function resolveAssetImage(asset: { default?: string } | string) {
   return typeof asset === 'string' ? asset : (asset.default ?? '')
 }
 
-function buildCategorySummaries(wines: Wine[]): CategorySummary[] {
+function buildCategorySummaries(categories: CategoryRecord[], wines: Wine[]): CategorySummary[] {
   const counts = new Map<string, number>()
 
   wines.forEach((wine) => {
-    counts.set(wine.category, (counts.get(wine.category) ?? 0) + 1)
+    if (!wine.categoryId) return
+    counts.set(wine.categoryId, (counts.get(wine.categoryId) ?? 0) + 1)
   })
 
-  return [...counts.entries()]
-    .map(([name, count]) => ({
-      name,
-      slug: toCategorySlug(name),
-      count,
+  return categories
+    .map((category) => ({
+      name: category.name,
+      slug: getCategorySlug(category),
+      count: counts.get(category.id) ?? 0,
     }))
+    .filter((category) => category.count > 0)
     .sort((left, right) => left.name.localeCompare(right.name))
 }
 
@@ -48,6 +51,7 @@ export default function ProductListPage() {
   const navigate = useNavigate()
   const { categorySlug } = useParams<{ categorySlug?: string }>()
   const [allWines, setAllWines] = useState<Wine[]>([])
+  const [allCategories, setAllCategories] = useState<CategoryRecord[]>([])
   const [itemViewMode, setItemViewMode] = useState<ItemViewMode>('grid')
   const [currentPage, setCurrentPage] = useState(1)
   const [isLoadingCategories, setIsLoadingCategories] = useState(true)
@@ -60,9 +64,13 @@ export default function ProductListPage() {
         try {
           setIsLoadingCategories(true)
           setErrorMessage('')
-          const wines = await wineService.getWines()
+          const [wines, categories] = await Promise.all([
+            wineService.getWines(),
+            categoryService.getCategories(),
+          ])
           if (!active) return
           setAllWines(wines)
+          setAllCategories(categories)
         } catch (error) {
           if (!active) return
           console.error('ProductListPage: error fetching categories', error)
@@ -79,20 +87,21 @@ export default function ProductListPage() {
     }
   }, [])
 
-  const categories = useMemo(() => buildCategorySummaries(allWines), [allWines])
+  const categories = useMemo(() => buildCategorySummaries(allCategories, allWines), [allCategories, allWines])
 
   const selectedRouteSlug = useMemo(() => {
     if (!categorySlug) return DEFAULT_CATEGORY_SLUG
-    return categorySlug in PRIMARY_CATEGORY_SLUG_TO_NAME ? categorySlug : OTHER_CATEGORY_SLUG
-  }, [categorySlug])
+    if (categorySlug === OTHER_CATEGORY_SLUG) return OTHER_CATEGORY_SLUG
+    return categories.some((category) => category.slug === categorySlug) ? categorySlug : DEFAULT_CATEGORY_SLUG
+  }, [categorySlug, categories])
 
   const selectedCategory = useMemo(() => {
     if (selectedRouteSlug === OTHER_CATEGORY_SLUG) {
       return OTHER_CATEGORY_LABEL
     }
 
-    return PRIMARY_CATEGORY_SLUG_TO_NAME[selectedRouteSlug] ?? ''
-  }, [selectedRouteSlug])
+    return categories.find((category) => category.slug === selectedRouteSlug)?.name ?? ''
+  }, [categories, selectedRouteSlug])
 
   useEffect(() => {
     if (categorySlug !== selectedRouteSlug) {
@@ -103,10 +112,12 @@ export default function ProductListPage() {
   const products = useMemo(() => {
     if (isLoadingCategories) return []
 
+    const selectedCategoryRecord = allCategories.find((category) => getCategorySlug(category) === selectedRouteSlug)
+
     return selectedRouteSlug === OTHER_CATEGORY_SLUG
-      ? allWines.filter((wine) => !PRIMARY_CATEGORY_NAMES.has(wine.category))
-      : allWines.filter((wine) => wine.category === PRIMARY_CATEGORY_SLUG_TO_NAME[selectedRouteSlug])
-  }, [allWines, selectedRouteSlug, isLoadingCategories])
+      ? allWines.filter((wine) => !isPrimaryCategory(allCategories.find((category) => category.id === wine.categoryId)))
+      : allWines.filter((wine) => wine.categoryId === selectedCategoryRecord?.id)
+  }, [allCategories, allWines, selectedRouteSlug, isLoadingCategories])
 
   useEffect(() => {
     setCurrentPage(1)

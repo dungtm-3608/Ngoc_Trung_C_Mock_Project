@@ -3,12 +3,13 @@ import type { Wine } from '../types/wine'
 export const DEFAULT_CATEGORY_SLUG = 'red-wine'
 export const OTHER_CATEGORY_SLUG = 'others'
 export const OTHER_CATEGORY_LABEL = 'LOẠI RƯỢU KHÁC'
-export const PRIMARY_CATEGORY_SLUG_TO_NAME: Record<string, string> = {
-  'red-wine': 'Red Wine',
-  'white-wine': 'White Wine',
-  champagne: 'Champagne',
+export const PRIMARY_CATEGORY_SLUGS = ['red-wine', 'white-wine', 'champagne'] as const
+
+const PRIMARY_CATEGORY_ID_SUFFIX_TO_SLUG: Record<string, (typeof PRIMARY_CATEGORY_SLUGS)[number]> = {
+  'Red-Wine': 'red-wine',
+  'White-Wine': 'white-wine',
+  Champagne: 'champagne',
 }
-export const PRIMARY_CATEGORY_NAMES = new Set(Object.values(PRIMARY_CATEGORY_SLUG_TO_NAME))
 
 const wineImages = import.meta.glob('/src/assets/wine/*.{png,jpg,jpeg}', { eager: true }) as Record<string, { default?: string } | string>
 
@@ -48,10 +49,25 @@ export function resolveWineImage(wineId: string) {
 export function getWineCategorySlug(category?: string) {
   if (!category) return DEFAULT_CATEGORY_SLUG
 
-  const matchedSlug = Object.entries(PRIMARY_CATEGORY_SLUG_TO_NAME).find(([, label]) => label === category)?.[0]
-  return matchedSlug ?? toCategorySlug(category)
+  return toCategorySlug(category)
 }
 
-export function getWineDetailPath(wine: Pick<Wine, 'id' | 'category'>) {
-  return `/wines/${getWineCategorySlug(wine.category)}/${wine.id}`
+export function getCategorySlug(category: { id?: string; name?: string } | null | undefined) {
+  if (!category) return DEFAULT_CATEGORY_SLUG
+
+  const suffix = category.id?.split('-').slice(1).join('-')
+  if (suffix && suffix in PRIMARY_CATEGORY_ID_SUFFIX_TO_SLUG) {
+    return PRIMARY_CATEGORY_ID_SUFFIX_TO_SLUG[suffix]
+  }
+
+  return toCategorySlug(category.name ?? '') || DEFAULT_CATEGORY_SLUG
+}
+
+export function isPrimaryCategory(category: { id?: string; name?: string } | null | undefined) {
+  const slug = getCategorySlug(category)
+  return (PRIMARY_CATEGORY_SLUGS as readonly string[]).includes(slug)
+}
+
+export function getWineDetailPath(wine: Pick<Wine, 'id' | 'category' | 'categoryId' | 'categoryName'>) {
+  return `/wines/${getCategorySlug({ id: wine.categoryId, name: wine.categoryName ?? wine.category })}/${wine.id}`
 }

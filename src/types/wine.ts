@@ -1,7 +1,9 @@
 export type Wine = {
   id: string
   name: string
-  category: string
+  category?: string
+  categoryId?: string
+  categoryName?: string
   description?: string
   colors?: string[]
   size?: string[]

@@ -5,6 +5,7 @@ import CheckoutEmptyState from '../../components/layout/checkout/CheckoutEmptySt
 import CheckoutLoadErrorState from '../../components/layout/checkout/CheckoutLoadErrorState'
 import CheckoutSelectedItemsList from '../../components/layout/checkout/CheckoutSelectedItemsList'
 import CheckoutSummaryPanel from '../../components/layout/checkout/CheckoutSummaryPanel'
+import { getDiscountedPrice } from '../../utils/currencyUtil'
 import { useAuth } from '../../store/AuthContext'
 import { getCartItemKey, useCart } from '../../store/CartContext'
 import { createOrder } from '../../services/orderService'
@@ -12,6 +13,7 @@ import wineService from '../../services/wineService'
 import type { CheckoutSelectedItem } from '../../types/checkout/checkoutSelectedItem'
 import type { Wine } from '../../types/wine'
 import { validatePhoneNumber } from '../../utils/validators'
+import { getDefaultShippingAddress as getDefaultShippingAddressApi } from '../../services/shippingAddressService'
 
 function isCheckoutSelectedItem(entry: any): entry is CheckoutSelectedItem {
   return !!entry && typeof entry === 'object' && 'wine' in entry
@@ -34,13 +36,32 @@ export default function CheckoutPage() {
   useEffect(() => {
     if (!user) return
 
-    setCustomerName((currentValue) => currentValue || user.name)
-    setPhoneNumber((currentValue) => currentValue || user.phoneNumber)
+    let active = true;
+
+    (async () => {
+      try {
+        const defaultProfile = await getDefaultShippingAddressApi(user.id)
+        if (!active) return
+        if (defaultProfile) {
+          setCustomerName((currentValue) => currentValue || defaultProfile.customerName || user.name)
+          setPhoneNumber((currentValue) => currentValue || defaultProfile.phoneNumber || user.phoneNumber)
+          setShippingAddress((currentValue) => currentValue || defaultProfile.shippingAddress)
+          return
+        }
+
+        setCustomerName((currentValue) => currentValue || user.name)
+        setPhoneNumber((currentValue) => currentValue || user.phoneNumber)
+      } catch (err) {
+        setCustomerName((currentValue) => currentValue || user.name)
+        setPhoneNumber((currentValue) => currentValue || user.phoneNumber)
+      }
+    })()
+
+    return () => {
+      active = false
+    }
   }, [user])
 
-  useEffect(() => {
-    setShippingAddress((currentValue) => currentValue || '12 Nguyen Hue, District 1, Ho Chi Minh City')
-  }, [])
 
   useEffect(() => {
     let active = true
@@ -90,13 +111,13 @@ export default function CheckoutPage() {
 
   const total = useMemo(() => {
     if (selectedItems.length) {
-      return selectedItems.reduce((sum, item) => sum + item.wine.price * item.quantity, 0)
+      return selectedItems.reduce((sum, item) => sum + getDiscountedPrice(item.wine.price, item.wine.discount) * item.quantity, 0)
     }
 
     // fallback: compute total from cart items using available wine price or 0
     return selectedCartItems.reduce((sum, cartItem) => {
       const wine = wines.find((w) => w.id === cartItem.wineId)
-      return sum + (wine ? wine.price * cartItem.quantity : 0)
+      return sum + (wine ? getDiscountedPrice(wine.price, wine.discount) * cartItem.quantity : 0)
     }, 0)
   }, [selectedItems, selectedCartItems, wines])
 
@@ -135,7 +156,7 @@ export default function CheckoutPage() {
           return {
             wineId: item.wine.id,
             wineName: item.wine.name,
-            unitPrice: item.wine.price,
+            unitPrice: getDiscountedPrice(item.wine.price, item.wine.discount),
             quantity: item.quantity,
             selectedColor: item.selectedColor,
             selectedSize: item.selectedSize,
@@ -147,7 +168,7 @@ export default function CheckoutPage() {
         return {
           wineId: cartItem.wineId,
           wineName: wine ? wine.name : 'Sản phẩm không tìm thấy',
-          unitPrice: wine ? wine.price : 0,
+          unitPrice: wine ? getDiscountedPrice(wine.price, wine.discount) : 0,
           quantity: cartItem.quantity,
           selectedColor: cartItem.selectedColor,
           selectedSize: cartItem.selectedSize,
