@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axiosClient from '../services/axiosClient'
 import wineService from '../services/wineService'
+import categoryService from '../services/categoryService'
 import type { Wine } from '../types/wine'
 
 export default function useAdminCategories() {
@@ -10,25 +11,28 @@ export default function useAdminCategories() {
   const [selectedWineIds, setSelectedWineIds] = useState<string[]>([])
   const [editingCategory, setEditingCategory] = useState<string | null>(null)
   const [editValue, setEditValue] = useState('')
+  const [allCategories, setAllCategories] = useState<Array<{ id: string; name: string }>>([])
 
   useEffect(() => { fetchWines() }, [])
 
   const fetchWines = async () => {
     setLoading(true)
     try {
-      const data = await wineService.getWines()
+      const [data, cats] = await Promise.all([wineService.getWines(), categoryService.getCategories()])
       setWines(data)
+      setAllCategories(cats)
     } finally {
       setLoading(false)
     }
   }
 
-  const categories = Array.from(new Set(wines.map((w) => (w.category ?? '').trim()).filter(Boolean))).sort()
+  // categories come from categoryService (id + name)
+  const categories = allCategories.map((c) => c.name).sort()
 
-  const handleAssign = async (category: string) => {
-    if (!category || selectedWineIds.length === 0) return
+  const handleAssign = async (categoryId: string) => {
+    if (!categoryId || selectedWineIds.length === 0) return
     try {
-      await Promise.all(selectedWineIds.map((id) => axiosClient.patch(`/wines/${id}`, { category })))
+      await Promise.all(selectedWineIds.map((id) => axiosClient.patch(`/wines/${id}`, { categoryId })))
       setSelectedWineIds([])
       await fetchWines()
     } catch (err) {
@@ -37,10 +41,11 @@ export default function useAdminCategories() {
   }
 
   const handleCreateAndAssign = async () => {
-    const category = newCategory.trim()
-    if (!category || selectedWineIds.length === 0) return
+    const categoryName = newCategory.trim()
+    if (!categoryName || selectedWineIds.length === 0) return
     try {
-      await Promise.all(selectedWineIds.map((id) => axiosClient.patch(`/wines/${id}`, { category })))
+      const created = await categoryService.createCategory({ name: categoryName })
+      await Promise.all(selectedWineIds.map((id) => axiosClient.patch(`/wines/${id}`, { categoryId: created.id })))
       setNewCategory('')
       setSelectedWineIds([])
       await fetchWines()
@@ -52,10 +57,11 @@ export default function useAdminCategories() {
   const handleRename = async (oldName: string) => {
     const newName = editValue.trim()
     if (!newName) return
-    if (!confirm(`Rename category "${oldName}" to "${newName}" for all ${wines.filter((w) => (w.category ?? '').trim() === oldName).length} wines?`)) return
+    const category = allCategories.find((c) => c.name === oldName)
+    if (!category) return
+    if (!confirm(`Rename category "${oldName}" to "${newName}"?`)) return
     try {
-      const affected = wines.filter((w) => (w.category ?? '').trim() === oldName)
-      await Promise.all(affected.map((w) => axiosClient.patch(`/wines/${w.id}`, { category: newName })))
+      await categoryService.updateCategory(category.id, { name: newName })
       setEditingCategory(null)
       setEditValue('')
       await fetchWines()
@@ -64,11 +70,14 @@ export default function useAdminCategories() {
     }
   }
 
-  const handleDelete = async (category: string) => {
-    if (!confirm(`Delete category "${category}" and unset it from all related wines?`)) return
+  const handleDelete = async (categoryName: string) => {
+    const category = allCategories.find((c) => c.name === categoryName)
+    if (!category) return
+    if (!confirm(`Delete category "${categoryName}" and unset it from all related wines?`)) return
     try {
-      const affected = wines.filter((w) => (w.category ?? '').trim() === category)
-      await Promise.all(affected.map((w) => axiosClient.patch(`/wines/${w.id}`, { category: '' })))
+      const affected = wines.filter((w) => w.categoryId === category.id)
+      await Promise.all(affected.map((w) => axiosClient.patch(`/wines/${w.id}`, { categoryId: '' })))
+      await categoryService.deleteCategory(category.id)
       await fetchWines()
     } catch (err) {
       console.error('Delete category error', err)

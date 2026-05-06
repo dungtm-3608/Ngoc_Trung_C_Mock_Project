@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { Wine } from '../types/wine'
+import type { Wine } from '../types/wine'
 import axiosClient from './axiosClient'
 import categoryService from './categoryService'
 
@@ -54,8 +54,9 @@ const wineService = {
     let resolvedWines = wines
 
     // Resolve categoryName when possible (prefers categoryId -> categories.name)
+    let hasCategoryId = false
     try {
-      const hasCategoryId = wines.some((w) => !!w.categoryId)
+      hasCategoryId = wines.some((w) => !!w.categoryId)
       if (hasCategoryId) {
         const cats = await categoryService.getCategories()
         const map = new Map(cats.map((c) => [c.id, c.name]))
@@ -65,7 +66,10 @@ const wineService = {
         }))
       }
     } catch (err) {
-      // ignore and fallback
+      // If caller requested filtering by category, they depend on categoryName resolution.
+      // Propagate the error so the caller knows the filter couldn't be applied correctly.
+      if (options.category && hasCategoryId) throw err
+      // otherwise ignore and fall back to un-resolved names
     }
 
     if (options.category) {

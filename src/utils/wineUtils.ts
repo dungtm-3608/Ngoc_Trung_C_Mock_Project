@@ -64,6 +64,12 @@ export function getCategorySlug(category: { id?: string; name?: string } | null 
 }
 
 export function isPrimaryCategory(category: { id?: string; name?: string } | null | undefined) {
+  if (!category) return false
+
+  const hasId = typeof category.id === 'string' && category.id.trim() !== ''
+  const hasName = typeof category.name === 'string' && category.name.trim() !== ''
+  if (!hasId && !hasName) return false
+
   const slug = getCategorySlug(category)
   return (PRIMARY_CATEGORY_SLUGS as readonly string[]).includes(slug)
 }

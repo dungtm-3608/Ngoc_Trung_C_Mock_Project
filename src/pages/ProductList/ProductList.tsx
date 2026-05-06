@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 
 import LeftMenu from '../../components/layout/product_list/LeftMenu.tsx'
+import ErrorDialog from '../../components/common/ErrorDialog'
 import PaginationButton from '../../components/layout/product_list/PaginationButton.tsx'
 import ProductGridItem from '../../components/layout/product_list/ProductGridItem.tsx'
 import ProductListItem from '../../components/layout/product_list/ProductListItem.tsx'
@@ -232,7 +233,7 @@ export default function ProductListPage() {
           </header>
 
           {errorMessage ? (
-            <p className="mt-8 rounded border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{errorMessage}</p>
+            <ErrorDialog message={errorMessage} onClose={() => setErrorMessage('')} />
           ) : null}
 
           {isLoadingCategories ? (

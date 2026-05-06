@@ -134,9 +134,7 @@ export default function useAdminUsers() {
     if (!validateEmail(fs.email)) return false
     if (!validatePhone(fs.phoneNumber)) return false
     const addr = fs.shippingAddresses?.find((a) => a.isDefault) ?? fs.shippingAddresses?.[0]
-    if (addr) {
-      if (!validateAddress(addr.shippingAddress)) return false
-    }
+    if (!validateAddress(addr?.shippingAddress)) return false
     return true
   }
 
