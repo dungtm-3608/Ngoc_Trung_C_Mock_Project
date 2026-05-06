@@ -40,6 +40,7 @@ export default function Header({ className = '' }) {
       { to: '/order', label: 'Trạng thái đơn hàng' },
       { to: '/favorites', label: 'Danh sách ưu thích' },
       { to: '/cart', label: `Giỏ hàng (${itemCount})` },
+      { to: '/shipping-address', label: 'Địa chỉ của tôi' },
     ]
     : guestTopNavItems
 

@@ -45,7 +45,7 @@ export function validatePhoneNumber(value: string) {
     return 'Số điện thoại không được để trống.'
   }
 
-  if (!/^(\+?\d[\d\s.-]{8,14})$/.test(normalizedValue)) {
+  if (!/^(\+?\d[\d\s.-]{9,11})$/.test(normalizedValue)) {
     return 'Số điện thoại không đúng định dạng.'
   }
 

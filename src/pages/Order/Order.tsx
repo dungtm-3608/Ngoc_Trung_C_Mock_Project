@@ -7,6 +7,9 @@ import { getOrderById, getOrdersByUserId } from '../../services/orderService'
 import { useAuth } from '../../store/AuthContext'
 import type { OrderRecord } from '../../types/order/orderRecord'
 import { ORDER_STATUS_OPTIONS, countOrdersByStatus, getOrderStatusLabel, type OrderStatusFilter } from '../../utils/orderUtils'
+import type { ShippingAddress } from '../../types/shippingAddress'
+import { getDefaultShippingAddress as getDefaultShippingAddressApi } from '../../services/shippingAddressService'
+
 
 export default function OrderPage() {
   const navigate = useNavigate()
@@ -16,6 +19,7 @@ export default function OrderPage() {
   const [statusFilter, setStatusFilter] = useState<OrderStatusFilter>('all')
   const [isLoading, setIsLoading] = useState(true)
   const [loadError, setLoadError] = useState('')
+  const [defaultProfile, setDefaultProfile] = useState<ShippingAddress | null>(null)
   const [shouldScrollToDetail, setShouldScrollToDetail] = useState(false)
   const detailSectionRef = useRef<HTMLDivElement | null>(null)
 
@@ -26,24 +30,30 @@ export default function OrderPage() {
 
     let active = true
 
-    ;(async () => {
-      try {
-        setIsLoading(true)
-        setLoadError('')
-        const nextOrders = await getOrdersByUserId(user.id)
-        if (!active) return
+      ; (async () => {
+        try {
+          setIsLoading(true)
+          setLoadError('')
+          const nextOrders = await getOrdersByUserId(user.id)
+          if (!active) return
 
-        setOrders(nextOrders)
-      } catch (error) {
-        if (!active) return
-        console.error('OrderPage: error fetching orders', error)
-        setLoadError('Không thể tải danh sách đơn hàng. Vui lòng thử lại.')
-      } finally {
-        if (active) {
-          setIsLoading(false)
+          setOrders(nextOrders)
+          try {
+            const defaultProfile = await getDefaultShippingAddressApi(user.id)
+            if (active) setDefaultProfile(defaultProfile ?? null)
+          } catch {
+            if (active) setDefaultProfile(null)
+          }
+        } catch (error) {
+          if (!active) return
+          console.error('OrderPage: error fetching orders', error)
+          setLoadError('Không thể tải danh sách đơn hàng. Vui lòng thử lại.')
+        } finally {
+          if (active) {
+            setIsLoading(false)
+          }
         }
-      }
-    })()
+      })()
 
     return () => {
       active = false
@@ -61,18 +71,18 @@ export default function OrderPage() {
 
     let active = true
 
-    ;(async () => {
-      try {
-        const nextSelectedOrder = await getOrderById(orderId)
-        if (!active) return
+      ; (async () => {
+        try {
+          const nextSelectedOrder = await getOrderById(orderId)
+          if (!active) return
 
-        if (nextSelectedOrder.userId !== user.id) return
+          if (nextSelectedOrder.userId !== user.id) return
 
-        setOrders((prev) => [nextSelectedOrder, ...prev])
-      } catch (err) {
-        // Ignore — keep current list and do not trigger global loading state.
-      }
-    })()
+          setOrders((prev) => [nextSelectedOrder, ...prev])
+        } catch (err) {
+          // Ignore — keep current list and do not trigger global loading state.
+        }
+      })()
 
     return () => {
       active = false

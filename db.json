@@ -2791,6 +2791,26 @@
       "phoneNumber": "0901234567",
       "password": "wine1234",
       "subscribeNewsletter": true,
+      "shippingAddresses": [
+        {
+          "id": "1778034226288",
+          "userId": "1",
+          "label": "Địa chỉ mới",
+          "customerName": "Authay",
+          "phoneNumber": "09432423432",
+          "shippingAddress": "Hà Nội, Đống Đa, Trung Hoà, 12",
+          "isDefault": false
+        },
+        {
+          "id": "1777866906955",
+          "userId": "1",
+          "label": "Company",
+          "customerName": "Henry",
+          "phoneNumber": "0989656566",
+          "shippingAddress": "Hà Nội, Đống Đa, Nhân Chính 12",
+          "isDefault": true
+        }
+      ],
       "createdAt": "2026-04-22T08:00:00.000Z"
     },
     {
@@ -2802,6 +2822,16 @@
       "phoneNumber": "0912345678",
       "password": "cellar2026",
       "subscribeNewsletter": false,
+      "shippingAddresses": [
+        {
+          "id": "addr-2-1",
+          "label": "Công ty",
+          "customerName": "Minh Tran",
+          "phoneNumber": "0912345678",
+          "shippingAddress": "45 Le Loi, District 1, Ho Chi Minh City",
+          "isDefault": true
+        }
+      ],
       "createdAt": "2026-04-22T08:15:00.000Z"
     },
     {
@@ -2813,6 +2843,7 @@
       "phoneNumber": "0987654321",
       "password": "grapes2026",
       "subscribeNewsletter": true,
+      "shippingAddresses": [],
       "createdAt": "2026-04-22T08:30:00.000Z"
     },
     {
@@ -3217,6 +3248,122 @@
       "status": "pending",
       "createdAt": "2026-05-04T03:00:29.909Z",
       "id": "fwjET7kWXcA"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1350000,
+      "items": [
+        {
+          "wineId": "2",
+          "wineName": "White Wine Premium",
+          "unitPrice": 450000,
+          "quantity": 3,
+          "selectedColor": "White",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-04T03:28:57.015Z",
+      "id": "v0uftAsXgQY"
+    },
+    {
+      "userId": "1",
+      "customerName": "Rulu",
+      "phoneNumber": "09654645656",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1440000,
+      "items": [
+        {
+          "wineId": "6",
+          "wineName": "Chardonnay Bliss",
+          "unitPrice": 360000,
+          "quantity": 4,
+          "selectedColor": "Yellow",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-04T03:45:49.967Z",
+      "id": "fKMg1LR9h7w"
+    },
+    {
+      "userId": "1",
+      "customerName": "Jobss",
+      "phoneNumber": "094353544",
+      "shippingAddress": "Hà Nội, QUốc tử giam",
+      "total": 1164000,
+      "items": [
+        {
+          "wineId": "59",
+          "wineName": "Gruner Veltliner Select",
+          "unitPrice": 388000,
+          "quantity": 3,
+          "selectedColor": "Straw",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-04T03:51:51.671Z",
+      "id": "ugnMwqoBrZc"
+    },
+    {
+      "userId": "1",
+      "customerName": "fsfsfds",
+      "phoneNumber": "0989656566",
+      "shippingAddress": "rẻerrrresrseddddddd",
+      "total": 6080000,
+      "items": [
+        {
+          "wineId": "45",
+          "wineName": "Champagne Blanc de Blancs",
+          "unitPrice": 760000,
+          "quantity": 8,
+          "selectedColor": "Gold",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-04T04:12:52.941Z",
+      "id": "y7K-V68tEiA"
+    },
+    {
+      "userId": "1",
+      "customerName": "Henry",
+      "phoneNumber": "0989656566",
+      "shippingAddress": "Hà Nội, Đống Đa, Nhân Chính",
+      "total": 2435000,
+      "items": [
+        {
+          "wineId": "141",
+          "wineName": "Kosher Reserve Blanc",
+          "unitPrice": 398000,
+          "quantity": 2,
+          "selectedColor": "Pale Gold",
+          "selectedSize": "M"
+        },
+        {
+          "wineId": "142",
+          "wineName": "Kosher Reserve Rouge",
+          "unitPrice": 445000,
+          "quantity": 1,
+          "selectedColor": "Burgundy",
+          "selectedSize": "L"
+        },
+        {
+          "wineId": "141",
+          "wineName": "Kosher Reserve Blanc",
+          "unitPrice": 398000,
+          "quantity": 3,
+          "selectedColor": "White",
+          "selectedSize": "L"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-06T02:01:26.651Z",
+      "id": "HlqatZErpXc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

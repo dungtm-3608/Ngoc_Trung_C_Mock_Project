@@ -11,6 +11,7 @@ import { useAuth } from '../store/AuthContext'
 import CartPage from '../pages/Cart/Cart'
 import CheckoutPage from '../pages/Checkout/Checkout'
 import OrderPage from '../pages/Order/Order'
+import ShippingAddressPage from '../pages/ShippingAddress/ShippingAddress'
 import NotFoundPage from '../pages/NotFound/NotFound'
 
 function PublicOnlyRoute({ children }: { children: ReactElement }) {
@@ -81,6 +82,14 @@ export default function AppRouter() {
         element={
           <ProtectedRoute>
             <CheckoutPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/shipping-address"
+        element={
+          <ProtectedRoute>
+            <ShippingAddressPage />
           </ProtectedRoute>
         }
       />
