@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axiosClient from '../services/axiosClient'
+import handleError from '../utils/handleError'
 import type { OrderRecord } from '../types/order/orderRecord'
 
 type PaginatedOrdersResponse = {
@@ -41,6 +42,8 @@ export default function useAdminOrders() {
 
       setOrders(sortOrders(nextOrders))
       setTotalPages(nextTotalPages)
+    } catch (err) {
+      handleError(err, { userMessage: 'Không thể tải đơn hàng' })
     } finally {
       setLoading(false)
     }
@@ -58,7 +61,7 @@ export default function useAdminOrders() {
       await fetchOrders()
       setEditingStatus((s) => { const c = { ...s }; delete c[String(orderId)]; return c })
     } catch (err) {
-      console.error('useAdminOrders: update status error', err)
+      handleError(err, { userMessage: 'Không thể cập nhật trạng thái đơn' })
     }
   }
 

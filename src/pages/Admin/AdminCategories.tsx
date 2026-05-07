@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import AdminLayout from './AdminLayout'
 import categoryService, { CategoryRecord } from '../../services/categoryService'
+import handleError from '../../utils/handleError'
 import Button from '../../components/common/Button'
 
 export default function AdminCategories() {
@@ -18,7 +19,7 @@ export default function AdminCategories() {
       const data = await categoryService.getCategories()
       setCategories(data)
     } catch (err) {
-      console.error('fetch categories', err)
+      handleError(err, { userMessage: 'Không thể tải danh mục' })
     } finally {
       setLoading(false)
     }
@@ -32,7 +33,7 @@ export default function AdminCategories() {
       setNewName('')
       await fetchCategories()
     } catch (err) {
-      console.error('create category', err)
+      handleError(err, { userMessage: 'Không thể tạo danh mục' })
     }
   }
 
@@ -50,7 +51,7 @@ export default function AdminCategories() {
       setEditValue('')
       await fetchCategories()
     } catch (err) {
-      console.error('update category', err)
+      handleError(err, { userMessage: 'Không thể cập nhật danh mục' })
     }
   }
 
@@ -60,7 +61,7 @@ export default function AdminCategories() {
       await categoryService.deleteCategory(id)
       await fetchCategories()
     } catch (err) {
-      console.error('delete category', err)
+      handleError(err, { userMessage: 'Không thể xóa danh mục' })
     }
   }
 

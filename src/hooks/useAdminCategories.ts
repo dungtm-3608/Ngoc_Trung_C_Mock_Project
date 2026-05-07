@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import axiosClient from '../services/axiosClient'
 import wineService from '../services/wineService'
 import categoryService from '../services/categoryService'
+import handleError from '../utils/handleError'
 import type { Wine } from '../types/wine'
 
 export default function useAdminCategories() {
@@ -21,6 +22,8 @@ export default function useAdminCategories() {
       const [data, cats] = await Promise.all([wineService.getWines(), categoryService.getCategories()])
       setWines(data)
       setAllCategories(cats)
+    } catch (err) {
+      handleError(err, { userMessage: 'Không thể tải danh sách rượu hoặc danh mục' })
     } finally {
       setLoading(false)
     }
@@ -36,7 +39,7 @@ export default function useAdminCategories() {
       setSelectedWineIds([])
       await fetchWines()
     } catch (err) {
-      console.error('Assign category error', err)
+      handleError(err, { userMessage: 'Không thể gán danh mục' })
     }
   }
 
@@ -50,7 +53,7 @@ export default function useAdminCategories() {
       setSelectedWineIds([])
       await fetchWines()
     } catch (err) {
-      console.error('Create & assign error', err)
+      handleError(err, { userMessage: 'Không thể tạo và gán danh mục' })
     }
   }
 
@@ -66,7 +69,7 @@ export default function useAdminCategories() {
       setEditValue('')
       await fetchWines()
     } catch (err) {
-      console.error('Rename category error', err)
+      handleError(err, { userMessage: 'Không thể đổi tên danh mục' })
     }
   }
 
@@ -80,7 +83,7 @@ export default function useAdminCategories() {
       await categoryService.deleteCategory(category.id)
       await fetchWines()
     } catch (err) {
-      console.error('Delete category error', err)
+      handleError(err, { userMessage: 'Không thể xóa danh mục' })
     }
   }
 

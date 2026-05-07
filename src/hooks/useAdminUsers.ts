@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axiosClient from '../services/axiosClient'
 import * as userService from '../services/userService'
+import handleError from '../utils/handleError'
 import type { AuthUserRecord } from '../types'
 
 type EditingState = Record<string, boolean>
@@ -34,7 +35,7 @@ export default function useAdminUsers() {
       setUsers(nextUsers)
       setTotalPages(nextTotalPages)
     } catch (err) {
-      // ignore for now
+      handleError(err, { userMessage: 'Không thể tải danh sách người dùng' })
     } finally {
       setLoading(false)
     }
@@ -97,7 +98,7 @@ export default function useAdminUsers() {
         return copy
       })
     } catch (err) {
-      // ignore
+      handleError(err, { userMessage: 'Không thể lưu thông tin người dùng' })
     }
   }
 
@@ -107,7 +108,7 @@ export default function useAdminUsers() {
       await userService.deleteUser(String(id))
       setUsers((u) => u.filter((item) => item.id !== id))
     } catch (err) {
-      // ignore
+      handleError(err, { userMessage: 'Không thể xoá người dùng' })
     }
   }
 

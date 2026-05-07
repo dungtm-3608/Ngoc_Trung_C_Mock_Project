@@ -7,6 +7,7 @@ import CartSummary from '../../components/layout/cart/CartSummary'
 import CheckoutLoadErrorState from '../../components/layout/checkout/CheckoutLoadErrorState'
 import { useCart } from '../../store/CartContext'
 import wineService from '../../services/wineService'
+import handleError from '../../utils/handleError'
 import { getDiscountedPrice } from '../../utils/currencyUtil'
 import type { EnrichedCartItem } from '../../types/cart/enrichedCartItem'
 import type { Wine } from '../../types/wine'
@@ -34,7 +35,7 @@ export default function CartPage() {
         setWines(nextWines)
       } catch (error) {
         if (!active) return
-        console.error('CartPage: error fetching wines', error)
+        handleError(error, { userMessage: 'Không thể tải thông tin sản phẩm. Vui lòng thử lại.' })
         setWines([])
         setLoadError('Không thể tải thông tin sản phẩm. Vui lòng thử lại.')
       } finally {

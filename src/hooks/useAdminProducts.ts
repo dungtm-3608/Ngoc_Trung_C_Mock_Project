@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axiosClient from '../services/axiosClient'
+import handleError from '../utils/handleError'
 import type { Wine } from '../types/wine'
 
 type PaginatedWinesResponse = {
@@ -31,6 +32,8 @@ export default function useAdminProducts() {
 
       setWines(nextWines)
       setTotalPages(nextTotalPages)
+    } catch (err) {
+      handleError(err, { userMessage: 'Không thể tải sản phẩm' })
     } finally {
       setLoading(false)
     }
@@ -58,7 +61,7 @@ export default function useAdminProducts() {
       await fetchWines()
       handleCancel()
     } catch (err) {
-      console.error('useAdminProducts: save error', err)
+      handleError(err, { userMessage: 'Không thể lưu sản phẩm' })
     }
   }
 
@@ -69,7 +72,7 @@ export default function useAdminProducts() {
       await axiosClient.delete(`/wines/${id}`)
       setWines((s) => s.filter((w) => w.id !== id))
     } catch (err) {
-      // ignore
+      handleError(err, { userMessage: 'Không thể xóa sản phẩm' })
     }
   }
 
