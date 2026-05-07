@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil.ts'
+import { formatCurrency, getDiscountedPrice } from '../../../utils/currencyUtil.ts'
 import { FeaturedWineProps } from '../../../types/home/featureWineProps.ts'
 import { getWineDetailPath } from '../../../utils/wineUtils.ts'
 
@@ -21,12 +21,14 @@ export default function FeaturedWine({ wine, bannerImage, resolveImage }: Featur
           </h2>
           <p className="mt-2 text-sm uppercase tracking-[0.18em] text-slate-400">Niên vụ {wine.yearFrom ?? '2026'}</p>
           <div className="mt-6 flex items-end gap-3">
-            <span className="text-[38px] leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
             {wine.discount ? (
-              <span className="pb-1 text-base text-slate-400 line-through">
-                {formatCurrency(getOriginalPrice(wine.price, wine.discount))}đ
-              </span>
-            ) : null}
+              <>
+                <span className="text-[38px] leading-none text-amber-500">{formatCurrency(getDiscountedPrice(wine.price, wine.discount))}đ</span>
+                <span className="pb-1 text-base text-slate-400 line-through">{formatCurrency(wine.price)}đ</span>
+              </>
+            ) : (
+              <span className="text-[38px] leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
+            )}
           </div>
           <p className="mt-5 max-w-md text-sm leading-7 text-slate-500">
             {wine.description ?? 'Rượu vang được ủ trong điều kiện lý tưởng, tạo nên hương vị cân bằng và dư vị bền lâu.'}

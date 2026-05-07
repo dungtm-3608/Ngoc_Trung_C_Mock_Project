@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import wineService from '../../services/wineService'
 import FeaturedWine from '../../components/layout/home/FeaturedWine.tsx'
-import { formatCurrency, getOriginalPrice } from '../../utils/currencyUtil.ts'
+import { formatCurrency, getDiscountedPrice } from '../../utils/currencyUtil.ts'
 import type { Wine } from '../../types/wine.ts'
 import { getWineDetailPath, resolveWineImage } from '../../utils/wineUtils.ts'
 import { Link } from 'react-router-dom'
@@ -54,10 +54,14 @@ export default function Home() {
       </div>
       <Link to={getWineDetailPath(w)} className="mt-4 min-h-12 text-sm font-semibold uppercase tracking-[0.08em] text-slate-800 transition hover:text-amber-600">{w.name}</Link>
       <div className="mt-1 flex items-end justify-center gap-2">
-        <span className="text-[30px] leading-none text-amber-500">{formatCurrency(w.price)}đ</span>
         {w.discount ? (
-          <span className="text-sm text-slate-400 line-through">{formatCurrency(getOriginalPrice(w.price, w.discount))}đ</span>
-        ) : null}
+          <>
+            <span className="text-[30px] leading-none text-amber-500">{formatCurrency(getDiscountedPrice(w.price, w.discount))}đ</span>
+            <span className="text-sm text-slate-400 line-through">{formatCurrency(w.price)}đ</span>
+          </>
+        ) : (
+          <span className="text-[30px] leading-none text-amber-500">{formatCurrency(w.price)}đ</span>
+        )}
       </div>
     </article>
   )

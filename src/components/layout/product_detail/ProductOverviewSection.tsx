@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import type { Dispatch, SetStateAction } from 'react'
 
 import type { Wine } from '../../../types/wine'
-import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
+import { formatCurrency, getDiscountedPrice } from '../../../utils/currencyUtil'
 import { resolveWineImage } from '../../../utils/wineUtils'
 
 type ProductOverviewSectionProps = {
@@ -40,10 +40,14 @@ export default function ProductOverviewSection({
         <p className="mt-3 text-sm uppercase tracking-[0.18em] text-neutral-500">Niên vụ {wine.yearFrom ?? '2026'}</p>
 
         <div className="mt-6 flex items-end gap-3 border-b border-neutral-200 pb-6">
-          <span className="text-5xl leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
           {wine.discount ? (
-            <span className="pb-1 text-lg text-neutral-400 line-through">{formatCurrency(getOriginalPrice(wine.price, wine.discount))}đ</span>
-          ) : null}
+            <>
+              <span className="text-5xl leading-none text-amber-500">{formatCurrency(getDiscountedPrice(wine.price, wine.discount))}đ</span>
+              <span className="pb-1 text-lg text-neutral-400 line-through">{formatCurrency(wine.price)}đ</span>
+            </>
+          ) : (
+            <span className="text-5xl leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
+          )}
         </div>
 
         <p className="mt-6 text-sm leading-7 text-neutral-600">

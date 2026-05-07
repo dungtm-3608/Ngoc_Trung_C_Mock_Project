@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-import { Wine } from '../types/wine'
+import type { Wine } from '../types/wine'
 import axiosClient from './axiosClient'
+import categoryService from './categoryService'
 
 const WINE_API = '/wines'
 
@@ -46,17 +47,56 @@ function getOnStoreTimestamp(onStoreDate?: string) {
 
 const wineService = {
   async getWines(options: WinesQueryOptions = {}) {
-    const response = await axiosClient.get(WINE_API, {
-      params: options.category ? { category: options.category } : undefined,
-    })
+    const response = await axiosClient.get(WINE_API)
 
-    return normalizeWines(response.data)
+    const wines = normalizeWines(response.data)
+
+    let resolvedWines = wines
+
+    // Resolve categoryName when possible (prefers categoryId -> categories.name)
+    let hasCategoryId = false
+    try {
+      hasCategoryId = wines.some((w) => !!w.categoryId)
+      if (hasCategoryId) {
+        const cats = await categoryService.getCategories()
+        const map = new Map(cats.map((c) => [c.id, c.name]))
+        resolvedWines = wines.map((w) => ({
+          ...w,
+          categoryName: w.categoryId ? map.get(w.categoryId) ?? w.category ?? '' : w.category ?? '',
+        }))
+      }
+    } catch (err) {
+      // If caller requested filtering by category, they depend on categoryName resolution.
+      // Propagate the error so the caller knows the filter couldn't be applied correctly.
+      if (options.category && hasCategoryId) throw err
+      // otherwise ignore and fall back to un-resolved names
+    }
+
+    if (options.category) {
+      return resolvedWines.filter((wine) => (wine.categoryName ?? wine.category ?? '') === options.category)
+    }
+
+    return resolvedWines
   },
 
   async getWineById(wineId: string) {
     try {
       const response = await axiosClient.get(`${WINE_API}/${wineId}`)
-      return normalizeWine(response.data)
+      const wine = normalizeWine(response.data)
+      if (!wine) return null
+
+      try {
+        if (wine.categoryId) {
+          const cat = await categoryService.getCategoryById(wine.categoryId)
+          wine.categoryName = cat?.name ?? wine.category ?? ''
+        } else {
+          wine.categoryName = wine.category ?? ''
+        }
+      } catch (err) {
+        wine.categoryName = wine.category ?? ''
+      }
+
+      return wine
     } catch (error) {
       if (axios.isAxiosError(error) && error.response?.status === 404) {
         return null

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Wine } from '../../../types/wine'
-import { formatCurrency, getOriginalPrice } from '../../../utils/currencyUtil'
+import { formatCurrency, getDiscountedPrice } from '../../../utils/currencyUtil'
 import { getWineDetailPath } from '../../../utils/wineUtils'
 
 type ProductListItemProps = {
@@ -19,10 +19,14 @@ export default function ProductListItem({ wine, resolveImage }: ProductListItemP
           {wine.name}
         </Link>
         <div className="mt-4 flex items-end gap-3">
-          <span className="text-4xl leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
           {wine.discount ? (
-            <span className="pb-1 text-base text-neutral-400 line-through">{formatCurrency(getOriginalPrice(wine.price, wine.discount))}đ</span>
-          ) : null}
+            <>
+              <span className="text-4xl leading-none text-amber-500">{formatCurrency(getDiscountedPrice(wine.price, wine.discount))}đ</span>
+              <span className="pb-1 text-base text-neutral-400 line-through">{formatCurrency(wine.price)}đ</span>
+            </>
+          ) : (
+            <span className="text-4xl leading-none text-amber-500">{formatCurrency(wine.price)}đ</span>
+          )}
         </div>
         <p className="mt-5 max-w-2xl text-sm leading-7 text-neutral-500">{wine.description}</p>
       </div>

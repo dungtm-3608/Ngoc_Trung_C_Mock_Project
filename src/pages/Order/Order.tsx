@@ -7,7 +7,6 @@ import { getOrderById, getOrdersByUserId } from '../../services/orderService'
 import { useAuth } from '../../store/AuthContext'
 import type { OrderRecord } from '../../types/order/orderRecord'
 import { ORDER_STATUS_OPTIONS, countOrdersByStatus, getOrderStatusLabel, type OrderStatusFilter } from '../../utils/orderUtils'
-import type { ShippingAddress } from '../../types/shippingAddress'
 import { getDefaultShippingAddress as getDefaultShippingAddressApi } from '../../services/shippingAddressService'
 
 
@@ -19,9 +18,12 @@ export default function OrderPage() {
   const [statusFilter, setStatusFilter] = useState<OrderStatusFilter>('all')
   const [isLoading, setIsLoading] = useState(true)
   const [loadError, setLoadError] = useState('')
-  const [defaultProfile, setDefaultProfile] = useState<ShippingAddress | null>(null)
   const [shouldScrollToDetail, setShouldScrollToDetail] = useState(false)
   const detailSectionRef = useRef<HTMLDivElement | null>(null)
+
+  const sortOrders = (arr: OrderRecord[]) => {
+    return arr.slice().sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+  }
 
   // Fetch the full orders list only when `user` changes to avoid refetching
   // the whole list when navigating between `/order/:orderId` routes.
@@ -37,12 +39,11 @@ export default function OrderPage() {
           const nextOrders = await getOrdersByUserId(user.id)
           if (!active) return
 
-          setOrders(nextOrders)
+          setOrders(sortOrders(nextOrders))
           try {
-            const defaultProfile = await getDefaultShippingAddressApi(user.id)
-            if (active) setDefaultProfile(defaultProfile ?? null)
+            await getDefaultShippingAddressApi(user.id)
           } catch {
-            if (active) setDefaultProfile(null)
+            // ignore default address fetch errors for order list view
           }
         } catch (error) {
           if (!active) return
@@ -78,7 +79,7 @@ export default function OrderPage() {
 
           if (nextSelectedOrder.userId !== user.id) return
 
-          setOrders((prev) => [nextSelectedOrder, ...prev])
+          setOrders((prev) => sortOrders([nextSelectedOrder, ...prev]))
         } catch (err) {
           // Ignore — keep current list and do not trigger global loading state.
         }

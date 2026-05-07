@@ -7,6 +7,8 @@ import CartSummary from '../../components/layout/cart/CartSummary'
 import CheckoutLoadErrorState from '../../components/layout/checkout/CheckoutLoadErrorState'
 import { useCart } from '../../store/CartContext'
 import wineService from '../../services/wineService'
+import handleError from '../../utils/handleError'
+import { getDiscountedPrice } from '../../utils/currencyUtil'
 import type { EnrichedCartItem } from '../../types/cart/enrichedCartItem'
 import type { Wine } from '../../types/wine'
 
@@ -33,7 +35,7 @@ export default function CartPage() {
         setWines(nextWines)
       } catch (error) {
         if (!active) return
-        console.error('CartPage: error fetching wines', error)
+        handleError(error, { userMessage: 'Không thể tải thông tin sản phẩm. Vui lòng thử lại.' })
         setWines([])
         setLoadError('Không thể tải thông tin sản phẩm. Vui lòng thử lại.')
       } finally {
@@ -66,10 +68,10 @@ export default function CartPage() {
   }, [items, wines])
 
   const selectedCount = detailedItems.filter((item) => item.selected).length
-  const subtotal = detailedItems.reduce((total, item) => total + (item.wine.price * item.quantity), 0)
+  const subtotal = detailedItems.reduce((total, item) => total + (getDiscountedPrice(item.wine.price, item.wine.discount) * item.quantity), 0)
   const selectedSubtotal = detailedItems
     .filter((item) => item.selected)
-    .reduce((total, item) => total + (item.wine.price * item.quantity), 0)
+    .reduce((total, item) => total + (getDiscountedPrice(item.wine.price, item.wine.discount) * item.quantity), 0)
 
   if (isLoading) {
     return <main className="mx-auto max-w-7xl px-6 py-12 text-sm text-neutral-500">Đang tải giỏ hàng...</main>

@@ -7,6 +7,11 @@ import Login from '../pages/Login/Login'
 import ProductListPage from '../pages/ProductList/ProductList'
 import ProductDetailPage from '../pages/ProductDetail/ProductDetail'
 import Register from '../pages/Register/Register'
+import AdminLogin from '../pages/Admin/AdminLogin'
+import AdminUsers from '../pages/Admin/AdminUsers'
+import AdminCategories from '../pages/Admin/AdminCategories'
+import AdminProducts from '../pages/Admin/AdminProducts'
+import AdminOrders from '../pages/Admin/AdminOrders'
 import { useAuth } from '../store/AuthContext'
 import CartPage from '../pages/Cart/Cart'
 import CheckoutPage from '../pages/Checkout/Checkout'
@@ -24,6 +29,12 @@ function ProtectedRoute({ children }: { children: ReactElement }) {
   const { user } = useAuth()
 
   return user ? children : <Navigate replace to="/login" />
+}
+
+function AdminProtectedRoute({ children }: { children: ReactElement }) {
+  const isAdmin = localStorage.getItem('isAdmin') === 'true'
+
+  return isAdmin ? children : <Navigate replace to="/admin" />
 }
 
 export default function AppRouter() {
@@ -113,6 +124,12 @@ export default function AppRouter() {
       <Route path="/white_wine" element={<Navigate replace to="/wines/white-wine" />} />
       <Route path="/champagne" element={<Navigate replace to="/wines/champagne" />} />
       <Route path="*" element={<NotFoundPage />} />
+      <Route path="/admin" element={<AdminLogin />} />
+      <Route path="/admin/users" element={<AdminProtectedRoute><AdminUsers /></AdminProtectedRoute>} />
+      <Route path="/admin/categories" element={<AdminProtectedRoute><AdminCategories /></AdminProtectedRoute>} />
+      <Route path="/admin/products" element={<AdminProtectedRoute><AdminProducts /></AdminProtectedRoute>} />
+      <Route path="/admin/orders" element={<AdminProtectedRoute><AdminOrders /></AdminProtectedRoute>} />
+
     </Routes>
   )
 }

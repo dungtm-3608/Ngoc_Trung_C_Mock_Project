@@ -3,27 +3,24 @@
     {
       "id": "1",
       "name": "Red Wine Classic",
-      "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A classic red wine with a rich aroma and smooth taste.",
       "colors": [
-        "Red",
         "Ruby",
-        "Crimson"
+        "Yellow"
       ],
       "size": [
         "S",
-        "M",
-        "L"
+        "M"
       ],
       "onStoreDate": "2026-04-01",
-      "price": 370000,
-      "discount": 10
+      "price": 180000,
+      "discount": 10,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "2",
       "name": "White Wine Premium",
-      "category": "White Wine",
       "yearFrom": "2020",
       "description": "A premium white wine with a crisp and refreshing flavor.",
       "colors": [
@@ -38,12 +35,12 @@
       ],
       "onStoreDate": "2026-03-15",
       "price": 450000,
-      "discount": 15
+      "discount": 15,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "3",
       "name": "Champagne Royale",
-      "category": "Champagne",
       "yearFrom": "2019",
       "description": "A luxurious champagne with a delicate balance of flavors.",
       "colors": [
@@ -58,12 +55,12 @@
       ],
       "onStoreDate": "2026-02-20",
       "price": 680000,
-      "discount": 20
+      "discount": 20,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "4",
       "name": "Rosé Delight",
-      "category": "Rose Wine",
       "yearFrom": "2021",
       "description": "A delightful rosé with hints of strawberry and citrus.",
       "colors": [
@@ -78,12 +75,12 @@
       ],
       "onStoreDate": "2026-04-02",
       "price": 320000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "5",
       "name": "Merlot Reserve",
-      "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A smooth Merlot with notes of plum and chocolate.",
       "colors": [
@@ -97,12 +94,12 @@
       ],
       "onStoreDate": "2026-04-03",
       "price": 390000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "6",
       "name": "Chardonnay Bliss",
-      "category": "White Wine",
       "yearFrom": "2019",
       "description": "A buttery Chardonnay with a hint of oak.",
       "colors": [
@@ -116,12 +113,12 @@
       ],
       "onStoreDate": "2026-04-04",
       "price": 360000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "7",
       "name": "Pinot Noir Elegance",
-      "category": "Red Wine",
       "yearFrom": "2018",
       "description": "An elegant Pinot Noir with cherry and earthy flavors.",
       "colors": [
@@ -135,12 +132,12 @@
       ],
       "onStoreDate": "2026-04-05",
       "price": 470000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "8",
       "name": "Sauvignon Blanc Fresh",
-      "category": "White Wine",
       "yearFrom": "2020",
       "description": "A fresh Sauvignon Blanc with tropical fruit notes.",
       "colors": [
@@ -154,12 +151,12 @@
       ],
       "onStoreDate": "2026-04-06",
       "price": 350000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "9",
       "name": "Zinfandel Bold",
-      "category": "Red Wine",
       "yearFrom": "2016",
       "description": "A bold Zinfandel with blackberry and spice flavors.",
       "colors": [
@@ -173,12 +170,12 @@
       ],
       "onStoreDate": "2026-04-07",
       "price": 410000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "10",
       "name": "Cabernet Sauvignon Rich",
-      "category": "Red Wine",
       "yearFrom": "2015",
       "description": "A rich Cabernet Sauvignon with dark fruit and vanilla notes.",
       "colors": [
@@ -192,12 +189,12 @@
       ],
       "onStoreDate": "2026-04-08",
       "price": 520000,
-      "discount": 15
+      "discount": 15,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "11",
       "name": "Gewürztraminer",
-      "category": "White Wine",
       "yearFrom": "2021",
       "description": "A floral and spicy Gewürztraminer with notes of lychee and rose.",
       "colors": [
@@ -211,12 +208,12 @@
       ],
       "onStoreDate": "2026-04-09",
       "price": 430000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "12",
       "name": "Syrah",
-      "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A bold Syrah with notes of blackberry and pepper.",
       "colors": [
@@ -230,12 +227,12 @@
       ],
       "onStoreDate": "2026-04-10",
       "price": 465000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "13",
       "name": "Pinot Gris",
-      "category": "White Wine",
       "yearFrom": "2018",
       "description": "A smooth Pinot Gris with notes of pear and apple.",
       "colors": [
@@ -249,12 +246,12 @@
       ],
       "onStoreDate": "2026-04-11",
       "price": 380000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "14",
       "name": "Tempranillo",
-      "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A smooth Tempranillo with notes of cherry and earth.",
       "colors": [
@@ -268,12 +265,12 @@
       ],
       "onStoreDate": "2026-04-12",
       "price": 405000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "15",
       "name": "Malbec",
-      "category": "Red Wine",
       "yearFrom": "2016",
       "description": "A bold Malbec with notes of blackberry and spice.",
       "colors": [
@@ -287,12 +284,12 @@
       ],
       "onStoreDate": "2026-04-13",
       "price": 435000,
-      "discount": 11
+      "discount": 11,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "16",
       "name": "Sangiovese",
-      "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A smooth Sangiovese with notes of cherry and earth.",
       "colors": [
@@ -306,12 +303,12 @@
       ],
       "onStoreDate": "2026-04-14",
       "price": 395000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "17",
       "name": "Nebbiolo",
-      "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A smooth Nebbiolo with notes of cherry and earth.",
       "colors": [
@@ -325,12 +322,12 @@
       ],
       "onStoreDate": "2026-04-15",
       "price": 510000,
-      "discount": 13
+      "discount": 13,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "18",
       "name": "Croatian Red",
-      "category": "Red Wine",
       "yearFrom": "2020",
       "description": "A bold Croatian red wine with notes of blackberry and spice.",
       "colors": [
@@ -344,12 +341,12 @@
       ],
       "onStoreDate": "2026-04-16",
       "price": 420000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "19",
       "name": "Portuguese Red",
-      "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A bold Portuguese red wine with notes of blackberry and spice.",
       "colors": [
@@ -363,12 +360,12 @@
       ],
       "onStoreDate": "2026-04-17",
       "price": 460000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "20",
       "name": "Italian Red",
-      "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A bold Italian red wine with notes of blackberry and spice.",
       "colors": [
@@ -382,12 +379,12 @@
       ],
       "onStoreDate": "2026-04-18",
       "price": 495000,
-      "discount": 14
+      "discount": 14,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "21",
       "name": "French Red",
-      "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A bold French red wine with notes of blackberry and spice.",
       "colors": [
@@ -401,12 +398,12 @@
       ],
       "onStoreDate": "2026-04-19",
       "price": 540000,
-      "discount": 16
+      "discount": 16,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "22",
       "name": "Spanish Red",
-      "category": "Red Wine",
       "yearFrom": "2016",
       "description": "A bold Spanish red wine with notes of blackberry and spice.",
       "colors": [
@@ -420,12 +417,12 @@
       ],
       "onStoreDate": "2026-04-20",
       "price": 575000,
-      "discount": 18
+      "discount": 18,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "23",
       "name": "American Red",
-      "category": "Red Wine",
       "yearFrom": "2015",
       "description": "A bold American red wine with notes of blackberry and spice.",
       "colors": [
@@ -439,12 +436,12 @@
       ],
       "onStoreDate": "2026-04-21",
       "price": 610000,
-      "discount": 20
+      "discount": 20,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "24",
       "name": "Australian Red",
-      "category": "Red Wine",
       "yearFrom": "2021",
       "description": "A bold Australian red wine with notes of blackberry and spice.",
       "colors": [
@@ -458,12 +455,12 @@
       ],
       "onStoreDate": "2026-04-22",
       "price": 655000,
-      "discount": 22
+      "discount": 22,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "25",
       "name": "New Zealand Red",
-      "category": "Red Wine",
       "yearFrom": "2020",
       "description": "A bold New Zealand red wine with notes of blackberry and spice.",
       "colors": [
@@ -477,12 +474,12 @@
       ],
       "onStoreDate": "2026-04-23",
       "price": 690000,
-      "discount": 24
+      "discount": 24,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "26",
       "name": "South African Red",
-      "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A bold South African red wine with notes of blackberry and spice.",
       "colors": [
@@ -496,12 +493,12 @@
       ],
       "onStoreDate": "2026-04-24",
       "price": 720000,
-      "discount": 26
+      "discount": 26,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "27",
       "name": "Chilean Red",
-      "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A bold Chilean red wine with notes of blackberry and spice.",
       "colors": [
@@ -515,12 +512,12 @@
       ],
       "onStoreDate": "2026-04-25",
       "price": 760000,
-      "discount": 28
+      "discount": 28,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "28",
       "name": "Argentine Red",
-      "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A bold Argentine red wine with notes of blackberry and spice.",
       "colors": [
@@ -534,12 +531,12 @@
       ],
       "onStoreDate": "2026-04-26",
       "price": 790000,
-      "discount": 30
+      "discount": 30,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "29",
       "name": "Brazilian Red",
-      "category": "Red Wine",
       "yearFrom": "2016",
       "description": "A bold Brazilian red wine with notes of blackberry and spice.",
       "colors": [
@@ -553,12 +550,12 @@
       ],
       "onStoreDate": "2026-04-27",
       "price": 830000,
-      "discount": 32
+      "discount": 32,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "30",
       "name": "Canadian Red",
-      "category": "Red Wine",
       "yearFrom": "2015",
       "description": "A bold Canadian red wine with notes of blackberry and spice.",
       "colors": [
@@ -572,12 +569,12 @@
       ],
       "onStoreDate": "2026-04-28",
       "price": 860000,
-      "discount": 34
+      "discount": 34,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "31",
       "name": "Mexican Red",
-      "category": "Red Wine",
       "yearFrom": "2014",
       "description": "A bold Mexican red wine with notes of blackberry and spice.",
       "colors": [
@@ -591,12 +588,12 @@
       ],
       "onStoreDate": "2026-04-29",
       "price": 895000,
-      "discount": 36
+      "discount": 36,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "32",
       "name": "Indian Red",
-      "category": "Red Wine",
       "yearFrom": "2013",
       "description": "A bold Indian red wine with notes of blackberry and spice.",
       "colors": [
@@ -610,12 +607,12 @@
       ],
       "onStoreDate": "2026-04-30",
       "price": 930000,
-      "discount": 38
+      "discount": 38,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "33",
       "name": "Prosecco Gold Label",
-      "category": "Sparkling Wine",
       "yearFrom": "2020",
       "description": "A lively prosecco with crisp pear, citrus, and fine bubbles.",
       "colors": [
@@ -629,12 +626,12 @@
       ],
       "onStoreDate": "2026-05-01",
       "price": 540000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "34",
       "name": "Cava Reserva Brut",
-      "category": "Sparkling Wine",
       "yearFrom": "2019",
       "description": "A dry cava with green apple, almond, and persistent mousse.",
       "colors": [
@@ -648,12 +645,12 @@
       ],
       "onStoreDate": "2026-05-02",
       "price": 590000,
-      "discount": 14
+      "discount": 14,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "35",
       "name": "Ruby Port Heritage",
-      "category": "Port Wine",
       "yearFrom": "2021",
       "description": "A rich ruby port with black cherry, plum, and cocoa depth.",
       "colors": [
@@ -667,12 +664,12 @@
       ],
       "onStoreDate": "2026-05-03",
       "price": 480000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "36",
       "name": "Tawny Port Cellar No. 8",
-      "category": "Port Wine",
       "yearFrom": "2018",
       "description": "A mellow tawny port with caramel, walnut, and dried fig notes.",
       "colors": [
@@ -686,12 +683,12 @@
       ],
       "onStoreDate": "2026-05-04",
       "price": 505000,
-      "discount": 11
+      "discount": 11,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "37",
       "name": "Fino Sherry Solera",
-      "category": "Sherry",
       "yearFrom": "2022",
       "description": "A pale fino sherry with saline freshness and toasted almond notes.",
       "colors": [
@@ -705,12 +702,12 @@
       ],
       "onStoreDate": "2026-05-05",
       "price": 410000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "38",
       "name": "Oloroso Sherry Cask",
-      "category": "Sherry",
       "yearFrom": "2021",
       "description": "A deep oloroso sherry with walnut, spice, and polished oak tones.",
       "colors": [
@@ -724,12 +721,12 @@
       ],
       "onStoreDate": "2026-05-06",
       "price": 445000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "39",
       "name": "Sauternes Noble Harvest",
-      "category": "Dessert Wine",
       "yearFrom": "2023",
       "description": "A luxurious dessert wine with honey, apricot, and candied citrus.",
       "colors": [
@@ -743,12 +740,12 @@
       ],
       "onStoreDate": "2026-05-07",
       "price": 395000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "40",
       "name": "Tokaji Aszu Prestige",
-      "category": "Dessert Wine",
       "yearFrom": "2022",
       "description": "A sweet Tokaji with marmalade, quince, and long velvet finish.",
       "colors": [
@@ -762,12 +759,12 @@
       ],
       "onStoreDate": "2026-05-08",
       "price": 405000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "41",
       "name": "Vidal Icewine Reserve",
-      "category": "Ice Wine",
       "yearFrom": "2021",
       "description": "A concentrated ice wine with tropical fruit, honey, and vibrant acidity.",
       "colors": [
@@ -781,12 +778,12 @@
       ],
       "onStoreDate": "2026-05-09",
       "price": 430000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "42",
       "name": "Riesling Icewine Aurora",
-      "category": "Ice Wine",
       "yearFrom": "2020",
       "description": "A bright ice wine with peach nectar, citrus peel, and floral lift.",
       "colors": [
@@ -800,12 +797,12 @@
       ],
       "onStoreDate": "2026-05-10",
       "price": 420000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "43",
       "name": "Amber Skin Contact No. 3",
-      "category": "Orange Wine",
       "yearFrom": "2023",
       "description": "An orange wine with dried apricot, tea leaf, and subtle tannin grip.",
       "colors": [
@@ -820,12 +817,12 @@
       ],
       "onStoreDate": "2026-05-11",
       "price": 385000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "44",
       "name": "Qvevri Amber Selection",
-      "category": "Orange Wine",
       "yearFrom": "2022",
       "description": "A textured orange wine with orange peel, herbs, and savory minerality.",
       "colors": [
@@ -840,12 +837,12 @@
       ],
       "onStoreDate": "2026-05-12",
       "price": 398000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "45",
       "name": "Champagne Blanc de Blancs",
-      "category": "Champagne",
       "yearFrom": "2020",
       "description": "A refined champagne with fine bubbles, brioche, and citrus zest.",
       "colors": [
@@ -859,12 +856,12 @@
       ],
       "onStoreDate": "2026-05-13",
       "price": 760000,
-      "discount": 15
+      "discount": 15,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "46",
       "name": "Champagne Imperial Brut",
-      "category": "Champagne",
       "yearFrom": "2019",
       "description": "A vibrant brut champagne with apple, almond, and toasted bread notes.",
       "colors": [
@@ -878,12 +875,12 @@
       ],
       "onStoreDate": "2026-05-14",
       "price": 820000,
-      "discount": 18
+      "discount": 18,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "47",
       "name": "Madeira Rainwater",
-      "category": "Madeira Wine",
       "yearFrom": "2023",
       "description": "A smooth madeira with roasted nuts, citrus peel, and gentle sweetness.",
       "colors": [
@@ -897,12 +894,12 @@
       ],
       "onStoreDate": "2026-05-15",
       "price": 365000,
-      "discount": 4
+      "discount": 4,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "48",
       "name": "Madeira Malmsey Cask",
-      "category": "Madeira Wine",
       "yearFrom": "2022",
       "description": "A rich madeira with caramel, dried fruit, and warming spice.",
       "colors": [
@@ -916,12 +913,12 @@
       ],
       "onStoreDate": "2026-05-16",
       "price": 372000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "49",
       "name": "Bordeaux Heritage Reserve",
-      "category": "Red Wine",
       "yearFrom": "2020",
       "description": "A layered Bordeaux red with blackberry, cedar, and velvet tannins.",
       "colors": [
@@ -935,12 +932,12 @@
       ],
       "onStoreDate": "2026-05-17",
       "price": 545000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "50",
       "name": "Rioja Gran Reserva",
-      "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A mature Rioja with cherry, vanilla, and tobacco notes.",
       "colors": [
@@ -954,12 +951,12 @@
       ],
       "onStoreDate": "2026-05-18",
       "price": 515000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "51",
       "name": "Chianti Classico Oro",
-      "category": "Red Wine",
       "yearFrom": "2021",
       "description": "A bright Chianti with sour cherry, herbs, and balanced acidity.",
       "colors": [
@@ -973,12 +970,12 @@
       ],
       "onStoreDate": "2026-05-19",
       "price": 455000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "52",
       "name": "Barossa Shiraz Estate",
-      "category": "Red Wine",
       "yearFrom": "2018",
       "description": "A dense Shiraz with plum, pepper, and dark chocolate.",
       "colors": [
@@ -992,12 +989,12 @@
       ],
       "onStoreDate": "2026-05-20",
       "price": 565000,
-      "discount": 13
+      "discount": 13,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "53",
       "name": "Napa Valley Meritage",
-      "category": "Red Wine",
       "yearFrom": "2020",
       "description": "A polished Meritage blend with cassis, oak, and spice.",
       "colors": [
@@ -1011,12 +1008,12 @@
       ],
       "onStoreDate": "2026-05-21",
       "price": 625000,
-      "discount": 15
+      "discount": 15,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "54",
       "name": "Mendoza Reserve Blend",
-      "category": "Red Wine",
       "yearFrom": "2019",
       "description": "A ripe red blend with blackberry, violet, and cocoa finish.",
       "colors": [
@@ -1030,12 +1027,12 @@
       ],
       "onStoreDate": "2026-05-22",
       "price": 495000,
-      "discount": 11
+      "discount": 11,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "55",
       "name": "Douro Valley Signature",
-      "category": "Red Wine",
       "yearFrom": "2017",
       "description": "A powerful Douro red with plum, mineral, and spice tones.",
       "colors": [
@@ -1049,12 +1046,12 @@
       ],
       "onStoreDate": "2026-05-23",
       "price": 535000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "56",
       "name": "Tuscan Rosso Limited",
-      "category": "Red Wine",
       "yearFrom": "2022",
       "description": "A modern Tuscan red with black fruit and smooth oak.",
       "colors": [
@@ -1068,12 +1065,12 @@
       ],
       "onStoreDate": "2026-05-24",
       "price": 475000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029492-Red-Wine"
     },
     {
       "id": "57",
       "name": "Chablis Premier Cru",
-      "category": "White Wine",
       "yearFrom": "2022",
       "description": "A mineral-driven white with lemon zest and oyster-shell freshness.",
       "colors": [
@@ -1087,12 +1084,12 @@
       ],
       "onStoreDate": "2026-05-25",
       "price": 485000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "58",
       "name": "Pinot Blanc Alpine",
-      "category": "White Wine",
       "yearFrom": "2021",
       "description": "A fresh Pinot Blanc with pear, white flowers, and soft texture.",
       "colors": [
@@ -1106,12 +1103,12 @@
       ],
       "onStoreDate": "2026-05-26",
       "price": 395000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "59",
       "name": "Gruner Veltliner Select",
-      "category": "White Wine",
       "yearFrom": "2023",
       "description": "A lively Gruner with lime, green apple, and peppery finish.",
       "colors": [
@@ -1125,12 +1122,12 @@
       ],
       "onStoreDate": "2026-05-27",
       "price": 388000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "60",
       "name": "Albariño Atlantic Coast",
-      "category": "White Wine",
       "yearFrom": "2022",
       "description": "A crisp Albariño with citrus, saline notes, and peach blossom.",
       "colors": [
@@ -1144,12 +1141,12 @@
       ],
       "onStoreDate": "2026-05-28",
       "price": 425000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "61",
       "name": "Viognier Sun Crest",
-      "category": "White Wine",
       "yearFrom": "2021",
       "description": "A floral Viognier with apricot, honeysuckle, and silky body.",
       "colors": [
@@ -1163,12 +1160,12 @@
       ],
       "onStoreDate": "2026-05-29",
       "price": 432000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "62",
       "name": "Semillon Reserve",
-      "category": "White Wine",
       "yearFrom": "2020",
       "description": "A textured Semillon with beeswax, citrus peel, and soft oak.",
       "colors": [
@@ -1182,12 +1179,12 @@
       ],
       "onStoreDate": "2026-05-30",
       "price": 418000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "63",
       "name": "Soave Classico",
-      "category": "White Wine",
       "yearFrom": "2023",
       "description": "A bright Soave with white peach, almond, and floral lift.",
       "colors": [
@@ -1201,12 +1198,12 @@
       ],
       "onStoreDate": "2026-05-31",
       "price": 365000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "64",
       "name": "Verdicchio Castelli",
-      "category": "White Wine",
       "yearFrom": "2022",
       "description": "A clean Verdicchio with citrus, fennel, and mineral freshness.",
       "colors": [
@@ -1220,12 +1217,12 @@
       ],
       "onStoreDate": "2026-06-01",
       "price": 378000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-White-Wine"
     },
     {
       "id": "65",
       "name": "Champagne Rose Prestige",
-      "category": "Champagne",
       "yearFrom": "2020",
       "description": "A refined rose champagne with berry fruit and brioche complexity.",
       "colors": [
@@ -1239,12 +1236,12 @@
       ],
       "onStoreDate": "2026-06-02",
       "price": 845000,
-      "discount": 16
+      "discount": 16,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "66",
       "name": "Champagne Vintage Noir",
-      "category": "Champagne",
       "yearFrom": "2018",
       "description": "A deep champagne with toasted hazelnut, citrus, and chalk finish.",
       "colors": [
@@ -1258,12 +1255,12 @@
       ],
       "onStoreDate": "2026-06-03",
       "price": 910000,
-      "discount": 19
+      "discount": 19,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "67",
       "name": "Champagne Reserve Brut Nature",
-      "category": "Champagne",
       "yearFrom": "2019",
       "description": "A dry brut nature with fine mousse and citrus blossom nose.",
       "colors": [
@@ -1277,12 +1274,12 @@
       ],
       "onStoreDate": "2026-06-04",
       "price": 880000,
-      "discount": 17
+      "discount": 17,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "68",
       "name": "Champagne Grand Cuvee",
-      "category": "Champagne",
       "yearFrom": "2021",
       "description": "A celebratory cuvee with apple, toast, and elegant acidity.",
       "colors": [
@@ -1296,12 +1293,12 @@
       ],
       "onStoreDate": "2026-06-05",
       "price": 795000,
-      "discount": 14
+      "discount": 14,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "69",
       "name": "Champagne Artisan Blanc",
-      "category": "Champagne",
       "yearFrom": "2020",
       "description": "A grower-style blanc with citrus pith and creamy bubbles.",
       "colors": [
@@ -1315,12 +1312,12 @@
       ],
       "onStoreDate": "2026-06-06",
       "price": 765000,
-      "discount": 13
+      "discount": 13,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "70",
       "name": "Champagne Royal Extra Brut",
-      "category": "Champagne",
       "yearFrom": "2019",
       "description": "An extra brut champagne with chalk, lemon, and almond finish.",
       "colors": [
@@ -1334,12 +1331,12 @@
       ],
       "onStoreDate": "2026-06-07",
       "price": 835000,
-      "discount": 15
+      "discount": 15,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "71",
       "name": "Champagne Fleur de Craie",
-      "category": "Champagne",
       "yearFrom": "2021",
       "description": "A floral champagne with white peach and crisp mineral tension.",
       "colors": [
@@ -1353,12 +1350,12 @@
       ],
       "onStoreDate": "2026-06-08",
       "price": 785000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "72",
       "name": "Champagne Noble Barrel",
-      "category": "Champagne",
       "yearFrom": "2018",
       "description": "A barrel-aged champagne with pastry notes and long finish.",
       "colors": [
@@ -1372,12 +1369,12 @@
       ],
       "onStoreDate": "2026-06-09",
       "price": 925000,
-      "discount": 18
+      "discount": 18,
+      "categoryId": "1778049029493-Champagne"
     },
     {
       "id": "73",
       "name": "Provence Petal Rose",
-      "category": "Rose Wine",
       "yearFrom": "2023",
       "description": "A dry rose with strawberry, melon, and crisp finish.",
       "colors": [
@@ -1391,12 +1388,12 @@
       ],
       "onStoreDate": "2026-06-10",
       "price": 365000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "74",
       "name": "Grenache Rose Garden",
-      "category": "Rose Wine",
       "yearFrom": "2022",
       "description": "A lively rose with raspberry, herbs, and floral perfume.",
       "colors": [
@@ -1410,12 +1407,12 @@
       ],
       "onStoreDate": "2026-06-11",
       "price": 378000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "75",
       "name": "Rose Riviera Cuvee",
-      "category": "Rose Wine",
       "yearFrom": "2023",
       "description": "A bright rose with peach skin and citrus-driven freshness.",
       "colors": [
@@ -1429,12 +1426,12 @@
       ],
       "onStoreDate": "2026-06-12",
       "price": 392000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "76",
       "name": "Tempranillo Rose Luma",
-      "category": "Rose Wine",
       "yearFrom": "2021",
       "description": "A savory rose with watermelon, red currant, and crisp acidity.",
       "colors": [
@@ -1448,12 +1445,12 @@
       ],
       "onStoreDate": "2026-06-13",
       "price": 355000,
-      "discount": 4
+      "discount": 4,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "77",
       "name": "Rose de Saignée",
-      "category": "Rose Wine",
       "yearFrom": "2022",
       "description": "A deeper rose with cherry, rose petal, and subtle spice.",
       "colors": [
@@ -1467,12 +1464,12 @@
       ],
       "onStoreDate": "2026-06-14",
       "price": 408000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "78",
       "name": "Pink Sunset Estate",
-      "category": "Rose Wine",
       "yearFrom": "2023",
       "description": "An easy-drinking rose with berry fruit and refreshing finish.",
       "colors": [
@@ -1486,12 +1483,12 @@
       ],
       "onStoreDate": "2026-06-15",
       "price": 342000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "79",
       "name": "Cinsault Rose Breeze",
-      "category": "Rose Wine",
       "yearFrom": "2021",
       "description": "A pale rose with red berries, citrus peel, and minerality.",
       "colors": [
@@ -1505,12 +1502,12 @@
       ],
       "onStoreDate": "2026-06-16",
       "price": 374000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "80",
       "name": "Mediterranean Rose Bloom",
-      "category": "Rose Wine",
       "yearFrom": "2022",
       "description": "A soft rose with peach, strawberry, and floral undertones.",
       "colors": [
@@ -1524,12 +1521,12 @@
       ],
       "onStoreDate": "2026-06-17",
       "price": 386000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Rose-Wine"
     },
     {
       "id": "81",
       "name": "Pet Nat Orchard",
-      "category": "Sparkling Wine",
       "yearFrom": "2023",
       "description": "A playful sparkling wine with green apple and yeasty lift.",
       "colors": [
@@ -1543,12 +1540,12 @@
       ],
       "onStoreDate": "2026-06-18",
       "price": 455000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "82",
       "name": "Metodo Classico Reserve",
-      "category": "Sparkling Wine",
       "yearFrom": "2021",
       "description": "A classic-method sparkler with brioche, citrus, and fine mousse.",
       "colors": [
@@ -1562,12 +1559,12 @@
       ],
       "onStoreDate": "2026-06-19",
       "price": 522000,
-      "discount": 11
+      "discount": 11,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "83",
       "name": "Lambrusco Rosso Frizzante",
-      "category": "Sparkling Wine",
       "yearFrom": "2022",
       "description": "A vibrant sparkling red with berries and gentle sweetness.",
       "colors": [
@@ -1581,12 +1578,12 @@
       ],
       "onStoreDate": "2026-06-20",
       "price": 398000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "84",
       "name": "Blanc de Noirs Spark",
-      "category": "Sparkling Wine",
       "yearFrom": "2020",
       "description": "A structured sparkling wine with apple skin and toasted notes.",
       "colors": [
@@ -1600,12 +1597,12 @@
       ],
       "onStoreDate": "2026-06-21",
       "price": 545000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "85",
       "name": "Moscato Spumante Pearl",
-      "category": "Sparkling Wine",
       "yearFrom": "2023",
       "description": "A fragrant sparkling wine with lychee, jasmine, and sweet fizz.",
       "colors": [
@@ -1619,12 +1616,12 @@
       ],
       "onStoreDate": "2026-06-22",
       "price": 412000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "86",
       "name": "Cremant de Loire",
-      "category": "Sparkling Wine",
       "yearFrom": "2021",
       "description": "A refined Cremant with citrus zest and creamy texture.",
       "colors": [
@@ -1638,12 +1635,12 @@
       ],
       "onStoreDate": "2026-06-23",
       "price": 508000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "87",
       "name": "Brut Cuvee Horizon",
-      "category": "Sparkling Wine",
       "yearFrom": "2022",
       "description": "A clean brut sparkler with lemon, pear, and mineral finish.",
       "colors": [
@@ -1657,12 +1654,12 @@
       ],
       "onStoreDate": "2026-06-24",
       "price": 468000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "88",
       "name": "Rosato Frizzante",
-      "category": "Sparkling Wine",
       "yearFrom": "2023",
       "description": "A pink sparkler with red berries and crisp bubbles.",
       "colors": [
@@ -1676,12 +1673,12 @@
       ],
       "onStoreDate": "2026-06-25",
       "price": 425000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Sparkling-Wine"
     },
     {
       "id": "89",
       "name": "Late Bottled Vintage Port",
-      "category": "Port Wine",
       "yearFrom": "2019",
       "description": "A full-bodied port with cassis, cocoa, and polished tannins.",
       "colors": [
@@ -1695,12 +1692,12 @@
       ],
       "onStoreDate": "2026-06-26",
       "price": 515000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "90",
       "name": "White Port Reserve",
-      "category": "Port Wine",
       "yearFrom": "2021",
       "description": "A golden white port with dried apricot and citrus peel.",
       "colors": [
@@ -1714,12 +1711,12 @@
       ],
       "onStoreDate": "2026-06-27",
       "price": 452000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "91",
       "name": "Vintage Port Imperial",
-      "category": "Port Wine",
       "yearFrom": "2017",
       "description": "A deep port with blackberry, spice, and long chocolate finish.",
       "colors": [
@@ -1733,12 +1730,12 @@
       ],
       "onStoreDate": "2026-06-28",
       "price": 625000,
-      "discount": 14
+      "discount": 14,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "92",
       "name": "Colheita Port Barrel Aged",
-      "category": "Port Wine",
       "yearFrom": "2018",
       "description": "A nuanced colheita port with nuts, dried fig, and spice.",
       "colors": [
@@ -1752,12 +1749,12 @@
       ],
       "onStoreDate": "2026-06-29",
       "price": 548000,
-      "discount": 11
+      "discount": 11,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "93",
       "name": "Reserve Tawny 10 Years",
-      "category": "Port Wine",
       "yearFrom": "2016",
       "description": "A mature tawny with caramel, orange peel, and walnut richness.",
       "colors": [
@@ -1771,12 +1768,12 @@
       ],
       "onStoreDate": "2026-06-30",
       "price": 575000,
-      "discount": 12
+      "discount": 12,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "94",
       "name": "Ruby Port Estate",
-      "category": "Port Wine",
       "yearFrom": "2020",
       "description": "A youthful ruby port with ripe plum and blackberry core.",
       "colors": [
@@ -1790,12 +1787,12 @@
       ],
       "onStoreDate": "2026-07-01",
       "price": 438000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "95",
       "name": "Port Quinta Especial",
-      "category": "Port Wine",
       "yearFrom": "2019",
       "description": "A rich single-quinta port with floral lift and dark fruit.",
       "colors": [
@@ -1809,12 +1806,12 @@
       ],
       "onStoreDate": "2026-07-02",
       "price": 532000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "96",
       "name": "Old Tawny Heritage",
-      "category": "Port Wine",
       "yearFrom": "2015",
       "description": "A mellow old tawny with toffee, raisin, and spice.",
       "colors": [
@@ -1828,12 +1825,12 @@
       ],
       "onStoreDate": "2026-07-03",
       "price": 598000,
-      "discount": 13
+      "discount": 13,
+      "categoryId": "1778049029493-Port-Wine"
     },
     {
       "id": "97",
       "name": "Manzanilla Sea Mist",
-      "category": "Sherry",
       "yearFrom": "2022",
       "description": "A coastal manzanilla with saline snap and almond finish.",
       "colors": [
@@ -1847,12 +1844,12 @@
       ],
       "onStoreDate": "2026-07-04",
       "price": 392000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "98",
       "name": "Amontillado Noble Oak",
-      "category": "Sherry",
       "yearFrom": "2021",
       "description": "A nutty amontillado with caramel and lifted savory notes.",
       "colors": [
@@ -1866,12 +1863,12 @@
       ],
       "onStoreDate": "2026-07-05",
       "price": 418000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "99",
       "name": "Pedro Ximenez Reserva",
-      "category": "Sherry",
       "yearFrom": "2020",
       "description": "A luscious sherry with raisin, molasses, and espresso depth.",
       "colors": [
@@ -1885,12 +1882,12 @@
       ],
       "onStoreDate": "2026-07-06",
       "price": 455000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "100",
       "name": "Cream Sherry Solstice",
-      "category": "Sherry",
       "yearFrom": "2021",
       "description": "A smooth cream sherry with toffee, dried fig, and walnut.",
       "colors": [
@@ -1904,12 +1901,12 @@
       ],
       "onStoreDate": "2026-07-07",
       "price": 425000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "101",
       "name": "Palo Cortado Especial",
-      "category": "Sherry",
       "yearFrom": "2019",
       "description": "A rare sherry with citrus edge, walnut, and elegant lift.",
       "colors": [
@@ -1923,12 +1920,12 @@
       ],
       "onStoreDate": "2026-07-08",
       "price": 498000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "102",
       "name": "Moscatel Dorado",
-      "category": "Sherry",
       "yearFrom": "2022",
       "description": "A fragrant sherry with orange peel, honey, and floral sweetness.",
       "colors": [
@@ -1942,12 +1939,12 @@
       ],
       "onStoreDate": "2026-07-09",
       "price": 405000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "103",
       "name": "Fino En Rama",
-      "category": "Sherry",
       "yearFrom": "2023",
       "description": "An unfiltered fino with intense savory notes and citrus snap.",
       "colors": [
@@ -1961,12 +1958,12 @@
       ],
       "onStoreDate": "2026-07-10",
       "price": 398000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "104",
       "name": "Oloroso Viejo",
-      "category": "Sherry",
       "yearFrom": "2018",
       "description": "A mature oloroso with spice box, walnut, and long warmth.",
       "colors": [
@@ -1980,12 +1977,12 @@
       ],
       "onStoreDate": "2026-07-11",
       "price": 472000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Sherry"
     },
     {
       "id": "105",
       "name": "Beerenauslese Gold",
-      "category": "Dessert Wine",
       "yearFrom": "2022",
       "description": "A sweet dessert wine with apricot jam and floral honey.",
       "colors": [
@@ -1999,12 +1996,12 @@
       ],
       "onStoreDate": "2026-07-12",
       "price": 438000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "106",
       "name": "Muscat Nectar Reserve",
-      "category": "Dessert Wine",
       "yearFrom": "2023",
       "description": "A perfumed dessert wine with orange blossom and peach syrup.",
       "colors": [
@@ -2018,12 +2015,12 @@
       ],
       "onStoreDate": "2026-07-13",
       "price": 396000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "107",
       "name": "Vendange Tardive Pearl",
-      "category": "Dessert Wine",
       "yearFrom": "2021",
       "description": "A late-harvest wine with quince, honey, and vivid acidity.",
       "colors": [
@@ -2037,12 +2034,12 @@
       ],
       "onStoreDate": "2026-07-14",
       "price": 415000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "108",
       "name": "Noble Rot Selection",
-      "category": "Dessert Wine",
       "yearFrom": "2020",
       "description": "A concentrated sweet wine with marmalade and saffron depth.",
       "colors": [
@@ -2056,12 +2053,12 @@
       ],
       "onStoreDate": "2026-07-15",
       "price": 462000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "109",
       "name": "Late Harvest Chenin",
-      "category": "Dessert Wine",
       "yearFrom": "2022",
       "description": "A bright dessert wine with pineapple, pear, and honeycomb.",
       "colors": [
@@ -2075,12 +2072,12 @@
       ],
       "onStoreDate": "2026-07-16",
       "price": 388000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "110",
       "name": "Passito di Sole",
-      "category": "Dessert Wine",
       "yearFrom": "2021",
       "description": "A rich passito with dried apricot, fig, and spice finish.",
       "colors": [
@@ -2094,12 +2091,12 @@
       ],
       "onStoreDate": "2026-07-17",
       "price": 452000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "111",
       "name": "Moscato Dolce Oro",
-      "category": "Dessert Wine",
       "yearFrom": "2023",
       "description": "A soft dessert wine with peach, orange peel, and blossom notes.",
       "colors": [
@@ -2113,12 +2110,12 @@
       ],
       "onStoreDate": "2026-07-18",
       "price": 372000,
-      "discount": 4
+      "discount": 4,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "112",
       "name": "Tokaji Sweet Crown",
-      "category": "Dessert Wine",
       "yearFrom": "2020",
       "description": "A luxurious dessert wine with candied citrus and silk texture.",
       "colors": [
@@ -2132,12 +2129,12 @@
       ],
       "onStoreDate": "2026-07-19",
       "price": 478000,
-      "discount": 10
+      "discount": 10,
+      "categoryId": "1778049029493-Dessert-Wine"
     },
     {
       "id": "113",
       "name": "Cab Franc Icewine",
-      "category": "Ice Wine",
       "yearFrom": "2022",
       "description": "A pink-hued ice wine with strawberry jam and bright lift.",
       "colors": [
@@ -2151,12 +2148,12 @@
       ],
       "onStoreDate": "2026-07-20",
       "price": 458000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "114",
       "name": "Vidal Icewine Gold Leaf",
-      "category": "Ice Wine",
       "yearFrom": "2021",
       "description": "A rich ice wine with pineapple, mango, and honey finish.",
       "colors": [
@@ -2170,12 +2167,12 @@
       ],
       "onStoreDate": "2026-07-21",
       "price": 442000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "115",
       "name": "Gewurz Ice Pearl",
-      "category": "Ice Wine",
       "yearFrom": "2023",
       "description": "An aromatic ice wine with lychee, rose, and citrus peel.",
       "colors": [
@@ -2189,12 +2186,12 @@
       ],
       "onStoreDate": "2026-07-22",
       "price": 435000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "116",
       "name": "Frozen Harvest Select",
-      "category": "Ice Wine",
       "yearFrom": "2020",
       "description": "A concentrated ice wine with nectarine, marmalade, and floral lift.",
       "colors": [
@@ -2208,12 +2205,12 @@
       ],
       "onStoreDate": "2026-07-23",
       "price": 448000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "117",
       "name": "Riesling Frost Reserve",
-      "category": "Ice Wine",
       "yearFrom": "2022",
       "description": "A crystalline ice wine with lime, peach nectar, and mineral edge.",
       "colors": [
@@ -2227,12 +2224,12 @@
       ],
       "onStoreDate": "2026-07-24",
       "price": 426000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "118",
       "name": "Golden Winter Nectar",
-      "category": "Ice Wine",
       "yearFrom": "2021",
       "description": "A lush ice wine with apricot, honeycomb, and silky sweetness.",
       "colors": [
@@ -2246,12 +2243,12 @@
       ],
       "onStoreDate": "2026-07-25",
       "price": 462000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "119",
       "name": "Orchard Frost Vidal",
-      "category": "Ice Wine",
       "yearFrom": "2023",
       "description": "A vibrant ice wine with pineapple, pear, and honey glaze.",
       "colors": [
@@ -2265,12 +2262,12 @@
       ],
       "onStoreDate": "2026-07-26",
       "price": 438000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "120",
       "name": "Icewine Aurora Reserve",
-      "category": "Ice Wine",
       "yearFrom": "2020",
       "description": "A polished ice wine with floral aromas and citrus marmalade.",
       "colors": [
@@ -2284,12 +2281,12 @@
       ],
       "onStoreDate": "2026-07-27",
       "price": 455000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Ice-Wine"
     },
     {
       "id": "121",
       "name": "Skin Contact Amber One",
-      "category": "Orange Wine",
       "yearFrom": "2023",
       "description": "A grippy orange wine with dried citrus and herbal finish.",
       "colors": [
@@ -2303,12 +2300,12 @@
       ],
       "onStoreDate": "2026-07-28",
       "price": 398000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "122",
       "name": "Amber Amphora Estate",
-      "category": "Orange Wine",
       "yearFrom": "2022",
       "description": "An amphora-aged orange wine with tea leaf and dried apricot.",
       "colors": [
@@ -2322,12 +2319,12 @@
       ],
       "onStoreDate": "2026-07-29",
       "price": 425000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "123",
       "name": "Georgian Qvevri Gold",
-      "category": "Orange Wine",
       "yearFrom": "2021",
       "description": "A savory orange wine with orange peel and earthy minerality.",
       "colors": [
@@ -2341,12 +2338,12 @@
       ],
       "onStoreDate": "2026-07-30",
       "price": 448000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "124",
       "name": "Amber Terrace Blend",
-      "category": "Orange Wine",
       "yearFrom": "2023",
       "description": "A fresh orange wine with stone fruit, spice, and gentle tannin.",
       "colors": [
@@ -2360,12 +2357,12 @@
       ],
       "onStoreDate": "2026-07-31",
       "price": 392000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "125",
       "name": "Sun-Kissed Orange Cuvee",
-      "category": "Orange Wine",
       "yearFrom": "2022",
       "description": "A juicy orange wine with mandarin, tea, and dried herbs.",
       "colors": [
@@ -2379,12 +2376,12 @@
       ],
       "onStoreDate": "2026-08-01",
       "price": 405000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "126",
       "name": "Amber Ridge Selection",
-      "category": "Orange Wine",
       "yearFrom": "2021",
       "description": "A structured orange wine with apricot skin and savory grip.",
       "colors": [
@@ -2398,12 +2395,12 @@
       ],
       "onStoreDate": "2026-08-02",
       "price": 432000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "127",
       "name": "Clay Jar Amber",
-      "category": "Orange Wine",
       "yearFrom": "2023",
       "description": "A bright orange wine with bergamot, quince, and chalky finish.",
       "colors": [
@@ -2417,12 +2414,12 @@
       ],
       "onStoreDate": "2026-08-03",
       "price": 418000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "128",
       "name": "Orange Harvest Parcel",
-      "category": "Orange Wine",
       "yearFrom": "2022",
       "description": "A layered orange wine with marmalade, herbs, and dry finish.",
       "colors": [
@@ -2436,12 +2433,12 @@
       ],
       "onStoreDate": "2026-08-04",
       "price": 446000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Orange-Wine"
     },
     {
       "id": "129",
       "name": "Madeira Sercial Dry",
-      "category": "Madeira Wine",
       "yearFrom": "2021",
       "description": "A dry madeira with citrus peel, nuts, and crisp finish.",
       "colors": [
@@ -2455,12 +2452,12 @@
       ],
       "onStoreDate": "2026-08-05",
       "price": 388000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "130",
       "name": "Madeira Verdelho Estate",
-      "category": "Madeira Wine",
       "yearFrom": "2020",
       "description": "A balanced madeira with dried fruit and toasted spice.",
       "colors": [
@@ -2474,12 +2471,12 @@
       ],
       "onStoreDate": "2026-08-06",
       "price": 402000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "131",
       "name": "Madeira Bual Barrel",
-      "category": "Madeira Wine",
       "yearFrom": "2019",
       "description": "A rich madeira with toffee, fig, and orange peel warmth.",
       "colors": [
@@ -2493,12 +2490,12 @@
       ],
       "onStoreDate": "2026-08-07",
       "price": 418000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "132",
       "name": "Madeira Colheita Select",
-      "category": "Madeira Wine",
       "yearFrom": "2018",
       "description": "A mature madeira with walnut, caramel, and lifted acidity.",
       "colors": [
@@ -2512,12 +2509,12 @@
       ],
       "onStoreDate": "2026-08-08",
       "price": 445000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "133",
       "name": "Madeira Rainforest Gold",
-      "category": "Madeira Wine",
       "yearFrom": "2022",
       "description": "A bright madeira with citrus, toasted almond, and dried peach.",
       "colors": [
@@ -2531,12 +2528,12 @@
       ],
       "onStoreDate": "2026-08-09",
       "price": 378000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "134",
       "name": "Madeira Old Canteiro",
-      "category": "Madeira Wine",
       "yearFrom": "2017",
       "description": "An old-style madeira with spice box and dried fruit depth.",
       "colors": [
@@ -2550,12 +2547,12 @@
       ],
       "onStoreDate": "2026-08-10",
       "price": 462000,
-      "discount": 9
+      "discount": 9,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "135",
       "name": "Madeira Atlantic Breeze",
-      "category": "Madeira Wine",
       "yearFrom": "2021",
       "description": "A medium-sweet madeira with apricot, nuts, and saline edge.",
       "colors": [
@@ -2569,12 +2566,12 @@
       ],
       "onStoreDate": "2026-08-11",
       "price": 395000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "136",
       "name": "Madeira Noble Flame",
-      "category": "Madeira Wine",
       "yearFrom": "2020",
       "description": "A warming madeira with caramelized citrus and elegant finish.",
       "colors": [
@@ -2588,12 +2585,12 @@
       ],
       "onStoreDate": "2026-08-12",
       "price": 408000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Madeira-Wine"
     },
     {
       "id": "137",
       "name": "Organic White Vineyard",
-      "category": "Organic Wine",
       "yearFrom": "2023",
       "description": "An organic white wine with citrus blossom and fresh orchard fruit.",
       "colors": [
@@ -2607,12 +2604,12 @@
       ],
       "onStoreDate": "2026-08-13",
       "price": 382000,
-      "discount": 5
+      "discount": 5,
+      "categoryId": "1778049029493-Organic-Wine"
     },
     {
       "id": "138",
       "name": "Organic Red Terra",
-      "category": "Organic Wine",
       "yearFrom": "2022",
       "description": "An organic red with blackberry fruit and earthy spice.",
       "colors": [
@@ -2626,12 +2623,12 @@
       ],
       "onStoreDate": "2026-08-14",
       "price": 418000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Organic-Wine"
     },
     {
       "id": "139",
       "name": "Natural Amber Field",
-      "category": "Natural Wine",
       "yearFrom": "2023",
       "description": "A minimal-intervention wine with wild herbs and textured finish.",
       "colors": [
@@ -2645,12 +2642,12 @@
       ],
       "onStoreDate": "2026-08-15",
       "price": 425000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Natural-Wine"
     },
     {
       "id": "140",
       "name": "Natural Rouge Parcel",
-      "category": "Natural Wine",
       "yearFrom": "2022",
       "description": "A lively natural red with tart cherry and herbal lift.",
       "colors": [
@@ -2664,12 +2661,12 @@
       ],
       "onStoreDate": "2026-08-16",
       "price": 432000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Natural-Wine"
     },
     {
       "id": "141",
       "name": "Kosher Reserve Blanc",
-      "category": "Kosher Wine",
       "yearFrom": "2021",
       "description": "A clean kosher white with pear, lemon, and floral notes.",
       "colors": [
@@ -2683,12 +2680,12 @@
       ],
       "onStoreDate": "2026-08-17",
       "price": 398000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Kosher-Wine"
     },
     {
       "id": "142",
       "name": "Kosher Reserve Rouge",
-      "category": "Kosher Wine",
       "yearFrom": "2020",
       "description": "A kosher red with plum, spice, and balanced tannins.",
       "colors": [
@@ -2702,12 +2699,12 @@
       ],
       "onStoreDate": "2026-08-18",
       "price": 445000,
-      "discount": 8
+      "discount": 8,
+      "categoryId": "1778049029493-Kosher-Wine"
     },
     {
       "id": "143",
       "name": "Fruit Berry Cuvee",
-      "category": "Fruit Wine",
       "yearFrom": "2023",
       "description": "A fruit wine with blackberry aroma and soft sweet finish.",
       "colors": [
@@ -2721,12 +2718,12 @@
       ],
       "onStoreDate": "2026-08-19",
       "price": 335000,
-      "discount": 4
+      "discount": 4,
+      "categoryId": "1778049029493-Fruit-Wine"
     },
     {
       "id": "144",
       "name": "Peach Orchard Wine",
-      "category": "Fruit Wine",
       "yearFrom": "2022",
       "description": "A fragrant fruit wine with peach nectar and floral sweetness.",
       "colors": [
@@ -2740,12 +2737,12 @@
       ],
       "onStoreDate": "2026-08-20",
       "price": 328000,
-      "discount": 3
+      "discount": 3,
+      "categoryId": "1778049029493-Fruit-Wine"
     },
     {
       "id": "145",
       "name": "Fortified Muscat Gold",
-      "category": "Fortified Wine",
       "yearFrom": "2021",
       "description": "A fortified wine with muscat perfume, honey, and warm finish.",
       "colors": [
@@ -2759,12 +2756,12 @@
       ],
       "onStoreDate": "2026-08-21",
       "price": 412000,
-      "discount": 6
+      "discount": 6,
+      "categoryId": "1778049029493-Fortified-Wine"
     },
     {
       "id": "146",
       "name": "Fortified Ruby Select",
-      "category": "Fortified Wine",
       "yearFrom": "2020",
       "description": "A fortified red wine with berry richness and smooth warmth.",
       "colors": [
@@ -2778,7 +2775,35 @@
       ],
       "onStoreDate": "2026-08-22",
       "price": 438000,
-      "discount": 7
+      "discount": 7,
+      "categoryId": "1778049029493-Fortified-Wine"
+    },
+    {
+      "name": "RED WINE CL",
+      "categoryId": "1778049029492-Red-Wine",
+      "price": 1200000,
+      "colors": [
+        "Blue"
+      ],
+      "size": [
+        "X",
+        "S",
+        "M"
+      ],
+      "id": "gmbqx8HzFks"
+    },
+    {
+      "name": "Red Wine Classic1111111",
+      "categoryId": "1778049029492-Red-Wine",
+      "price": 1300000,
+      "colors": [
+        "Red"
+      ],
+      "size": [
+        "X",
+        "S"
+      ],
+      "id": "tgiSamJdRTY"
     }
   ],
   "users": [
@@ -2788,26 +2813,17 @@
       "lastName": "Nguyen",
       "username": "anna.nguyen",
       "email": "anna.nguyen@example.com",
-      "phoneNumber": "0901234567",
+      "phoneNumber": "091234431",
       "password": "wine1234",
       "subscribeNewsletter": true,
       "shippingAddresses": [
         {
-          "id": "1778034226288",
-          "userId": "1",
-          "label": "Địa chỉ mới",
-          "customerName": "Authay",
-          "phoneNumber": "09432423432",
-          "shippingAddress": "Hà Nội, Đống Đa, Trung Hoà, 12",
-          "isDefault": false
-        },
-        {
           "id": "1777866906955",
           "userId": "1",
           "label": "Company",
-          "customerName": "Henry",
-          "phoneNumber": "0989656566",
-          "shippingAddress": "Hà Nội, Đống Đa, Nhân Chính 12",
+          "customerName": "Anna Nguyen",
+          "phoneNumber": "0901234567",
+          "shippingAddress": "Thanh Xuân, Hà Nội City",
           "isDefault": true
         }
       ],
@@ -2843,7 +2859,12 @@
       "phoneNumber": "0987654321",
       "password": "grapes2026",
       "subscribeNewsletter": true,
-      "shippingAddresses": [],
+      "shippingAddresses": [
+        {
+          "shippingAddress": "32 Le Loi, District 1, Ho Chi Minh City",
+          "isDefault": true
+        }
+      ],
       "createdAt": "2026-04-22T08:30:00.000Z"
     },
     {
@@ -2855,13 +2876,24 @@
       "password": "12345678q",
       "subscribeNewsletter": false,
       "createdAt": "2026-04-22T09:48:28.786Z",
-      "id": "iXw9j8kO0JQ"
+      "id": "iXw9j8kO0JQ",
+      "shippingAddresses": [
+        {
+          "id": "addr-iXw9j8kO0JQ-1777950202323",
+          "userId": "iXw9j8kO0JQ",
+          "label": "Default",
+          "customerName": "Ha Chuc",
+          "phoneNumber": "0973456789",
+          "shippingAddress": "132 Le Loi, District 1, Ho Chi Minh City",
+          "isDefault": true
+        }
+      ]
     },
     {
       "firstName": "Nguyen",
       "lastName": "C",
       "username": "FFF",
-      "email": "nguyen.ngoc.trung-c@sun-asterisk.com",
+      "email": "fsdd@suncom",
       "phoneNumber": "0934567890",
       "password": "Aa@123456",
       "subscribeNewsletter": false,
@@ -2878,28 +2910,6 @@
       "subscribeNewsletter": false,
       "createdAt": "2026-04-23T03:01:56.252Z",
       "id": "hRT6lPLsGrg"
-    },
-    {
-      "firstName": "Nguyen11fdsf",
-      "lastName": "C",
-      "username": "FFFds",
-      "email": "nguyen.ng@sun-acom.fd",
-      "phoneNumber": "0956789012",
-      "password": "12345678A",
-      "subscribeNewsletter": false,
-      "createdAt": "2026-04-23T03:02:53.249Z",
-      "id": "9v544AMXHHA"
-    },
-    {
-      "firstName": "Nguyen",
-      "lastName": "Cfsdfd",
-      "username": "Adfsdffds",
-      "email": "43fdsfdrung-c@sun-asterisk.com",
-      "phoneNumber": "0967890123",
-      "password": "1234567X",
-      "subscribeNewsletter": false,
-      "createdAt": "2026-04-23T03:11:02.775Z",
-      "id": "HlOfwueUPDM"
     }
   ],
   "orders": [
@@ -2937,7 +2947,7 @@
           "quantity": 2
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "createdAt": "2026-04-24T04:19:55.261Z",
       "id": "cq-sDg1U9vA"
     },
@@ -2961,7 +2971,7 @@
           "quantity": 2
         }
       ],
-      "status": "pending",
+      "status": "cancelled",
       "createdAt": "2026-04-24T04:20:38.476Z",
       "id": "fA2O1epJ6s4"
     },
@@ -3029,7 +3039,7 @@
           "selectedSize": "L"
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "createdAt": "2026-04-24T06:43:22.571Z",
       "id": "iYtbb0U4cZ4"
     },
@@ -3057,7 +3067,7 @@
           "selectedSize": "L"
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "createdAt": "2026-04-28T09:20:02.685Z",
       "id": "TjFYyd1vEAw"
     },
@@ -3077,7 +3087,7 @@
           "selectedSize": "L"
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "createdAt": "2026-04-28T09:20:30.295Z",
       "id": "18ljd1h8j1M"
     },
@@ -3097,7 +3107,7 @@
           "selectedSize": "S"
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "createdAt": "2026-04-28T09:41:27.179Z",
       "id": "Jr11CTNImZ4"
     },
@@ -3117,7 +3127,7 @@
           "selectedSize": "S"
         }
       ],
-      "status": "pending",
+      "status": "confirmed",
       "createdAt": "2026-04-28T09:45:12.129Z",
       "id": "F1LfE61lPyg"
     },
@@ -3137,7 +3147,7 @@
           "selectedSize": "S"
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "createdAt": "2026-04-28T09:49:46.109Z",
       "id": "-DOiGsuKIKw"
     },
@@ -3165,7 +3175,7 @@
           "selectedSize": "L"
         }
       ],
-      "status": "pending",
+      "status": "cancelled",
       "createdAt": "2026-04-28T09:50:19.260Z",
       "id": "B7qASN-lKDc"
     },
@@ -3185,7 +3195,7 @@
           "selectedSize": "S"
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "createdAt": "2026-04-28T09:55:35.944Z",
       "id": "fZs-K9lV5EU"
     },
@@ -3205,7 +3215,7 @@
           "selectedSize": "S"
         }
       ],
-      "status": "pending",
+      "status": "confirmed",
       "createdAt": "2026-04-28T09:56:26.283Z",
       "id": "LLw8VFGo3ek"
     },
@@ -3245,7 +3255,7 @@
           "selectedSize": "S"
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "createdAt": "2026-05-04T03:00:29.909Z",
       "id": "fwjET7kWXcA"
     },
@@ -3331,39 +3341,195 @@
     },
     {
       "userId": "1",
-      "customerName": "Henry",
-      "phoneNumber": "0989656566",
-      "shippingAddress": "Hà Nội, Đống Đa, Nhân Chính",
-      "total": 2435000,
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "091234433",
+      "shippingAddress": "12 Nguyen Hue, District 1, Ho Chi Minh City",
+      "total": 1170000,
       "items": [
         {
-          "wineId": "141",
-          "wineName": "Kosher Reserve Blanc",
-          "unitPrice": 398000,
-          "quantity": 2,
-          "selectedColor": "Pale Gold",
-          "selectedSize": "M"
-        },
-        {
-          "wineId": "142",
-          "wineName": "Kosher Reserve Rouge",
-          "unitPrice": 445000,
-          "quantity": 1,
-          "selectedColor": "Burgundy",
-          "selectedSize": "L"
-        },
-        {
-          "wineId": "141",
-          "wineName": "Kosher Reserve Blanc",
-          "unitPrice": 398000,
+          "wineId": "5",
+          "wineName": "Merlot Reserve",
+          "unitPrice": 390000,
           "quantity": 3,
-          "selectedColor": "White",
-          "selectedSize": "L"
+          "selectedColor": "Red",
+          "selectedSize": "S"
         }
       ],
       "status": "pending",
-      "createdAt": "2026-05-06T02:01:26.651Z",
-      "id": "HlqatZErpXc"
+      "createdAt": "2026-05-05T03:35:22.171Z",
+      "id": "TW81rcwdyy0"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "Thanh Xuân, Hà Nội City",
+      "total": 2025000,
+      "items": [
+        {
+          "wineId": "14",
+          "wineName": "Tempranillo",
+          "unitPrice": 405000,
+          "quantity": 5,
+          "selectedColor": "Red",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-06T03:23:06.310Z",
+      "id": "vI-lSteAt5Y"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "Thanh Xuân, Hà Nội City",
+      "total": 2960000,
+      "items": [
+        {
+          "wineId": "1",
+          "wineName": "Red Wine Classic",
+          "unitPrice": 370000,
+          "quantity": 8,
+          "selectedColor": "Ruby",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-05-06T03:41:41.292Z",
+      "id": "k0GgnieARS8"
+    },
+    {
+      "userId": "1",
+      "customerName": "Anna Nguyen",
+      "phoneNumber": "0901234567",
+      "shippingAddress": "Thanh Xuân, Hà Nội City",
+      "total": 11430000,
+      "items": [
+        {
+          "wineId": "gmbqx8HzFks",
+          "wineName": "RED WINE CL",
+          "unitPrice": 1200000,
+          "quantity": 6,
+          "selectedColor": "Blue",
+          "selectedSize": "S"
+        },
+        {
+          "wineId": "7",
+          "wineName": "Pinot Noir Elegance",
+          "unitPrice": 423000,
+          "quantity": 10,
+          "selectedColor": "Red",
+          "selectedSize": "S"
+        }
+      ],
+      "status": "confirmed",
+      "createdAt": "2026-05-06T09:13:05.388Z",
+      "id": "vQbnnx5KXyg"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1778049029492-Red-Wine",
+      "name": "Red Wine",
+      "createdAt": "2026-05-06T06:30:29.492Z",
+      "updatedAt": "2026-05-06T10:25:43.274Z"
+    },
+    {
+      "id": "1778049029493-White-Wine",
+      "name": "White",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T07:03:13.508Z"
+    },
+    {
+      "id": "1778049029493-Champagne",
+      "name": "Champagne",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Rose-Wine",
+      "name": "Rose Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Sparkling-Wine",
+      "name": "Sparkling Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Port-Wine",
+      "name": "Port Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Sherry",
+      "name": "Sherry",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Dessert-Wine",
+      "name": "Dessert Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Ice-Wine",
+      "name": "Ice Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Orange-Wine",
+      "name": "Orange Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Madeira-Wine",
+      "name": "Madeira Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Organic-Wine",
+      "name": "Organic Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Natural-Wine",
+      "name": "Natural Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Kosher-Wine",
+      "name": "Kosher Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Fruit-Wine",
+      "name": "Fruit Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "id": "1778049029493-Fortified-Wine",
+      "name": "Fortified Wine",
+      "createdAt": "2026-05-06T06:30:29.493Z",
+      "updatedAt": "2026-05-06T06:30:29.493Z"
+    },
+    {
+      "name": "Orange Wine",
+      "createdAt": "2026-05-06T07:04:30.079Z",
+      "updatedAt": "2026-05-06T07:04:30.079Z",
+      "id": "yGtguyNVM38"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

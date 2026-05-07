@@ -3,8 +3,8 @@ import type { OrderRecord } from '../types/order/orderRecord'
 export const ORDER_STATUS_OPTIONS = [
   'all',
   'pending',
-  'approved',
-  'shipping',
+  'confirmed',
+  'delivering',
   'delivered',
   'cancelled',
 ] as const
@@ -13,16 +13,16 @@ export type OrderStatusFilter = (typeof ORDER_STATUS_OPTIONS)[number]
 
 const ORDER_STATUS_LABELS: Record<Exclude<OrderStatusFilter, 'all'>, string> = {
   pending: 'Chờ xác nhận',
-  approved: 'Đã xác nhận',
-  shipping: 'Đang giao',
+  confirmed: 'Đã xác nhận',
+  delivering: 'Đang giao',
   delivered: 'Đã giao hàng',
   cancelled: 'Đã hủy',
 }
 
 const ORDER_STATUS_BADGE_CLASSES: Record<Exclude<OrderStatusFilter, 'all'>, string> = {
   pending: 'border-amber-200 bg-amber-50 text-amber-700',
-  approved: 'border-sky-200 bg-sky-50 text-sky-700',
-  shipping: 'border-violet-200 bg-violet-50 text-violet-700',
+  confirmed: 'border-sky-200 bg-sky-50 text-sky-700',
+  delivering: 'border-violet-200 bg-violet-50 text-violet-700',
   delivered: 'border-emerald-200 bg-emerald-50 text-emerald-700',
   cancelled: 'border-rose-200 bg-rose-50 text-rose-700',
 }

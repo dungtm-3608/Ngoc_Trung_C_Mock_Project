@@ -34,6 +34,15 @@ export type AuthUserRecord = {
   password: string
   subscribeNewsletter?: boolean
   createdAt?: string
+  shippingAddresses?: Array<{
+    id?: string
+    userId?: string
+    label?: string
+    customerName?: string
+    phoneNumber?: string
+    shippingAddress?: string
+    isDefault?: boolean
+  }>
 }
 
 export type AuthResponse = {
